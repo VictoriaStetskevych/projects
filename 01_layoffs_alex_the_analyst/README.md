@@ -11,10 +11,12 @@ Goals:
 
 PROCESS
 
-1. First import file in Microsoft SQL server and.
-I had some difficulties with importing the layoffs.csv file. This is the way, how I was able to upload the file.
+1. Import file into Microsoft SQL server.
+I had some difficulties with importing the [layoffs.csv](https://github.com/VictoriaStetskevych/projects_from_internet/blob/main/01_layoffs_alex_the_analyst/layoffs.csv) file. 
+This is the way, how I was able to upload the file.
 
-Select Database > Tasks > Import Data > Next > Data source = Flat file source > Select CSV file > Locale = English (United States)  > Next > Destination > Microsoft OLE DB Provider for SQL Server > Next > Next > Finish
+> [!TIP]
+> Select Database > Tasks > Import Data > Next > Data source = Flat file source > Select CSV file > Locale = English (United States)  > Next > Destination > Microsoft OLE DB Provider for SQL Server > Next > Next > Finish
 
 
 2. The most important step in a cleaning data process - to make a duplicate to the original data file. 
