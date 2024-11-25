@@ -1,7 +1,6 @@
 ## Cleaning data using Microsoft SQL server ##
  
-This project was made using Alex Freberg's YouTube tutorial.
-https://www.youtube.com/watch?v=4UltKCnnnTA
+This project was made using Alex Freberg's YouTube [tutorial](https://www.youtube.com/watch?v=4UltKCnnnTA).
 
 
 Goals:
@@ -14,7 +13,7 @@ PROCESS
 
 1. First, the most importamnt step in a cleaning data process - to make a duplicate to the original data file. 
 
-```sql
+```
 SELECT *
 INTO layoffs_staging
 FROM [Portfolio Project]..layoffs;
