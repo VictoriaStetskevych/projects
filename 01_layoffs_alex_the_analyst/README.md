@@ -14,3 +14,11 @@ PROCESS
 
 1. First, the most importamnt step in a cleaning data process - to make a duplicate to the original data file. 
 
+```sql
+SELECT *
+INTO layoffs_staging
+FROM [Portfolio Project]..layoffs;
+```
+
+
+
