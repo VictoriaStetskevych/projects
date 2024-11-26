@@ -19,7 +19,7 @@ This is the way, how I was able to upload the file.
 > Select Database > Tasks > Import Data > Next > Data source = Flat file source > Select CSV file > Locale = English (United States)  > Next > Destination > Microsoft OLE DB Provider for SQL Server > Next > Next > Finish
 
 
-2. The most important step in a cleaning data process - to make a duplicate to the original data file. 
+2. The most important step in a cleaning data process - to make a duplicate to the original data file. Never work with a raw data file!
 
 ```sql
 SELECT *
@@ -27,10 +27,10 @@ INTO layoffs_staging
 FROM [Portfolio Project]..layoffs;
 ```
 
-During cleaning data I was making other duplicates, especially before updating data.
+During this project I was making other duplicates, especially before updating data. Just to make sure I have back ups, and I have last updated version of a file.
 
 3. Finding and removing duplicates.
-For this task we are going to use CTE in SQL to group and filter data.
+For this task we are going to use CTE to group and filter data.
 
 ```sql
 WITH duplicate_cte as
@@ -46,5 +46,27 @@ SELECT *
 FROM duplicate_cte
 WHERE row_number > 1;
 ```
-Result:
-!()
+Result: 5 duplicate rows that need to be delete:
+![](https://raw.githubusercontent.com/VictoriaStetskevych/projects_from_internet/refs/heads/main/01_layoffs_alex_the_analyst/images/01_duplicates.png)
+
+After finding duplicate rows, the next step is to delete them.
+```sql
+WITH duplicate_cte as
+(
+SELECT *,
+       ROW_NUMBER() OVER (
+           PARTITION BY company, location, industry, total_laid_off, percentage_laid_off, date, stage, country, funds_raised_millions
+           ORDER BY date DESC
+       ) AS row_number
+FROM layoffs_staging
+)
+DELETE FROM duplicate_cte
+WHERE row_number > 1;
+```
+Result after executing a query.
+![](https://raw.githubusercontent.com/VictoriaStetskevych/projects_from_internet/refs/heads/main/01_layoffs_alex_the_analyst/images/02_deleted_duplicates.png)
+
+4. Standardizing data
+
+During this part of a project we need to make data consistent.
+
