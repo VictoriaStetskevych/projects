@@ -68,7 +68,7 @@ DELETE FROM duplicate_cte
 WHERE row_number > 1;
 ```
 Result after executing a query.
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects_from_internet/refs/heads/main/01_layoffs_alex_the_analyst/images/02_deleted_dulicates.png)
+![](https://raw.githubusercontent.com/VictoriaStetskevych/projects_from_internet/refs/heads/main/01_layoffs_alex_the_analyst/images/02_dulicates_fixed.png)
 
 4. ## Standardizing data
 
