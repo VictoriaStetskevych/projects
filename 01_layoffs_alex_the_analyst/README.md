@@ -31,7 +31,7 @@ INTO layoffs_staging
 FROM [Portfolio Project]..layoffs;
 ```
 
-During this project I was making other duplicates, especially before updating data. Just to make sure I have back ups, and I have last updated version of a file.
+During this project I was making other duplicates, especially before updating data. Just to make sure I have back ups, and I have a last updated version of a file.
 
 ## 3. Finding and removing duplicates.
 For this task we are going to use CTE to group and filter data.
@@ -82,7 +82,7 @@ FROM layoffs_staging2
 Result: there are 2 companies that have extra space at the beginning. 
 ![](https://raw.githubusercontent.com/VictoriaStetskevych/projects_from_internet/refs/heads/main/01_layoffs_alex_the_analyst/images/03_company.png)
 
-To fix it we are going to use a TRIM function to delete spaces and we wll update data file.
+To fix it we are going to use a TRIM function to delete spaces and we will update data file.
 ```sql
 UPDATE layoffs_staging2
 SET company = TRIM(company)
