@@ -64,9 +64,35 @@ DELETE FROM duplicate_cte
 WHERE row_number > 1;
 ```
 Result after executing a query.
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects_from_internet/refs/heads/main/01_layoffs_alex_the_analyst/images/02_deleted_duplicates.png)
+![](https://raw.githubusercontent.com/VictoriaStetskevych/projects_from_internet/refs/heads/main/01_layoffs_alex_the_analyst/images/02_deleted_dulicates.png)
 
 4. Standardizing data
 
 During this part of a project we need to make data consistent.
+
+First of all we run query to see names of all companies and to check if there are any inconsistencies. 
+```sql
+SELECT DISTINCT (company)
+FROM layoffs_staging2
+```
+Result: there are 2 companies that have extra space at the beginning. 
+![](https://raw.githubusercontent.com/VictoriaStetskevych/projects_from_internet/refs/heads/main/01_layoffs_alex_the_analyst/images/03_companies.png)
+
+Remove extra spaces using TRIM function and update data file.
+```sql
+UPDATE layoffs_staging2
+SET company = TRIM(company)
+```
+Result: 
+![](https://raw.githubusercontent.com/VictoriaStetskevych/projects_from_internet/refs/heads/main/01_layoffs_alex_the_analyst/images/04_companies_fixed.png)
+
+While checking names of industries we noticed that "Crypto" industry represented by 3 different names and there are 'Blank'(no data) industry cells 
+```sql
+SELECT DISTINCT (industry)
+FROM layoffs_staging2
+ORDER by 1
+``` 
+Result
+Result: 
+![](https://raw.githubusercontent.com/VictoriaStetskevych/projects_from_internet/refs/heads/main/01_layoffs_alex_the_analyst/images/05_industries.png)
 
