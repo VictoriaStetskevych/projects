@@ -97,5 +97,6 @@ FROM layoffs_staging2
 ORDER by 1
 ``` 
 Result:
+
 ![](https://raw.githubusercontent.com/VictoriaStetskevych/projects_from_internet/refs/heads/main/01_layoffs_alex_the_analyst/images/05_industries.png)
 
