@@ -1,4 +1,4 @@
-## Cleaning data in Microsoft SQL server ##
+# Cleaning data in Microsoft SQL server ##
  
 This project was made using Alex Freberg's YouTube [tutorial](https://www.youtube.com/watch?v=4UltKCnnnTA).
 
@@ -19,7 +19,7 @@ This is the way, how I was able to upload the file.
 > [!TIP]
 > Select Database > Tasks > Import Data > Next > Data source = Flat file source > Select CSV file > Locale = English (United States)  > Next > Destination > Microsoft OLE DB Provider for SQL Server > Next > Next > Finish
 
-2. ## Make a duplicate to the original data file
+## 2. Make a duplicate to the original data file
 
 This is the most important step in a cleaning data process  
 > [!IMPORTANT]
@@ -33,7 +33,7 @@ FROM [Portfolio Project]..layoffs;
 
 During this project I was making other duplicates, especially before updating data. Just to make sure I have back ups, and I have last updated version of a file.
 
-3. ## Finding and removing duplicates.
+## 3. Finding and removing duplicates.
 For this task we are going to use CTE to group and filter data.
 
 ```sql
@@ -70,7 +70,7 @@ WHERE row_number > 1;
 Result after executing a query.
 ![](https://raw.githubusercontent.com/VictoriaStetskevych/projects_from_internet/refs/heads/main/01_layoffs_alex_the_analyst/images/02_dulicates_fixed.png)
 
-4. ## Standardizing data
+## 4. Standardizing data
 
 During this part of a project we need to make data consistent.
 
