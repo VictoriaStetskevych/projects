@@ -67,7 +67,7 @@ FROM layoffs_staging
 DELETE FROM duplicate_cte
 WHERE row_number > 1;
 ```
-Result after executing a query.
+Result: all duplicate rows are deleted.
 ![](https://raw.githubusercontent.com/VictoriaStetskevych/projects_from_internet/refs/heads/main/01_layoffs_alex_the_analyst/images/02_dulicates_fixed.png)
 
 ## 4. Standardizing data
