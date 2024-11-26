@@ -1,5 +1,5 @@
-# projects_from_internet
- This is a folder with projects from Internet that I made.
+# Projects from Internet
 
-1. Cleaning data in Microsoft SQL Server - from Alex the analyst - in progress.
+This is a folder with projects from Internet that I made.
 
+1. [Cleaning data in Microsoft SQL Server](https://github.com/VictoriaStetskevych/projects_from_internet/tree/main/01_layoffs_alex_the_analyst) - layoffs from Alex the analyst - in progress.
