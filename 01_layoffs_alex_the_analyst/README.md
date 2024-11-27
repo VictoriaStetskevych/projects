@@ -156,5 +156,4 @@ WHERE TRY_CAST(date AS DATE) IS NOT NULL;
 -- permanently change the data type of the column. The column will be recognized as a DATE type in the database schema.
 ALTER TABLE layoffs_staging2
 ALTER COLUMN date DATE;
-
 ```
