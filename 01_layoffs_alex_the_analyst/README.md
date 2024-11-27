@@ -123,10 +123,10 @@ With the next step I change the 'United States' country name and update the data
  SET country = TRIM(TRAILING '.' FROM country)
  WHERE country LIKE 'United States%';
 ``` 
-Result:
+Result:                                 
 ![](https://raw.githubusercontent.com/VictoriaStetskevych/projects_from_internet/refs/heads/main/01_layoffs_alex_the_analyst/images/07_country_fixed.png)
 
-There is also a 'Blank' cell in a country column. I'm going to fix it in this project in a step #3 while populating cells. 
+There is also a 'Blank' cell in a country column. I'm going to fix it in this project in a step #5 while populating cells. 
 
 
 
