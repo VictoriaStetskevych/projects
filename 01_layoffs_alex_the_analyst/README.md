@@ -114,7 +114,7 @@ SELECT DISTINCT country
 FROM layoffs_staging2
 ORDER by 1;
 ```
-Result:
+Result:                             
 ![](https://raw.githubusercontent.com/VictoriaStetskevych/projects_from_internet/refs/heads/main/01_layoffs_alex_the_analyst/images/07_country.png)
 
 With the next step I change the 'United States' country name and update the data file. 
@@ -128,5 +128,33 @@ Result:
 
 There is also a 'Blank' cell in a country column. I'm going to fix it in this project in a step #5 while populating cells. 
 
+- Changing data type.
+Right now all data in a date column represented as text format and I need to change it into date format.
+I'm going to make it in a couple steps.  
+```sql
+-- identify a NULL cell in a date column and assign a date type to it.
+SELECT date
+FROM layoffs_staging2
+WHERE TRY_CAST(date AS DATE) IS NULL;
 
+-- update date format for NULL cells in a data file 
+UPDATE layoffs_staging2
+SET date = NULL
+WHERE TRY_CAST(date AS DATE) IS NULL;
 
+-- create an additional column to check that the FORMAT and CAST formulas work properly 
+SELECT date,
+       FORMAT(CAST(date AS DATE), 'yyyy-MM-dd') AS formatted_date
+FROM layoffs_staging2
+WHERE TRY_CAST(date AS DATE) IS NOT NULL;
+
+-- update date format in a data file 
+UPDATE layoffs_staging2
+SET date = FORMAT(CAST(date AS DATE), 'yyyy-MM-dd') 
+WHERE TRY_CAST(date AS DATE) IS NOT NULL;
+
+-- permanently change the data type of the column. The column will be recognized as a DATE type in the database schema.
+ALTER TABLE layoffs_staging2
+ALTER COLUMN date DATE;
+
+```
