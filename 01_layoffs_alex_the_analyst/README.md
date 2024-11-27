@@ -124,7 +124,7 @@ With the next step I change the 'United States' country name and update the data
  WHERE country LIKE 'United States%';
 ``` 
 Result:                                 
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects_from_internet/refs/heads/main/01_layoffs_alex_the_analyst/images/07_country_fixed.png)
+![](https://raw.githubusercontent.com/VictoriaStetskevych/projects_from_internet/refs/heads/main/01_layoffs_alex_the_analyst/images/08_country_fixed.png)
 
 There is also a 'Blank' cell in a country column. I'm going to fix it in this project in a step #5 while populating cells. 
 
