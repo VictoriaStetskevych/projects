@@ -222,7 +222,7 @@ Result:
 As I can see, there are other rows with the same company names with filled "industry" cell.
 ![](https://raw.githubusercontent.com/VictoriaStetskevych/projects_from_internet/refs/heads/main/01_layoffs_alex_the_analyst/images/11_industry_missing_result.png)
 
-WIth the next query I'll populate blank/NULL cells in the "industry" column and update the data file 
+With the next query I'll populate blank/NULL cells in the "industry" column and update the data file 
 ``` sql
 UPDATE t1
 SET t1.industry = t2.industry
@@ -232,7 +232,7 @@ ON t1.company = t2.company
 WHERE (t1.industry IS NULL OR t1.industry = '')
   AND t2.industry IS NOT NULL;
 ```
-After this step only on company "Bally's Interactive" has a NULL in an "industry" column and we don't have any data to fill it.
+After this step only one the "Bally's Interactive" company has a NULL in an "industry" column and we don't have any data to fill it.
 The only thing I'm going to do is to update the data file one more time to set a proper format to this NULL cell as it was a 'NULL' text format.
 ```sql
 UPDATE layoffs_staging4
