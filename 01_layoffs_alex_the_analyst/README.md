@@ -239,7 +239,7 @@ UPDATE layoffs_staging4
 SET industry = NULL
 WHERE industry = 'NULL';
 ```
-## 6. Delete the data with nulls that I couldn't populate.
+## 6. Delete the data with NULLs that I couldn't populate.
 
 This is going to be the last step in the cleaning process.
 There are some cells that have NULLS and I can't populate them. So, with my next query I will delete this data and update the data file .
