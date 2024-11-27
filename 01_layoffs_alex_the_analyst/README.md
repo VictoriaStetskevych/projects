@@ -34,7 +34,7 @@ FROM [Portfolio Project]..layoffs;
 During this project I was making other duplicates, especially before updating data. Just to make sure I have back ups, and I have a last updated version of a file.
 
 ## 3. Finding and removing duplicates.
-For this task we are going to use CTE to group and filter data.
+For this task I am going to use CTE to group and filter data.
 
 ```sql
 WITH duplicate_cte as
@@ -72,9 +72,9 @@ Result: all duplicate rows were deleted.
 
 ## 4. Standardizing data
 
-During this part of a project we need to make data consistent.
+During this part of a project I make data consistent.
 
-- First of all we run query to see names of all companies and to check if there are any inconsistencies. 
+- First of all I run query to see names of all companies and to check if there are any inconsistencies. 
 ```sql
 SELECT DISTINCT (company)
 FROM layoffs_staging2
@@ -82,7 +82,7 @@ FROM layoffs_staging2
 Result: there are 2 companies that have extra space at the beginning. 
 ![](https://raw.githubusercontent.com/VictoriaStetskevych/projects_from_internet/refs/heads/main/01_layoffs_alex_the_analyst/images/03_company.png)
 
-To fix it we are going to use a TRIM function to delete spaces and we will update data file.
+To fix it I use a TRIM function to delete spaces and after that I update my data file.
 ```sql
 UPDATE layoffs_staging2
 SET company = TRIM(company)
@@ -90,7 +90,7 @@ SET company = TRIM(company)
 Result: no more companies with extra spaces in names
 ![](https://raw.githubusercontent.com/VictoriaStetskevych/projects_from_internet/refs/heads/main/01_layoffs_alex_the_analyst/images/04_company_fixed.png)
 
-- While checking names of industries we noticed that "Crypto" industry represented by 3 different names and there are 'Blank'(no data) industry cells 
+- While checking names of industries I noticed that "Crypto" industry represented by 3 different names and there are 'Blank'(no data) industry cells 
 ```sql
 SELECT DISTINCT (industry)
 FROM layoffs_staging2
@@ -98,4 +98,35 @@ ORDER by 1
 ``` 
 Result:                           
 ![](https://raw.githubusercontent.com/VictoriaStetskevych/projects_from_internet/refs/heads/main/01_layoffs_alex_the_analyst/images/05_industries.png)
+
+To fix it I use the next query anf update my data file.
+```sql
+UPDATE layoffs_staging2
+SET industry = 'Crypto'
+WHERE industry LIKE 'Crypto%';
+```
+Result:                           
+![](https://raw.githubusercontent.com/VictoriaStetskevych/projects_from_internet/refs/heads/main/01_layoffs_alex_the_analyst/images/06_industries_fixed.png)
+
+- While checking names of countries I noticed that 'United States' written as 'United States.'(with a dot). 
+```sql
+SELECT DISTINCT country
+FROM layoffs_staging2
+ORDER by 1;
+```
+Result:
+![](https://raw.githubusercontent.com/VictoriaStetskevych/projects_from_internet/refs/heads/main/01_layoffs_alex_the_analyst/images/07_country.png)
+
+With the next step I change the 'United States' country name and update the data file. 
+```sql
+ UPDATE layoffs_staging2
+ SET country = TRIM(TRAILING '.' FROM country)
+ WHERE country LIKE 'United States%';
+``` 
+Result:
+![](https://raw.githubusercontent.com/VictoriaStetskevych/projects_from_internet/refs/heads/main/01_layoffs_alex_the_analyst/images/07_country_fixed.png)
+
+There is also a 'Blank' cell in a country column. I'm going to fix it in this project in a step #3 while populating cells. 
+
+
 
