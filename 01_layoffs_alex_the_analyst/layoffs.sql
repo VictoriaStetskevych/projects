@@ -228,6 +228,8 @@ OR industry ='';
 SELECT *
 FROM layoffs_staging4
 WHERE company = 'Juul';
+
+
 -- there are 2 rows and only 1 doesn't have industry.
 
 SELECT *
@@ -249,7 +251,7 @@ WHERE (t1.industry IS NULL OR t1.industry = '')
 
 UPDATE layoffs_staging4
 SET industry = NULL
-WHERE industry = '';
+WHERE industry = 'NULL';
 
 -- Deleting NULL and blank values that we don't need for the analysis.
 SELECT *

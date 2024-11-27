@@ -157,3 +157,108 @@ WHERE TRY_CAST(date AS DATE) IS NOT NULL;
 ALTER TABLE layoffs_staging2
 ALTER COLUMN date DATE;
 ```
+
+Using the same method I changed data type to "total_laid_off" and "percentage_laid_off" columns.
+```sql
+-- identify total_laid_off with NULL ad change a data type 
+SELECT *
+FROM layoffs_staging3
+WHERE TRY_CAST(total_laid_off AS numeric) IS NULL;
+
+-- Update data file.
+UPDATE layoffs_staging3
+SET total_laid_off = NULL
+WHERE TRY_CAST(total_laid_off AS numeric) IS NULL;
+
+-- change data type to numeric in a total_laid_off column
+
+ALTER TABLE layoffs_staging3
+ALTER COLUMN total_laid_off numeric;
+
+-- for percentage_laid_off I am going to set decimal data type
+-- identify percentage_laid_off with NULL and change a data type.
+SELECT *
+FROM layoffs_staging3
+WHERE TRY_CAST(percentage_laid_off AS decimal(10,4)) IS NULL;
+
+-- Update data file
+UPDATE layoffs_staging3
+SET percentage_laid_off = NULL
+WHERE TRY_CAST(percentage_laid_off AS decimal(10,4)) IS NULL;
+
+-- change data type to date in a percentage_laid_off column
+
+ALTER TABLE layoffs_staging3
+ALTER COLUMN percentage_laid_off decimal(10,4);
+```
+Result:
+![](https://raw.githubusercontent.com/VictoriaStetskevych/projects_from_internet/refs/heads/main/01_layoffs_alex_the_analyst/images/09_data_type_fixed.png)
+
+## 5. Fill in blank/NULL cells 
+
+During cleaning data I noticed that there are blank cells in the "industry" column.
+I need to try to fill them. For this task I need check what companies have missing data in the "industry" column, and for this task I use the next query
+```sql
+SELECT *
+FROM layoffs_staging3
+WHERE industry= 'NULL'
+OR industry = '';
+```
+Result:
+There are 4 rows with missing data in the "industry" column
+![](https://raw.githubusercontent.com/VictoriaStetskevych/projects_from_internet/refs/heads/main/01_layoffs_alex_the_analyst/images/10_industry_missing.png)
+
+To fill these cells I will use a JOIN function to check if there are the same companies with filled "industry" cells in other rows. 
+```sql
+SELECT *
+FROM layoffs_staging2 t1
+JOIN layoffs_staging2 t2
+	ON t1.company = t2.company
+	AND t1.location = t2.location
+WHERE (t1.industry IS NULL OR t1.industry = '')
+AND t2.industry IS NOT NULL
+```
+Result:
+As I can see, there are other rows with the same company names with filled "industry" cell.
+![](https://raw.githubusercontent.com/VictoriaStetskevych/projects_from_internet/refs/heads/main/01_layoffs_alex_the_analyst/images/11_industry_missing_result.png)
+
+WIth the next query I'll populate blank/NULL cells in the "industry" column and update the data file 
+``` sql
+UPDATE t1
+SET t1.industry = t2.industry
+FROM layoffs_staging4 AS t1
+INNER JOIN layoffs_staging4 AS t2
+ON t1.company = t2.company
+WHERE (t1.industry IS NULL OR t1.industry = '')
+  AND t2.industry IS NOT NULL;
+```
+After this step only on company "Bally's Interactive" has a NULL in an "industry" column and we don't have any data to fill it.
+The only thing I'm going to do is to update the data file one more time to set a proper format to this NULL cell as it was a 'NULL' text format.
+```sql
+UPDATE layoffs_staging4
+SET industry = NULL
+WHERE industry = 'NULL';
+```
+## 6. Delete the data with nulls that I couldn't populate.
+
+This is going to be the last step in the cleaning process.
+There are some cells that have NULLS and I can't populate them. So, with my next query I will delete this data and update the data file .
+```sql
+SELECT *
+FROM layoffs_staging4
+WHERE total_laid_off is NULL
+AND percentage_laid_off is NULL;
+
+DELETE 
+FROM layoffs_staging4
+WHERE total_laid_off is NULL
+AND percentage_laid_off is NULL;
+```
+
+This is the end of the cleaning process. 
+Let's check with this final query how the data is look like after cleaning.
+```sql
+SELECT *
+FROM layoffs_staging4
+```
+
