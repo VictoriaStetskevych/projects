@@ -108,7 +108,7 @@ WHERE industry LIKE 'Crypto%';
 Result:                           
 ![](https://raw.githubusercontent.com/VictoriaStetskevych/projects_from_internet/refs/heads/main/01_layoffs_alex_the_analyst/images/06_industries_fixed.png)
 
-- While checking names of countries I noticed that 'United States' written as 'United States.'(with a dot). 
+- While checking names of countries I noticed that 'United States' is written as 'United States.'(with a dot). 
 ```sql
 SELECT DISTINCT country
 FROM layoffs_staging2
