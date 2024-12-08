@@ -7,7 +7,7 @@ Goals:
 - Remove duplicates
 - Standardize the data
 - Populate the null or blank cells.
-- Delete unusual data with nulls that we couldn't populate.
+- Delete data with nulls that we couldn't populate.
 
 # PROCESS
 
