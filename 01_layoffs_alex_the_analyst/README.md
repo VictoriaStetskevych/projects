@@ -269,4 +269,4 @@ If you will need to save a cleaned data as a new .csv file, you need to follow n
 - select a location where you want to save your file
 - click Save.
 
-layoffs_cleaned.csv file
+[layoffs_cleaned.csv](https://github.com/VictoriaStetskevych/projects/blob/main/01_layoffs_alex_the_analyst/layoffs_cleaned.csv) file
