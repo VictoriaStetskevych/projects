@@ -261,4 +261,12 @@ Let's check with this final query how the data is look like after cleaning.
 SELECT *
 FROM layoffs_staging4
 ```
+If you will need to save a cleaned data as a new .csv file, you need to follow next steps:
+- write query
+- execute the query as usual
+- right click anywhere in the result set grid, then select 'Save Results As'
+- choose 'File name' and 'Save as type (.csv)'
+- select a location where you want to save your file
+- click Save.
 
+layoffs_cleaned.csv file
