@@ -131,3 +131,20 @@ Insert > Chart > Line
 
 To make a Dashboard I added a new sheet, and renamed it as 'Dashboard'.<br> 
 In this new sheet I added all pivot tables and charts that I made.
+I rearranged all tables, charts to look nice, understandable, readable.
+
+I added slicers to my charts to have a possibility to choose different parameters.<br>
+- Select a chart<br>
+- Data > Add a slicer<br>
+- Choose a Data Range (full data range)<br>
+- Choose a Column. <br>
+This slicer is going to be an interactive filter to all charts.
+
+I added 4 slicers to have a variety of different filters:<br>
+- Gender<br>
+- Marital Status <br>
+- Amount of cars <br>
+- Age Brackets <br>
+
+This is the way my dashboard looks. <br>
+ ![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/02_bike_sales_alex_the_analyst/images/13_dashboards.png)
