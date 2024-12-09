@@ -18,8 +18,8 @@ The tasks for this project are:
 > [!TIP]
 > Always make a duplicate! Never work with an original file! .
  
- - I made a copy of the original (raw) data file 
- (Right click on a sheet > Duplicate) 
+ - I made a copy of the original (raw) data 
+ (Right click on a sheet > Duplicate).
  - Renamed a new sheet as a "working_sheet" (Double click on a sheet's name).
  Since then, I was working with a duplicate .
 
