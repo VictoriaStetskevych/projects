@@ -43,38 +43,38 @@ Result '26 duplicate rows found and removed':
 
 ## 4. Cleaning data
 
-**Columns B and C** ('Marital Status' and 'Gender') use the same type of letters to represent different meaning of data >
-For example: Letter M in both these columns represents 'M'(male) and 'M'(married).
+**Columns B and C** ('Marital Status' and 'Gender') use the same letter to represent different meaning of data.<br>
+For example: Letter M in both these columns represents 'M'(male) and 'M'(married).<br>
 So, I changed how the data is represented in these two columns:
 
-Marital status: M - Married, S - Single.
-Select **Column B 'Marital Status'** > Ctrl+H ('Find and Replace')
-Find M > Replace with Married
-Find S > Replace with Single
+**Column B 'Marital Status'** (M - Married, S - Single).<br>
+Select Column B 'Marital Status' > Ctrl+H ('Find and Replace')<br>
+Find M > Replace with Married<br>
+Find S > Replace with Single<br>
 Replace All
 
 ![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/02_bike_sales_alex_the_analyst/images/05_colunm_b.png)
 
-I used the same method for the column C.
-Gender: M - Male, F - Female.
-Select **Column C 'Gender'** > Ctrl+H ('Find and Replace')
-Find M > Replace with Male
-Find F > Replace with Female
+I used the same method for the **Column C 'Gender'**: M - Male, F - Female.<br>
+Select Column C 'Gender' > Ctrl+H ('Find and Replace')<br>
+Find M > Replace with Male<br>
+Find F > Replace with Female<br>
 Replace All
 
-**Column D 'Income'**.
+**Column D 'Income'**.<br>
 I didn't do any changes, just removed decimals, as all numbers in this column are whole numbers.
 
-**Column J 'Commute Distance'**.
+**Column J 'Commute Distance'**.<br>
 I changed the name '10+ Miles' to 'More than 10 Miles' (Ctrl+H), as this step would help me to properly order data in Pivot Tables.
 
-**Column L 'Age'** has age data. 
+**Column L 'Age'**.<br> 
 All ages represented individually, not as a range.
-So, I created a new column 'Age Brackets' and divided all people in my data in three different groups:
-< 31 - Adolescents
-31 - 54 - Middle Age
-> 55 - Old
-To do that in a new column 'Age Brackets' I added the next formula:
+So, I created a new column 'Age Brackets' and divided all people in my data in three different groups:<br>
+\< 31 - Adolescents<br>
+31 - 54 - Middle Age<br>
+\>55 - Old<br>
+
+To do that in a new column 'Age Brackets' I added the next formula:<br>
 =IF(L2>54, "Old", IF(L2>=31, "Middle Age", IF(L2<31, "Adolescents", "Invalid")))
 
 ![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/02_bike_sales_alex_the_analyst/images/06_age_brackets.png)
@@ -98,7 +98,7 @@ Values > Income > Summarize by AVERAGE<br>
 ![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/02_bike_sales_alex_the_analyst/images/09_pivot_table_1.png)
 
 I added a chart for that table and some additions to it to make the data more readable <br>
-Insert > Chart > Column
+Insert > Chart > Column<br>
 ![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/02_bike_sales_alex_the_analyst/images/10_pivot_table_2.png)
 
 **Pivot Table 2.**
@@ -110,7 +110,7 @@ Rows > Commute Distance<br>
 Columns > Purchased Bikes<br>
 Values > Purchased Bikes
 
-I also added a chart for that table and some additions to it to make the data more readable 
+I also added a chart for that table and some additions to it to make the data more readable<br> 
 Insert > Chart > Line<br>
 ![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/02_bike_sales_alex_the_analyst/images/11_pivot_table_3.png)
 
@@ -123,6 +123,11 @@ Rows > Age Brackets<br>
 Columns > Purchased Bikes<br>
 Values > Purchased Bikes<br>
 
-Now I add a chart for that table and add some additions to it to make the data more readable 
+I also added a chart for the third table and added some additions to it to make the data more readable.<br> 
 Insert > Chart > Line 
 ![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/02_bike_sales_alex_the_analyst/images/12_pivot_table_4.png)
+
+## 5. Dashboard
+
+To make a Dashboard I added a new sheet, and renamed it as 'Dashboard'.<br> 
+In this new sheet I added all pivot tables and charts that I made.
