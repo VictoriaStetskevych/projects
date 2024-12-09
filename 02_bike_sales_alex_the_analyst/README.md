@@ -6,6 +6,8 @@ The tasks for this project are:
  - create a dashboard using Pivot Tables
 
  I made this project in Google Spreadsheets.
+ This is the final result:
+ ![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/02_bike_sales_alex_the_analyst/images/13_dashboards.png)
 
 # PROCESS
 
@@ -28,7 +30,7 @@ Though the menu: Data > Create a filter
 ![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/02_bike_sales_alex_the_analyst/images/02_filter.png)
 
 ## 3. Remove duplicates.
-I do this with following steps:
+To remove duplicates I did following steps:
     1. Select data range (Ctrl+A)
     2. Data > Data cleanup > Remove duplicates 
     3. Check the box 'Data has header row'.
@@ -36,16 +38,17 @@ I do this with following steps:
 
 ![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/02_bike_sales_alex_the_analyst/images/03_remove_duplicates.png)
 
-Result:
+Result '26 duplicate rows found and removed':
 ![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/02_bike_sales_alex_the_analyst/images/04_remove_duplicates_result.png)
 
 ## 4. Cleaning data
 
-Columns B and C ('Marital Status' and 'Gender') use the same type of letters to represent different data >
+**Columns B and C** ('Marital Status' and 'Gender') use the same type of letters to represent different meaning of data >
 For example: Letter M in both these columns represents 'M'(male) and 'M'(married).
-So, I'm going to change how the data represents in these two columns:
+So, I changed how the data is represented in these two columns:
 
-Select Column B 'Marital Status' > Ctrl+H ('Find and Replace')
+Marital status: M - Married, S - Single.
+Select **Column B 'Marital Status'** > Ctrl+H ('Find and Replace')
 Find M > Replace with Married
 Find S > Replace with Single
 Replace All
@@ -53,66 +56,72 @@ Replace All
 ![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/02_bike_sales_alex_the_analyst/images/05_colunm_b.png)
 
 I used the same method for the column C.
-Select Column C 'Gender' > Ctrl+H ('Find and Replace')
+Gender: M - Male, F - Female.
+Select **Column C 'Gender'** > Ctrl+H ('Find and Replace')
 Find M > Replace with Male
 Find F > Replace with Female
 Replace All
 
-Column D 'Income'.
-I'm not going to do any changes, only remove decimals as all numbers in this column are whole numbers.
+**Column D 'Income'**.
+I didn't do any changes, just removed decimals, as all numbers in this column are whole numbers.
 
-Column J 'Commute Distance'.
-I'm going to change the name '10+ Miles' to 'More than 10 Miles' (Ctrl+H), as I'll help me to order properly data in Pivot Tables.
+**Column J 'Commute Distance'**.
+I changed the name '10+ Miles' to 'More than 10 Miles' (Ctrl+H), as this step would help me to properly order data in Pivot Tables.
 
-Column L 'Age' has age data. 
+**Column L 'Age'** has age data. 
 All ages represented individually, not as a range.
-So, I'm going to create a new column 'Age Brackets' and divide all people in my data in different groups by age:
+So, I created a new column 'Age Brackets' and divided all people in my data in three different groups:
 < 31 - Adolescents
 31 - 54 - Middle Age
 > 55 - Old
-To do that in a new column 'Age Brackets' I will add the next formula:
+To do that in a new column 'Age Brackets' I added the next formula:
 =IF(L2>54, "Old", IF(L2>=31, "Middle Age", IF(L2<31, "Adolescents", "Invalid")))
 
 ![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/02_bike_sales_alex_the_analyst/images/06_age_brackets.png)
 
 ## 5. Pivot table
 
-I add a pivot table with following steps:
-Insert > Pivot Table > Select a data range (Ctrl+A) > Insert to New Sheet
+**Pivot Table 1.**
+
+I added pivot tables with following steps:<br>
+Insert > Pivot Table > Select a data range (Ctrl+A) > Insert to New Sheet.
 
 ![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/02_bike_sales_alex_the_analyst/images/07_add_pivot_table.png)
 Result:
 ![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/02_bike_sales_alex_the_analyst/images/08_pivot_table.png)
 
 
-I add next settings for a first pivot table:
-Rows > Gender
-Columns > Purchased Bikes
-Values > Income > Summarize by AVERAGE
+I added next settings for a first pivot table:<br>
+Rows > Gender<br>
+Columns > Purchased Bikes<br>
+Values > Income > Summarize by AVERAGE<br>
 ![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/02_bike_sales_alex_the_analyst/images/09_pivot_table_1.png)
 
-Now I add a chart for that table and add some additions to it to make the data more readable 
+I added a chart for that table and some additions to it to make the data more readable <br>
 Insert > Chart > Column
 ![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/02_bike_sales_alex_the_analyst/images/10_pivot_table_2.png)
 
+**Pivot Table 2.**
 
-Using the same steps I add a second pivot table into the same sheet.
+Using the same steps as before I added a second pivot table into the same sheet.
 
-I add next settings for a second pivot table:
-Rows > Commute Distance
-Columns > Purchased Bikes
+I added next settings for a second pivot table:<br>
+Rows > Commute Distance<br>
+Columns > Purchased Bikes<br>
 Values > Purchased Bikes
 
-Now I add a chart for that table and add some additions to it to make the data more readable 
-Insert > Chart > Line
+I also added a chart for that table and some additions to it to make the data more readable 
+Insert > Chart > Line<br>
 ![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/02_bike_sales_alex_the_analyst/images/11_pivot_table_3.png)
 
-Using the same steps I add a third pivot table into the same sheet.
+**Pivot Table 3.**
 
-I add next settings for a second pivot table:
-Rows > Age Brackets
-Columns > Purchased Bikes
-Values > Purchased Bikes
+Using the same steps as before I added a third pivot table into the same sheet.
+
+I added next settings for a second pivot table:<br>
+Rows > Age Brackets<br>
+Columns > Purchased Bikes<br>
+Values > Purchased Bikes<br>
 
 Now I add a chart for that table and add some additions to it to make the data more readable 
 Insert > Chart > Line 

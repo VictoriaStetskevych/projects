@@ -1,0 +1,21 @@
+Movieid,MovieName,Genre1,Genre2,Genre3,Budget,Revenue,US_Release,JapanReleaseDate,Duration,Director,Composer,writer
+20,When Marnie Was There,animation,drama,,115000000,34949567,7/26/2015,7/14/2014,1:43:00 AM,Hiromasa Yonebayashi,Takatsugu Muramatsu,Joan G. Robinson
+19,The Tale of The Princess Kaguya,animation,drama,fantasy,49300000,24366656,10/17/2014,11/23/2013,2:17:00 AM,Isao Takahata,Joe Hisaishi,Riko Sakaguchi
+18,The Wind Rises,animation,drama,romance,30000000,117932401,2/21/2014,7/20/2013,2:06:00 AM,Hayao Miyazaki,Joe Hisaishi,Tatsuo Hori
+16,The Secret World of Arrietty,animation,fantasy,family,23000000,149480483,2/17/2012,7/17/2010,1:34:00 AM,Hiromasa Yonebayashi,Cécile Corbel,Mary Norton
+15,Ponyo,animation,fantasy,family,34000000,202404009,8/14/2009,7/19/2008,1:40:00 AM,Hayao Miyazaki,Joe Hisaishi,Hayao Miyazaki
+8,Ocean Waves,animation,drama,romance,5000000,100000,12/28/2016,5/5/1993,1:12:00 AM,Tomomi Mochizuki,Shigeru Nagata,Kaori Nakamura
+14,Tales from Earthsea,animation,fantasy,adventure,22000000,68625104,,7/29/2006,1:55:00 AM,Goro Miyazaki,Tamiya Terashima,Goro Miyazaki/Keiko Niwa
+6,Only Yesterday,animation,drama,romance,2500000,473110,,7/20/1991,1:55:00 AM,Isao Takahata,Katz Hoshi,Isao Takahata
+12,Spirited Away,animation,fantasy,family,19000000,274925095,9/20/2002,7/20/2001,2:05:00 AM,Hayao Miyazaki,Joe Hisaishi,Hayao Miyazaki
+10,Whisper of the Heart,animation,drama,romance,7000000,34900000,3/7/2006,7/15/1995,1:51:00 AM,Yoshifumi Kondo,Yuji Nomi,Hayao Miyazaki
+3,Grave of the Fireflies,animation,drama,war,3700000,516962,7/26/1991,4/16/1988,1:29:00 AM,Isao Takahata,Michio Mamiya,Isao Takahata
+4,My Neighbor Totoro,animation,fantasy,family,3700000,41000000,7/13/1990,4/16/1988,1:26:00 AM,Hayao Miyazaki,Joe Hisaishi,Hayao Miyazaki
+11,Princess Mononoke,animation,fantasy,adventure,23500000,169000000,10/29/1999,7/12/1997,2:14:00 AM,Hayao Miyazaki,Joe Hisaishi,Hayao Miyazaki
+13,Howl`s Moving Castle,animation,fantasy,adventure,24000000,236049757,6/17/2005,11/20/2004,1:59:00 AM,Hayao Miyazaki,Joe Hisaishi,Hayao Miyazaki
+2,Castle in the Sky,animation,fantasy,adventure,3000000,15542039,3/24/1989,8/2/1986,2:05:00 AM,Hayao Miyazaki,Joe Hisaishi,Hayao Miyazaki
+5,Kiki`s Delivery Service,animation,fantasy,family,69000000,20500000,5/23/1998,7/29/1989,1:43:00 AM,Hayao Miyazaki,Joe Hisaishi,Hayao Miyazaki
+9,Pom Poko,animation,fantasy,adventure,12000000,44700000,4/21/1995,7/16/1994,1:59:00 AM,Isao Takahata,Shang Shang Typhoon,Isao Takahata
+7,Porco Rosso,animation,family,comedy,9200000,34100000,12/16/1994,7/18/1992,1:31:00 AM,Hayao Miyazaki,Joe Hisaishi,Hayao Miyazaki
+1,Nausicaä of the Valley of the Wind,animation,fantasy,adventure,500000,3301446,6/13/1985,3/11/1984,1:57:00 AM,Hayao Miyazaki,Joe Hisaishi,Hayao Miyazaki
+21,The Boy and the Heron,animation,adventure,,100000000,167000000,10/1/2023,7/14/2023,2:04:00 AM,Hayao Miyazaki,Joe Hisaishi,Hayao Miyazaki
