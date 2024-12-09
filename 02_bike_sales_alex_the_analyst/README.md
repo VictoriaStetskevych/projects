@@ -150,3 +150,5 @@ I added 4 slicers to have a variety of different filters:<br>
 
 This is the way my dashboard looks. <br>
  ![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/02_bike_sales_alex_the_analyst/images/13_dashboards.png)
+
+ This is the [link](https://docs.google.com/spreadsheets/d/16xFo5zaZq5X5NXIYclr6o-N8zQQ3IF8kVZw22ZesgZA/edit?usp=sharing) on a Google Sheet with this project.
