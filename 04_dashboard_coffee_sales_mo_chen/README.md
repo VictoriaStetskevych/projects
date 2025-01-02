@@ -7,7 +7,8 @@ The tasks for this project are:
  - create a dashboard using Pivot Tables.
 
 Result: a dashboard with a timeline, different slicers, and charts.<br>
------------------video
+
+![](https://github.com/VictoriaStetskevych/projects/raw/refs/heads/main/04_dashboard_coffee_sales_mo_chen/dashboard_coffee_sales_mo_chen.mp4)
 
  # PROCESS
 
