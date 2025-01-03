@@ -8,7 +8,7 @@ The tasks for this project are:
 
 Result: a dashboard with a timeline, different slicers, and charts.<br>
 
-https://github.com/user-attachments/assets/61aeca15-c861-445c-9508-11e39602b732
+[<video controls src="https://github.com/VictoriaStetskevych/projects/raw/refs/heads/main/04_dashboard_coffee_sales_mo_chen/dashboard_coffee_sales_mo_chen.mp4" title="Dashboard Coffee Sales"></video>](https://github.com/user-attachments/assets/61aeca15-c861-445c-9508-11e39602b732)
 
  # PROCESS
 
@@ -164,7 +164,7 @@ Click anywhere on a table > Insert > Pivot Table<br>
 
 <ins>To make dates to be grouped by year and month:<br></ins>
 
-<text>2. Right CLick > Group > Choose: Month and Year > OK<br>
+<text>2. Right Click > Group > Choose: Month and Year > OK<br>
 <text>3. Design <br>
 <text>4. Report Layout > Show in Tabular Form<br>
 <text>5. Grand Totals > Off for Rows and Columns<br>
@@ -209,13 +209,13 @@ Click anywhere on a table > Insert > Pivot Table<br>
 
 ## 4. Pivot table #2 'Sales by Country'
 
-I created a second pivot chart by copying the first one and changing parameters. (Press Ctrl + Drag a sheet)
-Rows: Country
-Values: Sales (Sum of Sales)
+I created a second pivot table by copying the first one and changing parameters. (Press Ctrl + Drag a sheet)<br>
+Rows: Country<br>
+Values: Sales (Sum of Sales)<br>
 
 Insert > Bar Chart
 
-I rearranged the order:
+I rearranged the order:<br>
 Pivot Table > Sort (Country) > More Sort Option > Ascending order (Sum of Sales)
 
 Formatted the 'Sales by Country' chart to look the same, as the previous chart. 
@@ -224,16 +224,16 @@ Formatted the 'Sales by Country' chart to look the same, as the previous chart.
 
 ## 5. Pivot table #3 'Top 5 Customers'
 
-I created a third pivot chart by copying the second one and changing parameters.(Press Ctrl + Drag a sheet)
-Rows: Customer Name
-Values: Sales (Sum of Sales)
+I created a third pivot table by copying the second one and changing parameters.(Press Ctrl + Drag a sheet)<br>
+Rows: Customer Name<br>
+Values: Sales (Sum of Sales)<br>
 
 Insert > Bar Chart
 
-To make only Top 5 Customers
+To make only Top 5 Customers<br>
 Pivot Table > Sort (Customer Name) > Value Filters > Top 10 > Change to Top 5 
 
-I rearranged the order:
+I rearranged the order:<br>
 Pivot Table > Sort (Customer Name) > More Sort Option > Ascending by Sum of Sales
 
 Formatted the 'Top 5 Customers' chart to look the same, as the previous charts. 
@@ -242,14 +242,14 @@ Formatted the 'Top 5 Customers' chart to look the same, as the previous charts.
 
 ## 6. Dashboard
 
-To make  dashboard I:<br>
+To make a dashboard I:<br>
 - added another sheet to the document,<br>
 - renamed it as 'Dashboard',<br>
 - inserted a shape (rectangle),<br>
 - added a text 'COFFEE SALES DASHBOARD' to the shape, aligned it, changed text color, and size<br>
 - added all charts and slicers from pivot tables to the dashboard (cut (Ctrl+X) > paste (Ctrl+V) )<br>
 - rearranged / adjust all charts and slicers on a dashboard to look readable and easy to understand<br>
-- made a connection between timeline, slicers and all charts
+- made a connection between timeline, slicers and all charts<br>
 Select timeline / slicer > Timeline / Slicer > Report Connections > Select all charts  <br>
 - Removed gridlines<br>
 View > Uncheck 'Gridlines' Checkbox<br>
@@ -257,4 +257,4 @@ View > Uncheck 'Gridlines' Checkbox<br>
 This is a final result of this project: <br>
 
 **Coffee Sales Dashboard:**<br>
-<video controls src="https://github.com/VictoriaStetskevych/projects/raw/refs/heads/main/04_dashboard_coffee_sales_mo_chen/dashboard_coffee_sales_mo_chen.mp4" title="Dashboard Coffee Sales"></video>
+[<video controls src="https://github.com/VictoriaStetskevych/projects/raw/refs/heads/main/04_dashboard_coffee_sales_mo_chen/dashboard_coffee_sales_mo_chen.mp4" title="Dashboard Coffee Sales"></video>](https://github.com/user-attachments/assets/61aeca15-c861-445c-9508-11e39602b732)
