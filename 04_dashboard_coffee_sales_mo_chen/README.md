@@ -261,31 +261,42 @@ This is a final result of this project: <br>
 [<video controls src="https://github.com/VictoriaStetskevych/projects/raw/refs/heads/main/04_dashboard_coffee_sales_mo_chen/dashboard_coffee_sales_mo_chen.mp4" title="Dashboard Coffee Sales"></video>](https://github.com/user-attachments/assets/61aeca15-c861-445c-9508-11e39602b732)
 
 P.S.
-Colors that I was using for this projects:
+Colors I used for this projects:
+
 <table>
-  <tr>
-    <td rowspan="9"><img src="https://github.com/VictoriaStetskevych/projects/blob/main/04_dashboard_coffee_sales_mo_chen/images/33_colors.png?raw=true" ></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>#F5F5F5</td>
-  </tr>
-  <tr>
-    <td>#58171D</td>
-  </tr>
-  <tr>
-    <td>#D86A7C</td>
-  </tr>
-  <tr>
-    <td>#FFB011</td>
-  </tr>
-   <tr>
-    <td>#54B2A9</td>
-  </tr>
-   <tr>
-    <td></td>
-  </tr>
-   <tr>
-    <td>#6F4E37</td>
-  </tr>
+   <thead>
+      <th>Color</th>
+      <th>Color #</th>
+      <th>Dashboard</th>
+   </thead>
+      <tr>
+         <td style="background-color:#F5F5F5"></td>
+         <td>#F5F5F5</td>
+         <td>background</td>
+      </tr>
+      <tr>
+         <td style="background-color:#58171D"></td>
+         <td>#58171D</td>
+         <td>Arabica</td>
+      </tr>
+      <tr>
+         <td style="background-color:#D86A7C"></td>
+         <td>#D86A7C</td>
+         <td>Excelsa</td>
+      </tr>
+      <tr>
+         <td style="background-color:#FFB011"></td>
+         <td>#FFB011</td>
+         <td>Robusta</td>
+      </tr>
+      <tr>
+         <td style="background-color:#54B2A9"></td>
+         <td>#54B2A9</td>
+         <td>Liberica</td>
+      </tr>
+            <tr>
+         <td style="background-color:#6F4E37"></td>
+         <td>#6F4E37</td>
+         <td>Timeline, slicers</td>
+      </tr>
 </table>
