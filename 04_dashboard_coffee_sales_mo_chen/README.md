@@ -270,18 +270,10 @@ Colors I used for this projects:
       <th>Dashboard</th>
    </thead>
       <tr>
-         <td>
-         <svg width="20" height="20">
-         <rect width="20" height="20" style="fill:#F5F5F5;">
-         </svg>
-         </td>
+         <td><img src="https://color-hex.org/colors/58171d.png">
+         <td>#58171D</td>
+         <td>Arabica</td>  
       </tr>
-      <tr>
-         <td>
-         <svg width="20" height="20">
-         <rect width="20" height="20" style="fill:#58171D;">
-         </svg>
-         </td>
       <tr>
          <td style="background-color:#58171D"></td>
          <td>#58171D</td>
