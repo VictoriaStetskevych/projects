@@ -257,4 +257,5 @@ View > Uncheck 'Gridlines' Checkbox<br>
 This is a final result of this project: <br>
 
 **Coffee Sales Dashboard:**<br>
+
 [<video controls src="https://github.com/VictoriaStetskevych/projects/raw/refs/heads/main/04_dashboard_coffee_sales_mo_chen/dashboard_coffee_sales_mo_chen.mp4" title="Dashboard Coffee Sales"></video>](https://github.com/user-attachments/assets/61aeca15-c861-445c-9508-11e39602b732)
