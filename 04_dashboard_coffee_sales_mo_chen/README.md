@@ -272,12 +272,16 @@ Colors I used for this projects:
       <tr>
          <td>
          <svg width="20" height="20">
-         <rect width="20" height="20" style="fill:#F5F5F5;" />
+         <rect width="20" height="20" style="fill:#F5F5F5;">
          </svg>
          </td>
-         <td>#F5F5F5</td>
-         <td>background</td>
       </tr>
+      <tr>
+         <td>
+         <svg width="20" height="20">
+         <rect width="20" height="20" style="fill:#58171D;">
+         </svg>
+         </td>
       <tr>
          <td style="background-color:#58171D"></td>
          <td>#58171D</td>
