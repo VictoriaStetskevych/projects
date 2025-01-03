@@ -269,35 +269,34 @@ Colors I used for this projects:
       <th>Color #</th>
       <th>Dashboard</th>
    </thead>
-      <tr>
-         <td><img src="https://color-hex.org/colors/58171d.png">
-         <td>#58171D</td>
-         <td>Arabica</td>  
-      </tr>
-      <tr>
-         <td style="background-color:#58171D"></td>
-         <td>#58171D</td>
-         <td>Arabica</td>
-      </tr>
-      <tr>
-         <td style="background-color:#D86A7C"></td>
-         <td>#D86A7C</td>
-         <td>Excelsa</td>
-      </tr>
-      <tr>
-         <td style="background-color:#FFB011"></td>
-         <td>#FFB011</td>
-         <td>Robusta</td>
-      </tr>
-      <tr>
-         <td style="background-color:#54B2A9"></td>
-         <td>#54B2A9</td>
-         <td>Liberica</td>
-      </tr>
-            <tr>
-         <td style="background-color:#6F4E37"></td>
+   <tr>
+      <td><img src="https://color-hex.org/colors/f5f5f5.png" style="width:100px; height:50px;"></td>
+      <td>#F5F5F5</td>
+      <td>Background</td>  
+   </tr>
+   <tr>
+      <td><img src="https://color-hex.org/colors/58171d.png" style="width:100px; height:50px;"></td>
+      <td>#58171D</td>
+      <td>Arabica</td>  
+   </tr>
+   <tr>
+      <td><img src="https://color-hex.org/colors/d86a7c.png" style="width:100px; height:50px;"></td>
+      <td>#D86A7C</td>
+      <td>Excelsa</td>  
+   </tr>
+   <tr>
+      <td><img src="https://color-hex.org/colors/ffb011.png" style="width:100px; height:50px;"></td>
+      <td>#FFB011</td>
+      <td>Robusta</td>  
+   </tr>
+   <tr>
+      <td><img src="https://color-hex.org/colors/54b2a9.png" style="width:100px; height:50px;"></td>
+      <td>#54B2A9</td>
+      <td>Liberica</td> 
+   </tr>
+   <tr>
+      <td><img src="https://color-hex.org/colors/6f4e37.png" style="width:100px; height:50px;"></td>
          <td>#6F4E37</td>
          <td>Timeline, slicers</td>
-      </tr>
+   </tr>
 </table>
-
