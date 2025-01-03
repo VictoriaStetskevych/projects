@@ -270,7 +270,11 @@ Colors I used for this projects:
       <th>Dashboard</th>
    </thead>
       <tr>
-         <td style="background-color:#F5F5F5"></td>
+         <td>
+         <svg width="20" height="20">
+         <rect width="20" height="20" style="fill:#F5F5F5;" />
+         </svg>
+         </td>
          <td>#F5F5F5</td>
          <td>background</td>
       </tr>
@@ -300,3 +304,4 @@ Colors I used for this projects:
          <td>Timeline, slicers</td>
       </tr>
 </table>
+
