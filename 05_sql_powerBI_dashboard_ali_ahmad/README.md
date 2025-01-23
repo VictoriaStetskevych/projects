@@ -1,4 +1,6 @@
-# Analyzing data in Microsoft SQL Server. Building Dashboards in Power BI. Feedback.<br>
+# Analyzing data in Microsoft SQL Server. 
+# Building Dashboards in Power BI. 
+# Feedback.<br>
 
 <u>Business problem</u><br>
 Online retail business is facing reduced customers engagement and conversion rates despite launching several new online marketing campaign.<br>
@@ -31,9 +33,11 @@ Current database has next tables:<br>
 - products - additional information about product<br>
 
 
-## 1. 'products' table
+## 1. 'products' table<br>
 
-I started my analysis with a 'products' table
+I started my analysis with a 'products' table<br>
+
+To look at the table and to see the variety of product categories I used the following queries:<br>
 ```sql
 SELECT *
 FROM products;
@@ -41,10 +45,13 @@ FROM products;
 SELECT DISTINCT(Category)
 FROM products;
 ```
-Result: we have a table with 1 category 'Sport', 20 different products, different prices from 26.21 to 485.32
+Result: <br>
+- 1 category - 'Sport', 
+- 20 different products, 
+- different prices from 26.21 to 485.32<br>
 
-01_product
-12_product_category
+![](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/images/01_product.png?raw=true)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/images/12_product_category.png?raw=true)
 
 max/min prises I got using following queries
 
@@ -55,8 +62,8 @@ FROM products;
 SELECT MAX(Price)as max_price
 FROM products;
 ``` 
+![](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/images/02_min_max_price.png?raw=true)
 
-02_min_max_price
 
 # 2. 'products' table. 'Price Category' column
 
@@ -78,7 +85,7 @@ END AS Price Category
 FROM products;
 ```
 Result:
-03_price_category
+![](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/images/03_price_category.png?raw=true)
 
 # 3. 'customers' table 
 
@@ -89,13 +96,12 @@ FROM customers;
 ```
 Result:
 In this table I got data with CustomerID, CustomerName, Email, Gender, Age, GeographyID
-
-04_customers
+![](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/images/04_customers.png?raw=true)
 
 To analyze a little this table I used the following queries 
 
 - to count male/female
-    
+
 ```sql
 SELECT 
     Gender,
@@ -103,7 +109,8 @@ SELECT
 FROM customers
 GROUP BY Gender;
 ```
-05_gender
+Result:
+![](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/images/05_gender.png?raw=true)
 
 to analyze age range 
 ```sql
@@ -122,8 +129,7 @@ END AS [Age Category]
 FROM dbo.customers;
 ```
 Result
-
-06_age_category
+![](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/images/06_age_category.png?raw=true)
 
 I also noticed a column 'DemographyID' with different numbers. 
 The next step was to join 'customer' and 'geography' tables to add customers' geography data, such as country, and city.
@@ -134,8 +140,8 @@ The next step was to join 'customer' and 'geography' tables to add customers' ge
 SELECT * 
 FROM geography;
 ```
-Result
-07_geography
+Result:
+![](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/images/07_geography.png?raw=true)
 
 My next step was to join two tables ('customers' and 'geography') to get a full data about customers
 
@@ -154,8 +160,8 @@ LEFT JOIN
     geography as g
 ON c.GeographyID = g.GeographyID;
 ```
-Result
-08_join_customers_and_geography
+Result:
+![](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/images/08_join_customers_and_geography.png?raw=true)
 
 5. The next step was observing the customer_reviews table
 
@@ -164,7 +170,7 @@ SELECT *
 FROM customer_reviews;
 ```
 Result:
-09_customer_reviews
+![](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/images/09_customer_reviews.png?raw=true)
 
 So, for cleaning process I wanted just to replace '  ' (double space) with ' '(single space) in a 'ReviewText' column. It will help to analyze this data in the future.
 To do that I was using the following query:
@@ -180,15 +186,17 @@ SELECT
 FROM customer_reviews;
 ```
 Result
-10_customer_reviews_fixed
+![](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/images/10_customer_reviews_fixed.png?raw=true)
 
 6. 'engagement_data' table
 
+```sql
 SELECT *
 FROM engagement_data;
+```
 
-Result
-11_engagement_data
+Result:
+![](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/images/11_engagement_data.png?raw=true)
 
 For this I table I cleaned data to have standardized look and I added comments to my queries to show what was the goal for each part of query.
 
