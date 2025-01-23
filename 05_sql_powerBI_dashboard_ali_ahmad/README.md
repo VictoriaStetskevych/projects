@@ -1,18 +1,16 @@
-# Analyzing data in Microsoft SQL Server.<br>
-# Building Dashboards in Power BI.<br>
-# Feedback.<br>
+# Analyzing data in Microsoft SQL Server. Building Dashboards in Power BI. Feedback.<br>
 
 <u>Business problem</u><br>
 Online retail business is facing reduced customers engagement and conversion rates despite launching several new online marketing campaign.<br>
 Marketing expenses have gone up but the return on investment isn't meeting company's expectations.
-For the past few months company noticed a drop in customer engagement and satisfaction, and gathered a significant amount of customer's reviews and social media comments that highlighted various issues and sentiments. <br>
+For the past few months company noticed a drop in customer engagement and satisfaction, and gathered a significant amount of customers' reviews and social media comments that highlighted various issues and sentiments. <br>
 
 <u>Goal:</u><br>
 - conduct a detail analysis<br>
 - identify areas for improvement in the marketing strategy<br>
 - identify factors impacting the conversion rate and provide recommendation to improve it<br>
 - Determine which types of content drive the highest engagement <br>
-- Understand common themes in customer reviews and provide actionable insights
+- Understand common themes in customer reviews and provide actionable insights <br>
 
 Key Performance Indicators (KPI's)<br>
 - Conversion Rate: percentage of website visitors who make purchase <br>
@@ -22,24 +20,31 @@ Key Performance Indicators (KPI's)<br>
 
 # Process
 
-In a current project I was using database backup file which I restored in the Microsoft SQL Server.<br>
+In a current project I was using [database backup file](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/PortfolioProject_MarketingAnalytics.bak) which I restored in the Microsoft SQL Server.<br>
 
-Current database has next tables:
-- customer_journey - customers' movements through the website.
-- customer_reviews - customers' feedback to identify common themes and sentiments
-- customers - information about customers
-- engagement_data - engagement with different types of content 
-- geography - additional geographic information about customers
-- products - additional information about product
+Current database has next tables:<br>
+- customer_journey - customers' movements through the website<br>
+- customer_reviews - customers' feedback to identify common themes and sentiments<br>
+- customers - information about customers<br>
+- engagement_data - engagement with different types of content <br>
+- geography - additional geographic information about customers<br>
+- products - additional information about product<br>
 
-1. I started my analysis with a 'products' table
+
+## 1. 'products' table
+
+I started my analysis with a 'products' table
 ```sql
 SELECT *
-FROM dbo.products
+FROM products;
+
+SELECT DISTINCT(Category)
+FROM products;
 ```
 Result: we have a table with 1 category 'Sport', 20 different products, different prices from 26.21 to 485.32
 
 01_product
+12_product_category
 
 max/min prises I got using following queries
 
@@ -53,7 +58,12 @@ FROM products;
 
 02_min_max_price
 
-2. Price category column
+# 2. 'products' table. 'Price Category' column
+
+As in this database there are products with different prices I decided to divide them into three price category: 
+'Low' - with the price lower or equal $50
+Medium - price between 50 and $200
+High - higher then $200
 
 ```sql 
 SELECT 
@@ -61,16 +71,18 @@ SELECT
     ProductName,
     Price
 CASE 
-    WHEN Price < 50 THEN 'Low'
+    WHEN Price <= 50 THEN 'Low'
     WHEN PRICE BETWEEN 50 AND 200 'Medium'
     ELSE 'High'
 END AS Price Category 
 FROM products;
 ```
+Result:
 03_price_category
 
-3. Customers table 
+# 3. 'customers' table 
 
+Observe the 'customers' table
 ```sql
 SELECT * 
 FROM customers;
@@ -80,9 +92,10 @@ In this table I got data with CustomerID, CustomerName, Email, Gender, Age, Geog
 
 04_customers
 
-To observe a little this table I was using the following queries 
+To analyze a little this table I used the following queries 
 
 - to count male/female
+    
 ```sql
 SELECT 
     Gender,
