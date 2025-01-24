@@ -1,5 +1,7 @@
 # Analyzing data in Microsoft SQL Server. Building Dashboards in Power BI.<br>
 
+This project was made using Ali Ahmad's YouTube [tutorials](https://www.youtube.com/watch?v=A6wJ-GDPX4o&list=PLMfXakCUhXsHxNShtz2ucsR69RCJqMnnd).
+
 <u>Business problem</u><br>
 Online retail business is facing reduced customers engagement and conversion rates despite launching several new online marketing campaign.<br>
 Marketing expenses have gone up but the return on investment isn't meeting company's expectations.
