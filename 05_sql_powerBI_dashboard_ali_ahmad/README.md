@@ -1,16 +1,14 @@
-## Analyzing data in Microsoft SQL Server. Building Dashboards in Power BI.<br>
+# Analyzing data in Microsoft SQL Server. Building Dashboards in Power BI.<br>
 
 <u>Business problem</u><br>
 Online retail business is facing reduced customers engagement and conversion rates despite launching several new online marketing campaign.<br>
 Marketing expenses have gone up but the return on investment isn't meeting company's expectations.
 For the past few months company noticed a drop in customer engagement and satisfaction, and gathered a significant amount of customers' reviews and social media comments that highlighted various issues and sentiments. <br>
 
-<u>Goal:</u><br>
-- conduct a detail analysis<br>
-- identify areas for improvement in the marketing strategy<br>
-- identify factors impacting the conversion rate and provide recommendation to improve it<br>
+<u>Goal is to conduct a detail analysis to:</u>
+- identify factors impacting the conversion rate<br>
 - Determine which types of content drive the highest engagement <br>
-- Understand common themes in customer reviews and provide actionable insights <br>
+- Understand common themes in customer reviews<br>
 
 Key Performance Indicators (KPI's)<br>
 - Conversion Rate: percentage of website visitors who make purchase <br>
@@ -21,6 +19,15 @@ Key Performance Indicators (KPI's)<br>
 # Process
 
 In a current project I was using [database backup file](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/PortfolioProject_MarketingAnalytics.bak) which I restored in the Microsoft SQL Server.<br>
+
+> [!NOTE] <br>
+>To restore a database in Microsoft SQL Server I had to follow next steps:<br>
+>- Databases > Right Click > Restore Database<br>
+>- Choose Device > Select Backup devices > Add<br>
+>- Choose a file<br>
+Backup file had to be in the location<br>
+C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\Backup<br>
+>- OK<br>
 
 Current database has next tables:<br>
 - customer_journey - customers' movements through the website<br>
@@ -36,6 +43,7 @@ Current database has next tables:<br>
 I started my analysis with a 'products' table.<br>
 
 To preview the data in the 'product' table and examine the variety of product categories I used the following queries:<br>
+
 ```sql
 SELECT *
 FROM products;
@@ -96,9 +104,9 @@ FROM customers;
 Result:
 ![](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/images/04_customers.png?raw=true)
 
-To perform a basic analysis of this table I used the following queries 
+To perform a basic analysis of this table I used the following queries <br>
 
-- to count male/female
+- to count male/female<br>
 
 ```sql
 SELECT 
@@ -107,7 +115,7 @@ SELECT
 FROM customers
 GROUP BY Gender;
 ```
-Result:
+Result:<br>
 ![](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/images/05_gender.png?raw=true)
 
 To categorize by age range, I used the following groups:<br>
@@ -130,7 +138,7 @@ CASE
 END AS [Age Category]
 FROM dbo.customers;
 ```
-Result
+Result:<br>
 ![](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/images/06_age_category.png?raw=true)
 
 I also observed a column called 'DemographyID' with various values. The next step was to join the 'customer' and 'geography' tables to add geography data for customers, such as country and city.<br>
@@ -312,8 +320,8 @@ Result:
 
 ## 8. Analyzing 'customer_reviews' table in Python
 
-In a project presented by Ali Ahmad, the next step involved data processing with Python. However, I chose to skip this step to focus on SQL and Power BI.
-That's the Python code Ali was using for this part of the project. 
+In a project presented by Ali Ahmad, the next step involved data processing with Python. However, I chose to skip this step to focus on SQL and Power BI.<br>
+This is the Python code Ali was using for this part of the project. <br>
 
 ```py
 # pip install pandas nltk pyodbc sqlalchemy
