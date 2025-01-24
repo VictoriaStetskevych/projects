@@ -20,7 +20,7 @@ Key Performance Indicators (KPI's)<br>
 
 In a current project I was using [database backup file](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/PortfolioProject_MarketingAnalytics.bak) which I restored in the Microsoft SQL Server.<br>
 
-> [!IMPORTANT] <br>
+> [!NOTE]
 > To restore a database in Microsoft SQL Server I had to follow next steps:<br>
 > - Databases > Right Click > Restore Database<br>
 > - Choose Device > Select Backup devices > Add<br>
