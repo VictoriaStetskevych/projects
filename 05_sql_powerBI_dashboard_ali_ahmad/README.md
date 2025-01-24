@@ -21,13 +21,13 @@ Key Performance Indicators (KPI's)<br>
 In a current project I was using [database backup file](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/PortfolioProject_MarketingAnalytics.bak) which I restored in the Microsoft SQL Server.<br>
 
 > [!NOTE] <br>
->To restore a database in Microsoft SQL Server I had to follow next steps:<br>
->- Databases > Right Click > Restore Database<br>
->- Choose Device > Select Backup devices > Add<br>
->- Choose a file<br>
+> To restore a database in Microsoft SQL Server I had to follow next steps:<br>
+> - Databases > Right Click > Restore Database<br>
+> - Choose Device > Select Backup devices > Add<br>
+> - Choose a file<br>
 Backup file had to be in the location<br>
 C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\Backup<br>
->- OK<br>
+> - OK<br>
 
 Current database has next tables:<br>
 - customer_journey - customers' movements through the website<br>
