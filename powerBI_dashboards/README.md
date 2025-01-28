@@ -5,9 +5,12 @@
    </thead>
    <tr>
       <td>
-        <video controls src="dashboard_sport.mp4" title="Title"></video></td>
+        <video width="640" height="360" controls>
+        <source src="https://github.com/VictoriaStetskevych/projects/raw/refs/heads/main/powerBI_dashboards/dashboard_sport/dashboard_sport.mp4" type="video/mp4"></video>
+        </td>
       <td>
-        - Tutorial <a href="https://www.youtube.com/watch?v=cYwioeHu_OU&t=1041s">link</a><br>
+        - Tutorial 
+        <a href="https://www.youtube.com/watch?v=cYwioeHu_OU&t=1041s">link</a><br>
         - Profile images <a href="https://new.express.adobe.com/"> link</a><br>
         - Crop circle, transparent background <a href="https://crop-circle.imageonline.co/">link</a><br>
         - Symbols / Icons <a hre="https://www.flaticon.com/">link</a><br>
