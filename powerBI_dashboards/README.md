@@ -4,8 +4,21 @@
       <th>Resources</th>
    </thead>
    <tr>
-      <td><img src="https://color-hex.org/colors/f5f5f5.png" style="width:100px; height:50px;"></td>
-      <td>#F5F5F5</td> 
+      <td>
+        <video controls src="dashboard_sport.mp4" title="Title"></video></td>
+      <td>
+        - Tutorial <a href="https://www.youtube.com/watch?v=cYwioeHu_OU&t=1041s">link</a><br>
+        - Profile images <a href="https://new.express.adobe.com/"> link</a><br>
+        - Crop circle, transparent background <a href="https://crop-circle.imageonline.co/">link</a><br>
+        - Symbols / Icons <a hre="https://www.flaticon.com/">link</a><br>
+        - heart icon <a href="https://www.flaticon.com/free-icons/heart" title="heart icons">link</a><br>
+        - footprint icons <a href="https://www.flaticon.com/free-icons/footprint" title="footprint icons">link</a><br>
+        - fork and spoon icon <a href="https://www.flaticon.com/free-icons/fork" title="fork icons">link</a><br>
+        - gym icon <a href="https://www.flaticon.com/free-icons/gym" title="gym icons">link</a>
+      </td>
    </tr>
-
 </table>
+
+
+
+
