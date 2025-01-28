@@ -4,10 +4,9 @@
       <th>Resources</th>
    </thead>
    <tr>
-      <td>
-        <b><video controls src="dashboard_sport.mp4" title="Title"></video></b>
+     <td>
     </td>
-      <td>
+     <td>
         - Tutorial 
         <a href="https://www.youtube.com/watch?v=cYwioeHu_OU&t=1041s">link</a><br>
         - Profile images <a href="https://new.express.adobe.com/"> link</a><br>
@@ -20,4 +19,9 @@
       </td>
    </tr>
 </table>
+
+
+| Dashboard | Resources |
+|----------|----------|
+| <video controls src="dashboard_sport-1.mp4" title="Title"></video> | Row 1, Column 2 |
 
