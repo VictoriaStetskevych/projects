@@ -5,8 +5,8 @@
    </thead>
    <tr>
       <td>
-        <video controls src="dashboard_sport.mp4" title="Title"></video>
-        </td>
+        <b><video controls src="dashboard_sport.mp4" title="Title"></video></b>
+    </td>
       <td>
         - Tutorial 
         <a href="https://www.youtube.com/watch?v=cYwioeHu_OU&t=1041s">link</a><br>
@@ -20,7 +20,4 @@
       </td>
    </tr>
 </table>
-
-
-
 
