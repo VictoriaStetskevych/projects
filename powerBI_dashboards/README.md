@@ -5,7 +5,7 @@
    </thead>
    <tr>
       <td>
-        <video width="640" height="360" controls>
+        <video width="1268" height="710" controls>
         <source src="https://github.com/VictoriaStetskevych/projects/raw/refs/heads/main/powerBI_dashboards/dashboard_sport/dashboard_sport.mp4" type="video/mp4"></video>
         </td>
       <td>
