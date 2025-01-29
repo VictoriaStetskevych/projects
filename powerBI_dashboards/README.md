@@ -5,7 +5,7 @@
    </thead>
    <tr>
      <td>
-     <video><source src="https://github.com/user-attachments/assets/367e75c1-0af2-451e-a337-86618fa5182a"></video>
+     https://github.com/user-attachments/assets/367e75c1-0af2-451e-a337-86618fa5182a
     </td>
      <td>
         - Tutorial 
