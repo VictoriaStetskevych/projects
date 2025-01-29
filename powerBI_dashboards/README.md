@@ -4,7 +4,7 @@
       <th>Resources</th>
    </thead>
    <tr>
-     <td>
+     <td width="80%">
      https://github.com/user-attachments/assets/367e75c1-0af2-451e-a337-86618fa5182a
     </td>
      <td>
@@ -29,7 +29,7 @@
 
 ### Russian Translation
 ---
-https://github.com/user-attachments/assets/25264b5b-6931-4d39-948c-5a1e4ce42fa7
+https://github.com/user-attachments/assets/367e75c1-0af2-451e-a337-86618fa5182a
 
 </td>
 <td width="50%">
