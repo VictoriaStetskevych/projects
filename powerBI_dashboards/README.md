@@ -4,10 +4,11 @@
       <th>Resources</th>
    </thead>
    <tr>
-     <td width="90%">
+<td width="90%">
 
 https://github.com/user-attachments/assets/367e75c1-0af2-451e-a337-86618fa5182a
-    </td>
+
+</td>
      <td>
         - Tutorial 
         <a href="https://www.youtube.com/watch?v=cYwioeHu_OU&t=1041s">link</a><br>
