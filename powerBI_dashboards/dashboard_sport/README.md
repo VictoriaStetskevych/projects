@@ -11,8 +11,8 @@ Unfortunately, the profile images were unavailable, so I followed these steps to
 2. Cropped all images using this [website](https://crop-circle.imageonline.co/). The images needed to have a transparent background.<br>
 3. created an Excel [file](https://github.com/VictoriaStetskevych/projects/blob/main/powerBI_dashboards/dashboard_sport/profile_images.xlsx) with a list of all users and added a link to each user's profile image.<br>
 4. added this Excel file to the Power BI project's data<br>
-![alt text](01_add_excel_file.png)<br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/powerBI_dashboards/dashboard_sport/images/01_add_excel_file.png?raw=true)<br>
 5. Opened the Excel table in a Power BI 'Model View' to ensure there was a connection between User ID in the Excel file and User ID in the dimUser table.<br>
 6. Opened the Excel table in a Power BI 'Table View' to make sure that the 'Data category' was set to 'Image URL' <br>
-![alt text](02_image_url.png)<br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/powerBI_dashboards/dashboard_sport/images/02_image_url.png?raw=true)<br>
 6. Used photo links from the Excel file for visualizing profile images.<br>
