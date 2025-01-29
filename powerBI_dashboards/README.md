@@ -21,3 +21,23 @@
    </tr>
 </table>
 </video>
+
+
+<table>
+<tr>
+<td width="50%">
+
+### Russian Translation
+---
+https://github.com/user-attachments/assets/25264b5b-6931-4d39-948c-5a1e4ce42fa7
+
+</td>
+<td width="50%">
+
+### GPT-SoVITS Dubbing
+---
+https://github.com/user-attachments/assets/47d965b2-b4ab-4a0b-9d08-b49a7bf3508c
+
+</td>
+</tr>
+</table>
