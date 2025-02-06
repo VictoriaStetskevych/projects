@@ -168,12 +168,8 @@ GP% = DIVIDE([Gross Profit],[Sales])
 Colors I used for this projects:
 
 <table>
-   <thead>
-      <th>Color</th>
-      <th>Color #</th>
-      <th>Dashboard</th>
-   </thead>
    <tr>
+      <td>Color</td>
       <td><img src="https://color-hex.org/colors/540202.png" style="width:100px; height:50px;"></td>
       <td><img src="https://www.colorhexa.com/ab3131.png" style="width:100px; height:50px;"></td>
       <td><img src="https://color-hex.org/colors/799163.png" style="width:100px; height:50px;"></td> 
@@ -181,6 +177,7 @@ Colors I used for this projects:
       <td><img src="https://www.colorhexa.com/3f6c48.png" style="width:100px; height:50px;"></td>
    </tr>
    <tr>
+      <td>Color code</td>
       <td>#540202</td>
       <td>#AB3131</td>
       <td>#799163</td>
