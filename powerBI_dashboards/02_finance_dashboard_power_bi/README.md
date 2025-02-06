@@ -4,10 +4,9 @@ This project was made using Nicole Thompson's [tutorial](https://www.youtube.com
 
 https://github.com/user-attachments/assets/c08074be-788d-415b-9e8a-b2148bcc8126
 
-
 # Process 
 
-Here are some important steps and functions:
+Here are some important steps and functions I used in this project:
 
 - Upload data / Transform data <br>
 - Unique ID: Right click / Remove Duplicates <br>
@@ -30,14 +29,14 @@ VAR lastsalesdatePY = EDATE(lastsalesdate, -12)
 RETURN
 Dim_Date[Date]<=lastsalesdatePY
 ```
-> [!NOTE] <br>
+> [!NOTE]
 > It's a calculated column. <br>
 > It will return TRUE or FALSE for each row based on the condition.<br>
 > EDATE function in DAX moves a date forward or backward by a specified number of months.<br>
 
 - Modeling / New Table / _Measures = and (Press Enter) <br>
 
-> [!NOTE] <br>
+> [!NOTE]
 > To create a new table with veriaty of measures. <br>
 
 The list of measures:<br>
