@@ -22,6 +22,12 @@ CALENDAR(
 ```
 
 - Dim_Date / New Column<br>
+
+> [!NOTE]
+> It's a calculated column. <br>
+> It will return TRUE or FALSE for each row based on the condition.<br>
+> EDATE function in DAX moves a date forward or backward by a specified number of months.<br>
+
 ```
 Inpact = 
 VAR lastsalesdate = MAX(Fact_sales[Date_Time])
@@ -29,17 +35,13 @@ VAR lastsalesdatePY = EDATE(lastsalesdate, -12)
 RETURN
 Dim_Date[Date]<=lastsalesdatePY
 ```
-> [!NOTE]
-> It's a calculated column. <br>
-> It will return TRUE or FALSE for each row based on the condition.<br>
-> EDATE function in DAX moves a date forward or backward by a specified number of months.<br>
 
 - Modeling / New Table / _Measures = and (Press Enter) <br>
 
 > [!NOTE]
-> To create a new table with veriaty of measures. <br>
+> To create a new table with verity of measures. <br>
 
-The list of measures:<br>
+<u>The list of measures:<br></u>
 - Sales
 ```
 Sales = SUM(Fact_sales[Sales_USD])<br>
@@ -65,7 +67,7 @@ CALCULATE(
     Dim_Date[Inpact] = TRUE
 )
 ```
-> [!NOTE] <br>
+> [!NOTE]
 > PYTD_Sales measure calculates sales from the same period last year, but only for past dates.<br> 
 > SAMEPERIODLASTYEAR - finds the same date range from last year.<br> 
 > Dim_Date[Inpast] = TRUE - Ensures only past dates are included (not future dates).<br> 
@@ -91,7 +93,7 @@ CALCULATE(
 - Year to Date Sales
 ```sql
 -- original formula, but it didn't work for me, it didn't count total sales properly. 
--- It counted sales by year saperately but when I wanted to see the data for two year it didn't show the total amount
+-- It counted sales by year separately but when I wanted to see the data for two year it didn't show the total amount
 YTD_Sales = TOTALYTD([Sales],Fact_sales[Date_Time])
 -- formula I used
 YTD_Sales = CALCULATE([Sales],Fact_sales[Date_Time])
@@ -99,7 +101,7 @@ YTD_Sales = CALCULATE([Sales],Fact_sales[Date_Time])
 - Year to Date Quantity
 ```sql
 -- original formula.
--- The reaason I changged it is the same as in a previous formula
+-- The reason I changed it is the same as in a previous formula
 YTD_Quantity = TOTALYTD([Quantity],Fact_sales[Date_Time])
 -- formula I used
 YTD_Quantity = CALCULATE([Quantity],Fact_sales[Date_Time])
@@ -107,12 +109,12 @@ YTD_Quantity = CALCULATE([Quantity],Fact_sales[Date_Time])
 - Year to Date Gross Profit
 ```sql
 -- original formula.
--- The reaason I changged it is the same as in a previous formula
+-- The reason I changed it is the same as in a previous formula
 YTD_GrossProfit = TOTALYTD([Gross Profit],Fact_sales[Date_Time])
 -- formula I used
 YTD_GrossProfit = CALCULATE([Gross Profit],Fact_sales[Date_Time])
 ```
-- Switch prior year to date -
+- Switch prior year to date
 ```
 S_PYTD = 
 VAR selected_value = SELECTEDVALUE(Slc_Values[Values])
@@ -130,6 +132,7 @@ result
 > SWITCH - Checks what the user selected and returns the corresponding measure.<br>
 > RETURN result - gives back the chosen measure’s value.
 - Switch year to date
+
 ```
 S_YTD = 
 VAR selected_value = SELECTEDVALUE(Slc_Values[Values])
@@ -155,8 +158,8 @@ VAR result = IF(
 )
 RETURN
 result
-
 ```
+
 - GP% - Gross Profit %
 ```
 GP% = DIVIDE([Gross Profit],[Sales])
