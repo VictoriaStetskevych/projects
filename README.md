@@ -28,7 +28,7 @@
 <!-- Thick Line -->
 <tr>
     <td colspan="2">
-      <div style="height: 6px; background-color: black;"></div>
+      <div style="height: 10px; background-color: black;"></div>
     </td>
 </tr>
 </table>
