@@ -25,14 +25,7 @@
 <a href="https://github.com/VictoriaStetskevych/projects/tree/main/powerBI_dashboards/01_sport_dashboard_power_bi"> Power BI - sport dashboard</a><br>
 </td>
 </tr>
-<!-- Thick Line -->
-<tr padding = "0">
-    <td colspan="2">
-      <img src="https://www.colorhexa.com/000000.png" height = "1px" width = "1000px">
-     </td>
-</tr>
 </table>
-
 <hr>
 
 
