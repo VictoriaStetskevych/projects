@@ -28,7 +28,7 @@
 <!-- Thick Line -->
 <tr>
     <td colspan="2">
-      <img src="https://www.colorhexa.com/000000.png" height = "5px" width = "1000px">
+      <img src="https://www.colorhexa.com/000000.png" height = "1px" width = "1000px">
      </td>
 </tr>
 </table>
