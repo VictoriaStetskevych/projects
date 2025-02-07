@@ -12,8 +12,8 @@
 </td>
 <td>
 
-<a href="https://github.com/VictoriaStetskevych/projects/tree/main/powerBI_dashboards/01_sport_dashboard_spower_bi">
-  <img src="https://github.com/VictoriaStetskevych/projects/blob/main/powerBI_dashboards/01_sport_dashboard_spower_bi/01_sport_image.png?raw=true">
+<a href="https://github.com/VictoriaStetskevych/projects/tree/main/powerBI_dashboards/01_sport_dashboard_power_bi">
+  <img src="https://github.com/VictoriaStetskevych/projects/blob/main/powerBI_dashboards/01_sport_dashboard_power_bi/01_sport_image.png">
 </a>
 </td>
 </tr>
@@ -22,7 +22,7 @@
 <a href="https://github.com/VictoriaStetskevych/projects/tree/main/powerBI_dashboards/02_finance_dashboard_power_bi"> Power BI - finance dashboard</a><br>
 </td>
 <td>
-<a href="https://github.com/VictoriaStetskevych/projects/tree/main/powerBI_dashboards/01_dashboard_sport_power_bi"> Power BI - sport dashboard</a><br>
+<a href="https://github.com/VictoriaStetskevych/projects/tree/main/powerBI_dashboards/01_sport_dashboard_power_bi"> Power BI - sport dashboard</a><br>
 </td>
 </tr>
 <!-- Thick Line -->
