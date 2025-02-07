@@ -31,8 +31,9 @@
       <img src="https://www.colorhexa.com/000000.png" height = "1px" width = "1000px">
      </td>
 </tr>
-<hr>
 </table>
+
+<hr>
 
 
 
