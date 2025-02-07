@@ -1,7 +1,15 @@
 # Projects
 
 <table>
-
+<style>
+    tr {
+      height: 1px; /* Reduce the row height */
+    }
+    td {
+      padding: 0;
+      border: none; /* Remove any borders or padding around the image */
+    }
+  </style>
 <tr>
 <td>
 
