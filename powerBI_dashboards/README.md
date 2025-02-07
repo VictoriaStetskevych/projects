@@ -28,7 +28,7 @@ https://github.com/user-attachments/assets/367e75c1-0af2-451e-a337-86618fa5182a
 
 </td>
      <td>
-        - Project files <a href="https://github.com/VictoriaStetskevych/projects/tree/main/powerBI_dashboards/01_dashboard_port_power_bi"> link</a><br>
+        - Project files <a href="https://github.com/VictoriaStetskevych/projects/tree/main/powerBI_dashboards/01_dashboard_sport_power_bi"> link</a><br>
         - Tutorial 
         <a href="https://www.youtube.com/watch?v=cYwioeHu_OU&t=1041s">link</a><br>
         - Profile images <a href="https://new.express.adobe.com/"> link</a><br>
