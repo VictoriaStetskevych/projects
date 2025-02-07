@@ -28,10 +28,13 @@
 <!-- Thick Line -->
 <tr>
     <td colspan="2">
-      <div style="height: 10px; background-color: black;"></div>
-    </td>
+      <img src="https://www.colorhexa.com/000000.png" height = "5px">
+     </td>
 </tr>
 </table>
+
+
+
 
 
 This is the list of projects that I made.
