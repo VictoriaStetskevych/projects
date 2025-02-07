@@ -1,4 +1,4 @@
-## Business Power BI Dashboard 
+## Finance Power BI Dashboard 
 
 This project was made using Nicole Thompson's [tutorial](https://www.youtube.com/watch?v=BLxW9ZSuuVI) that I found on Mo Chen's Youtube [channel](https://www.youtube.com/@mo-chen)
 
