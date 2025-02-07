@@ -1,15 +1,7 @@
 # Projects
 
 <table>
-<style>
-    tr {
-      height: 1px; /* Reduce the row height */
-    }
-    td {
-      padding: 0;
-      border: none; /* Remove any borders or padding around the image */
-    }
-  </style>
+
 <tr>
 <td>
 
@@ -34,8 +26,8 @@
 </td>
 </tr>
 <!-- Thick Line -->
-<tr>
-    <td padding = "0" colspan="2">
+<tr padding = "0">
+    <td colspan="2">
       <img src="https://www.colorhexa.com/000000.png" height = "1px" width = "1000px">
      </td>
 </tr>
