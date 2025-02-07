@@ -1,5 +1,39 @@
 # Projects
 
+<table>
+
+<tr>
+<td>
+
+<a href="https://github.com/VictoriaStetskevych/projects/tree/main/powerBI_dashboards/02_finance_dashboard_power_bi">
+  <img src="https://github.com/VictoriaStetskevych/projects/blob/main/powerBI_dashboards/02_finance_dashboard_power_bi/02_finance_image.png?raw=true">
+</a>
+
+</td>
+<td>
+
+<a href="https://github.com/VictoriaStetskevych/projects/tree/main/powerBI_dashboards/01_sport_dashboard_spower_bi">
+  <img src="https://github.com/VictoriaStetskevych/projects/blob/main/powerBI_dashboards/01_sport_dashboard_spower_bi/01_sport_image.png?raw=true">
+</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://github.com/VictoriaStetskevych/projects/tree/main/powerBI_dashboards/02_finance_dashboard_power_bi"> Power BI - finance dashboard</a><br>
+</td>
+<td>
+<a href="https://github.com/VictoriaStetskevych/projects/tree/main/powerBI_dashboards/01_dashboard_sport_power_bi"> Power BI - sport dashboard</a><br>
+</td>
+</tr>
+<!-- Thick Line -->
+<tr>
+    <td colspan="2">
+      <div style="height: 6px; background-color: black;"></div>
+    </td>
+</tr>
+</table>
+
+
 This is the list of projects that I made.
 
 1. [Cleaning data in Microsoft SQL Server](https://github.com/VictoriaStetskevych/projects/tree/main/01_layoffs_alex_the_analyst) - layoffs from Alex the analyst
@@ -8,6 +42,6 @@ This is the list of projects that I made.
 4. [Dashboard in Microsoft Excel](https://github.com/VictoriaStetskevych/projects/tree/main/04_dashboard_coffee_sales_mo_chen) - coffee sales dashboard from Mo Chen
 5. [Analyzing Data in Microsoft SQL Server. Dashboards in Power BI](https://github.com/VictoriaStetskevych/projects/tree/main/05_sql_powerBI_dashboard_ali_ahmad) - marketing analysis from Ali Ahmad
 6. [Dashboard in Power BI](https://github.com/VictoriaStetskevych/projects/tree/main/powerBI_dashboards/01_dashboard_sport_power_bi) - sport dashboard from Bas Dohmen
-6. [Dashboard in Power BI](https://github.com/VictoriaStetskevych/projects/tree/main/powerBI_dashboards/02_finance_dashboard_power_bi) - finance dashboard from Nicole Thomson 
+7. [Dashboard in Power BI](https://github.com/VictoriaStetskevych/projects/tree/main/powerBI_dashboards/02_finance_dashboard_power_bi) - finance dashboard from Nicole Thomson 
 
 
