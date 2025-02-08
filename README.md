@@ -27,14 +27,17 @@
 <hr>
 
 <table>
-
+  <colgroup>
+    <col style="width: 50%;">
+    <col style="width: 50%;">
+  </colgroup>
 <tr>
-<td style="width: 50%">
+<td">
 <a href="https://github.com/VictoriaStetskevych/projects/tree/main/05_sql_powerBI_dashboard_ali_ahmad">
   <img src="https://raw.githubusercontent.com/VictoriaStetskevych/projects/main/05_sql_powerBI_dashboard_ali_ahmad/images/dashboard_01.png">
 </a>
 </td>
-<td style="width: 50%">
+<td>
 <a href="https://github.com/VictoriaStetskevych/projects/tree/main/04_dashboard_coffee_sales_mo_chen">
   <img src="https://github.com/VictoriaStetskevych/projects/blob/main/04_dashboard_coffee_sales_mo_chen/images/34_dashboard_image.png?raw=true" >
 </a>
