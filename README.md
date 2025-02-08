@@ -26,7 +26,7 @@
 </table>
 <hr>
 
-<table width="500" height="300" border="1">
+<table width="500" height="300">
 
 <tr>
 <td>
