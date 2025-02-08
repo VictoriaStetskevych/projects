@@ -36,7 +36,7 @@
 </td>
 <td>
 <a href="https://github.com/VictoriaStetskevych/projects/tree/main/04_dashboard_coffee_sales_mo_chen">
-  <img src="https://github.com/VictoriaStetskevych/projects/tree/main/04_dashboard_coffee_sales_mo_chen/images/34_dashboard_image.png">
+  <img src="https://github.com/VictoriaStetskevych/projects/blob/main/04_dashboard_coffee_sales_mo_chen/images/34_dashboard_image.png?raw=true">
 </a>
 </td>
 </tr>
