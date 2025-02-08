@@ -36,7 +36,7 @@
 </td>
 <td>
 <a href="https://github.com/VictoriaStetskevych/projects/tree/main/04_dashboard_coffee_sales_mo_chen">
-  <img src="https://github.com/VictoriaStetskevych/projects/blob/main/04_dashboard_coffee_sales_mo_chen/images/34_dashboard_image.png?raw=true" style="width: 120%; height: auto;" alt="Resized Image">
+  <img src="https://github.com/VictoriaStetskevych/projects/blob/main/04_dashboard_coffee_sales_mo_chen/images/34_dashboard_image.png?raw=true" style="width: 140%; height: auto;" alt="Resized Image">
 </a>
 </td>
 </tr>
