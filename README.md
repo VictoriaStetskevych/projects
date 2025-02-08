@@ -26,12 +26,12 @@
 </table>
 <hr>
 
-<table>
+<table width="500" height="300" border="1">
 
 <tr>
 <td>
 <a href="https://github.com/VictoriaStetskevych/projects/tree/main/05_sql_powerBI_dashboard_ali_ahmad">
-  <img src="https://raw.githubusercontent.com/VictoriaStetskevych/projects/main/05_sql_powerBI_dashboard_ali_ahmad/images/dashboard_01.png" style="width: 50%; height: auto;">
+  <img src="https://raw.githubusercontent.com/VictoriaStetskevych/projects/main/05_sql_powerBI_dashboard_ali_ahmad/images/dashboard_01.png">
 </a>
 </td>
 <td>
