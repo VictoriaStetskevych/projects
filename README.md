@@ -31,7 +31,7 @@
 <tr>
 <td>
 <a href="https://github.com/VictoriaStetskevych/projects/tree/main/05_sql_powerBI_dashboard_ali_ahmad">
-  <img src="https://raw.githubusercontent.com/VictoriaStetskevych/projects/main/05_sql_powerBI_dashboard_ali_ahmad/images/dashboard_01.png">
+  <img src="https://raw.githubusercontent.com/VictoriaStetskevych/projects/main/05_sql_powerBI_dashboard_ali_ahmad/images/dashboard_01.png" style="width: 90%; height: auto;" alt="Resized Image">
 </a>
 </td>
 <td>
