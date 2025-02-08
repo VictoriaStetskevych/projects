@@ -31,7 +31,7 @@
 <tr>
 <td>
 <a href="https://github.com/VictoriaStetskevych/projects/tree/main/05_sql_powerBI_dashboard_ali_ahmad">
-  <img src="https://raw.githubusercontent.com/VictoriaStetskevych/projects/main/05_sql_powerBI_dashboard_ali_ahmad/images/dashboard_01.png">
+  <img src="https://raw.githubusercontent.com/VictoriaStetskevych/projects/main/05_sql_powerBI_dashboard_ali_ahmad/images/dashboard_01.png" style="width: 50%; height: auto;">
 </a>
 </td>
 <td>
@@ -46,7 +46,7 @@
 <a href="https://github.com/VictoriaStetskevych/projects/tree/main/05_sql_powerBI_dashboard_ali_ahmad"> Microsoft SQL Server and <br> Power BI - dashboard</a><br>
 </td>
 <td>
-<a href="https://github.com/VictoriaStetskevych/projects/tree/main/04_dashboard_coffee_sales_mo_chen"> Power BI - sport dashboard</a><br>
+<a href="https://github.com/VictoriaStetskevych/projects/tree/main/04_dashboard_coffee_sales_mo_chen"> Microsoft Excel <br> Pivot Table and <dr> dashboard</a><br>
 </td>
 </tr>
 </table>
