@@ -10,7 +10,8 @@ The tasks for this project are:
 
  This is the result:
 
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/03_dynamic_dashboard_leila_gharani/images/15_result.png)
+https://github.com/user-attachments/assets/bda8f03f-b5cd-46fb-8b13-9f5bb5c2f473
+
 # PROCESS
 
 ## 1. Create a new sheet for the project
