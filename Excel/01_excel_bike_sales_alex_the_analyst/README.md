@@ -9,7 +9,7 @@ The tasks for this project are:
 
  I made this project in Google Spreadsheets.
  This is the final result:
- ![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/02_bike_sales_alex_the_analyst/images/13_dashboards.png)
+ ![](https://github.com/VictoriaStetskevych/projects/blob/main/Excel/01_excel_bike_sales_alex_the_analyst/images/13_dashboards.png?raw=true)
 
 # PROCESS
 
@@ -29,7 +29,7 @@ I added a filter to have a first look at the data.
 I did it through the toolbar: Select a top row > choose a filter icon or
 Though the menu: Data > Create a filter
 
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/02_bike_sales_alex_the_analyst/images/02_filter.png)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/Excel/01_excel_bike_sales_alex_the_analyst/images/02_filter.png?raw=true)
 
 ## 3. Remove duplicates.
 To remove duplicates I did following steps:
@@ -38,10 +38,10 @@ To remove duplicates I did following steps:
     3. Check the box 'Data has header row'.
     4. Press 'Remove Duplicates'.
 
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/02_bike_sales_alex_the_analyst/images/03_remove_duplicates.png)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/Excel/01_excel_bike_sales_alex_the_analyst/images/03_remove_duplicates.png?raw=true)
 
 Result '26 duplicate rows found and removed':
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/02_bike_sales_alex_the_analyst/images/04_remove_duplicates_result.png)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/Excel/01_excel_bike_sales_alex_the_analyst/images/04_remove_duplicates_result.png?raw=true)
 
 ## 4. Cleaning data
 
@@ -55,7 +55,7 @@ Find M > Replace with Married<br>
 Find S > Replace with Single<br>
 Replace All
 
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/02_bike_sales_alex_the_analyst/images/05_colunm_b.png)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/Excel/01_excel_bike_sales_alex_the_analyst/images/05_colunm_b.png?raw=true)
 
 I used the same method for the **Column C 'Gender'**: M - Male, F - Female.<br>
 Select Column C 'Gender' > Ctrl+H ('Find and Replace')<br>
@@ -79,7 +79,7 @@ So, I created a new column 'Age Brackets' and divided all people in my data in t
 To do that in a new column 'Age Brackets' I added the next formula:<br>
 =IF(L2>54, "Old", IF(L2>=31, "Middle Age", IF(L2<31, "Adolescents", "Invalid")))
 
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/02_bike_sales_alex_the_analyst/images/06_age_brackets.png)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/Excel/01_excel_bike_sales_alex_the_analyst/images/06_age_brackets.png?raw=true)
 
 ## 5. Pivot table
 
@@ -88,20 +88,20 @@ To do that in a new column 'Age Brackets' I added the next formula:<br>
 I added pivot tables with following steps:<br>
 Insert > Pivot Table > Select a data range (Ctrl+A) > Insert to New Sheet.
 
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/02_bike_sales_alex_the_analyst/images/07_add_pivot_table.png)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/Excel/01_excel_bike_sales_alex_the_analyst/images/07_add_pivot_table.png?raw=true)
 Result:
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/02_bike_sales_alex_the_analyst/images/08_pivot_table.png)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/Excel/01_excel_bike_sales_alex_the_analyst/images/08_pivot_table.png?raw=true)
 
 
 I added next settings for a first pivot table:<br>
 Rows > Gender<br>
 Columns > Purchased Bikes<br>
 Values > Income > Summarize by AVERAGE<br>
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/02_bike_sales_alex_the_analyst/images/09_pivot_table_1.png)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/Excel/01_excel_bike_sales_alex_the_analyst/images/09_pivot_table_1.png?raw=true)
 
 I added a chart for that table and some additions to it to make the data more readable <br>
 Insert > Chart > Column<br>
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/02_bike_sales_alex_the_analyst/images/10_pivot_table_2.png)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/Excel/01_excel_bike_sales_alex_the_analyst/images/10_pivot_table_2.png?raw=true)
 
 **Pivot Table 2.**
 
@@ -114,7 +114,7 @@ Values > Purchased Bikes
 
 I also added a chart for that table and some additions to it to make the data more readable<br> 
 Insert > Chart > Line<br>
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/02_bike_sales_alex_the_analyst/images/11_pivot_table_3.png)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/Excel/01_excel_bike_sales_alex_the_analyst/images/11_pivot_table_3.png?raw=true)
 
 **Pivot Table 3.**
 
@@ -127,7 +127,7 @@ Values > Purchased Bikes<br>
 
 I also added a chart for the third table and added some additions to it to make the data more readable.<br> 
 Insert > Chart > Line 
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/02_bike_sales_alex_the_analyst/images/12_pivot_table_4.png)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/Excel/01_excel_bike_sales_alex_the_analyst/images/12_pivot_table_4.png?raw=true)
 
 ## 5. Dashboard
 
@@ -149,6 +149,6 @@ I added 4 slicers to have a variety of different filters:<br>
 - Age Brackets <br>
 
 This is the way my dashboard looks. <br>
- ![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/02_bike_sales_alex_the_analyst/images/13_dashboards.png)
+ ![](https://github.com/VictoriaStetskevych/projects/blob/main/Excel/01_excel_bike_sales_alex_the_analyst/images/13_dashboards.png?raw=true)
 
  This is the [link](https://docs.google.com/spreadsheets/d/16xFo5zaZq5X5NXIYclr6o-N8zQQ3IF8kVZw22ZesgZA/edit?usp=sharing) on a Google Sheet with this project.

@@ -19,7 +19,7 @@ https://github.com/user-attachments/assets/bda8f03f-b5cd-46fb-8b13-9f5bb5c2f473
 In this project I didn't change the original files (sheets) that I got. I had to combine raw data into another table. 
 So, I added another sheet to the same document, called it 'Dashboard_new', and copied the formatting that was suggested in the Leila's tutorial.<br>
 
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/03_dynamic_dashboard_leila_gharani/images/01_new_sheet.png)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/Excel/02_excel_dynamic_dashboard_leila_gharani/images/01_new_sheet.png?raw=true)
 
 ## 2. Create a dropdown list for years and months
 
@@ -29,9 +29,9 @@ Choose a cell for the list. <br>
 Data > Data validation<br>
 Allow: List<br>
 Source: 'Actives' sheet, choose all column with year data range (Ctrl + Shift + Down Arrow Key)<br>
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/03_dynamic_dashboard_leila_gharani/images/02_data_validation_years.png)<br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/Excel/02_excel_dynamic_dashboard_leila_gharani/images/02_data_validation_years.png?raw=true)<br>
 Result:<br>
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/03_dynamic_dashboard_leila_gharani/images/03_data_validation_years_result.png)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/Excel/02_excel_dynamic_dashboard_leila_gharani/images/03_data_validation_years_result.png?raw=true)
 
 **Month - dropdown list**<br>
 I used the same method to make a dropdown list by month.<br>
@@ -39,28 +39,28 @@ Choose a cell for the list.<br>
 Data > Data validation<br>
 Allow: List<br>
 Source: 'Plan' sheet, choose all column with months data range (Ctrl + Shift + Down Arrow Key)<br>
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/03_dynamic_dashboard_leila_gharani/images/04_data_validation_months.png)<br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/Excel/02_excel_dynamic_dashboard_leila_gharani/images/04_data_validation_months.png?raw=true)<br>
 Result:<br>
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/03_dynamic_dashboard_leila_gharani/images/05_data_validation_months_result.png)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/Excel/02_excel_dynamic_dashboard_leila_gharani/images/05_data_validation_months_result.png?raw=true)
 
 ## 3. XLOOKUP function to populate columns Actual, PY(previous year), Plan in a new table
 
 I used XLOOKUP function to populate columns in a new table with actual data by location, making sure I can separately change any year/month and get the total amount by each location.<br>
 I was using the following function:<br>
 =XLOOKUP($C$2&$C$3&B7,TSales[Year]&TSales[Month]&TSales[Store Location],TSales[Sales],"")<br>
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/03_dynamic_dashboard_leila_gharani/images/06_actual_by_location.png)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/Excel/02_excel_dynamic_dashboard_leila_gharani/images/06_actual_by_location.png?raw=true)
 
 Autofill and this is the result.<br>
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/03_dynamic_dashboard_leila_gharani/images/07_actual_by_location_result.png)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/Excel/02_excel_dynamic_dashboard_leila_gharani/images/07_actual_by_location_result.png?raw=true)
 
 To populate a column PY (previous year), I copied the same XLOOKUP function, made sure all cells referred correctly and added -1 to year.<br>
 Autofill.<br>
 Result:<br>
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/03_dynamic_dashboard_leila_gharani/images/08_previous_year_by_location.png)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/Excel/02_excel_dynamic_dashboard_leila_gharani/images/08_previous_year_by_location.png?raw=true)
 
 To populate a column Plan I used the XLOOKUP function again (=XLOOKUP(B7,Plan_raw!$A$3:$A$13,XLOOKUP($C$3,Plan_raw!$B$2:$M$2,Plan_raw!$B$3:$M$13),"")) to fill the data by month and by each location. <br>
 Autofill and the result:<br>
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/03_dynamic_dashboard_leila_gharani/images/09_plan.png)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/Excel/02_excel_dynamic_dashboard_leila_gharani/images/09_plan.png?raw=true)
 
 ## 4. Variances
 
@@ -73,10 +73,10 @@ I also additionally wrapped this formula into IFERROR function to make sure I do
 Autofill and result.<br>
 
 Result ∆ PY %<br>
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/03_dynamic_dashboard_leila_gharani/images/10_delta_previous.png)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/Excel/02_excel_dynamic_dashboard_leila_gharani/images/10_delta_previous.png?raw=true)
 
 Result ∆ PL %<br>
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/03_dynamic_dashboard_leila_gharani/images/11_delta_plan.png)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/Excel/02_excel_dynamic_dashboard_leila_gharani/images/11_delta_plan.png?raw=true)
 
 **Change number formatting**<br>
 I used the following formatting for columns:<br>
@@ -84,7 +84,7 @@ I used the following formatting for columns:<br>
 Actual, previous year, plan - comma separator and zero decimal places. (Ctrl+1 > Number)<br>
 
 Now all data in the table is changing automatically, no matter what year/month I choose. 
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/03_dynamic_dashboard_leila_gharani/images/12_number_formatting.png)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/Excel/02_excel_dynamic_dashboard_leila_gharani/images/12_number_formatting.png?raw=true)
 
 
 ## 4. Visualization 
@@ -93,14 +93,14 @@ Now all data in the table is changing automatically, no matter what year/month I
 Selected:<br>
 All locations names + column 'Actual' + column 'Plan'<br>
 Insert > Column Chart<br>
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/03_dynamic_dashboard_leila_gharani/images/13_chart.png)<br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/Excel/02_excel_dynamic_dashboard_leila_gharani/images/13_chart.png?raw=true)<br>
 
 **Chart #2**<br>
 Selected:<br>
 All locations names + ∆ PY %<br>
 
 I also slightly changed the formatting of the second chart, as was suggested in the tutorial.<br>
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/03_dynamic_dashboard_leila_gharani/images/14_charts.png)<br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/Excel/02_excel_dynamic_dashboard_leila_gharani/images//14_charts.png?raw=true)<br>
 
 ## 5. My additional analysis and charts
 
@@ -129,4 +129,4 @@ I additionally added a simple calculation 'TOTAL, all location' using the SUM fo
 Added conditional formatting to the cell with total ∆ to make the font green/red depending if it's positive or negative.
 
 And this is the final result.
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/03_dynamic_dashboard_leila_gharani/images/15_result.png)<br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/Excel/02_excel_dynamic_dashboard_leila_gharani/images/15_result.png?raw=true)<br>

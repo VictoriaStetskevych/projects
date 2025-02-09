@@ -13,7 +13,7 @@ Goals:
 
 ## 1. Import file into Microsoft SQL server.
 
-I had some difficulties with importing the [layoffs.csv](https://github.com/VictoriaStetskevych/projects_from_internet/blob/main/01_layoffs_alex_the_analyst/layoffs.csv) file. 
+I had some difficulties with importing the [layoffs.csv](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/01_sql_layoffs_alex_the_analyst/layoffs_cleaned.csv) file. 
 This is the way, how I was able to upload the file.
 
 > [!TIP]
@@ -51,7 +51,7 @@ FROM duplicate_cte
 WHERE row_number > 1;
 ```
 Result: 5 duplicate rows that need to be delete:
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects_from_internet/refs/heads/main/01_layoffs_alex_the_analyst/images/01_duplicates.png)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/01_sql_layoffs_alex_the_analyst/images/01_duplicates.png?raw=true)
 
 After finding duplicate rows, the next step is to delete them.
 ```sql
@@ -68,7 +68,7 @@ DELETE FROM duplicate_cte
 WHERE row_number > 1;
 ```
 Result: all duplicate rows were deleted.
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects_from_internet/refs/heads/main/01_layoffs_alex_the_analyst/images/02_dulicates_fixed.png)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/01_sql_layoffs_alex_the_analyst/images/02_dulicates_fixed.png?raw=true)
 
 ## 4. Standardizing data
 
@@ -80,7 +80,7 @@ SELECT DISTINCT (company)
 FROM layoffs_staging2
 ```
 Result: there are 2 companies that have extra space at the beginning. 
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects_from_internet/refs/heads/main/01_layoffs_alex_the_analyst/images/03_company.png)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/01_sql_layoffs_alex_the_analyst/images/03_company.png?raw=true)
 
 To fix it I use a TRIM function to delete spaces and after that I update my data file.
 ```sql
@@ -88,7 +88,7 @@ UPDATE layoffs_staging2
 SET company = TRIM(company)
 ```
 Result: no more companies with extra spaces in names
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects_from_internet/refs/heads/main/01_layoffs_alex_the_analyst/images/04_company_fixed.png)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/01_sql_layoffs_alex_the_analyst/images/04_company_fixed.png?raw=true)
 
 - While checking names of industries I noticed that "Crypto" industry represented by 3 different names and there are 'Blank'(no data) industry cells 
 ```sql
@@ -97,7 +97,7 @@ FROM layoffs_staging2
 ORDER by 1
 ``` 
 Result:                           
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects_from_internet/refs/heads/main/01_layoffs_alex_the_analyst/images/05_industries.png)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/01_sql_layoffs_alex_the_analyst/images/05_industries.png?raw=true)
 
 To fix it I use the next query anf update my data file.
 ```sql
@@ -106,7 +106,7 @@ SET industry = 'Crypto'
 WHERE industry LIKE 'Crypto%';
 ```
 Result:                           
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects_from_internet/refs/heads/main/01_layoffs_alex_the_analyst/images/06_industries_fixed.png)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/01_sql_layoffs_alex_the_analyst/images/06_industries_fixed.png?raw=true)
 
 - While checking names of countries I noticed that 'United States' is written as 'United States.'(with a dot). 
 ```sql
@@ -115,7 +115,7 @@ FROM layoffs_staging2
 ORDER by 1;
 ```
 Result:                             
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects_from_internet/refs/heads/main/01_layoffs_alex_the_analyst/images/07_country.png)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/01_sql_layoffs_alex_the_analyst/images/07_country.png?raw=true)
 
 With the next step I change the 'United States' country name and update the data file. 
 ```sql
@@ -124,7 +124,7 @@ With the next step I change the 'United States' country name and update the data
  WHERE country LIKE 'United States%';
 ``` 
 Result:                                 
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects_from_internet/refs/heads/main/01_layoffs_alex_the_analyst/images/08_country_fixed.png)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/01_sql_layoffs_alex_the_analyst/images/08_country_fixed.png?raw=true)
 
 There is also a 'Blank' cell in a country column. I'm going to fix it in this project in a step #5 while populating cells. 
 
@@ -192,7 +192,7 @@ ALTER TABLE layoffs_staging3
 ALTER COLUMN percentage_laid_off decimal(10,4);
 ```
 Result:
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects_from_internet/refs/heads/main/01_layoffs_alex_the_analyst/images/09_data_type_fixed.png)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/01_sql_layoffs_alex_the_analyst/images/09_data_type_fixed.png?raw=true)
 
 ## 5. Fill in blank/NULL cells 
 
@@ -206,7 +206,7 @@ OR industry = '';
 ```
 Result:
 There are 4 rows with missing data in the "industry" column
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects_from_internet/refs/heads/main/01_layoffs_alex_the_analyst/images/10_industry_missing.png)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/01_sql_layoffs_alex_the_analyst/images/10_industry_missing.png?raw=true)
 
 To fill these cells I will use a JOIN function to check if there are the same companies with filled "industry" cells in other rows. 
 ```sql
@@ -220,7 +220,7 @@ AND t2.industry IS NOT NULL
 ```
 Result:
 As I can see, there are other rows with the same company names with filled "industry" cell.
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects_from_internet/refs/heads/main/01_layoffs_alex_the_analyst/images/11_industry_missing_result.png)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/01_sql_layoffs_alex_the_analyst/images/11_industry_missing_result.png?raw=true)
 
 With the next query I'll populate blank/NULL cells in the "industry" column and update the data file 
 ``` sql
@@ -269,4 +269,4 @@ If you will need to save a cleaned data as a new .csv file, you need to follow n
 - select a location where you want to save your file
 - click Save.
 
-[layoffs_cleaned.csv](https://github.com/VictoriaStetskevych/projects/blob/main/01_layoffs_alex_the_analyst/layoffs_cleaned.csv) file
+[layoffs_cleaned.csv](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/01_sql_layoffs_alex_the_analyst/layoffs_cleaned.csv) file

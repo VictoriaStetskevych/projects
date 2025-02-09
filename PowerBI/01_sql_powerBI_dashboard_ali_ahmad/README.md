@@ -20,7 +20,7 @@ Key Performance Indicators (KPI's)<br>
 
 # Process
 
-In a current project I was using [database backup file](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/PortfolioProject_MarketingAnalytics.bak) which I restored in the Microsoft SQL Server.<br>
+In a current project I was using [database backup file](https://github.com/VictoriaStetskevych/projects/blob/main/PowerBI/01_sql_powerBI_dashboard_ali_ahmad/PortfolioProject_MarketingAnalytics.bak) which I restored in the Microsoft SQL Server.<br>
 
 > [!NOTE]
 > To restore a database in Microsoft SQL Server I had to follow next steps:<br>
@@ -58,8 +58,8 @@ Result: <br>
 - 20 different products, 
 - different prices from 26.21 to 485.32<br>
 
-![](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/images/01_product.png?raw=true)
-![](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/images/12_product_category.png?raw=true)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/PowerBI/01_sql_powerBI_dashboard_ali_ahmad/images/01_product.png?raw=true)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/PowerBI/01_sql_powerBI_dashboard_ali_ahmad/images/12_product_category.png?raw=true)
 
 min/max prises I got using following queries
 
@@ -70,7 +70,7 @@ FROM products;
 SELECT MAX(Price)as max_price
 FROM products;
 ``` 
-![](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/images/02_min_max_price.png?raw=true)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/PowerBI/01_sql_powerBI_dashboard_ali_ahmad/images/02_min_max_price.png?raw=true)
 
 
 ## 2. 'products' table. 'Price Category' column
@@ -94,7 +94,7 @@ END AS Price Category
 FROM products;
 ```
 Result:<br>
-![](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/images/03_price_category.png?raw=true)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/PowerBI/01_sql_powerBI_dashboard_ali_ahmad/images/03_price_category.png?raw=true)
 
 ## 3. 'customers' table 
 
@@ -104,7 +104,7 @@ SELECT *
 FROM customers;
 ```
 Result:
-![](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/images/04_customers.png?raw=true)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/PowerBI/01_sql_powerBI_dashboard_ali_ahmad/images/04_customers.png?raw=true)
 
 To perform a basic analysis of this table I used the following queries <br>
 
@@ -118,7 +118,7 @@ FROM customers
 GROUP BY Gender;
 ```
 Result:<br>
-![](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/images/05_gender.png?raw=true)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/PowerBI/01_sql_powerBI_dashboard_ali_ahmad/images/05_gender.png?raw=true)
 
 To categorize by age range, I used the following groups:<br>
 - Young - Age below 29<br>
@@ -141,7 +141,7 @@ END AS [Age Category]
 FROM dbo.customers;
 ```
 Result:<br>
-![](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/images/06_age_category.png?raw=true)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/PowerBI/01_sql_powerBI_dashboard_ali_ahmad/images/06_age_category.png?raw=true)
 
 I also observed a column called 'DemographyID' with various values. The next step was to join the 'customer' and 'geography' tables to add geography data for customers, such as country and city.<br>
 
@@ -153,7 +153,7 @@ SELECT *
 FROM geography;
 ```
 Result:
-![](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/images/07_geography.png?raw=true)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/PowerBI/01_sql_powerBI_dashboard_ali_ahmad/images/07_geography.png?raw=true)
 
 Joined the 'customers' and 'geography' tables to obtain complete data about the customers with the following query:
 
@@ -173,7 +173,7 @@ LEFT JOIN
 ON c.GeographyID = g.GeographyID;
 ```
 Result:
-![](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/images/08_join_customers_and_geography.png?raw=true)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/PowerBI/01_sql_powerBI_dashboard_ali_ahmad/images/08_join_customers_and_geography.png?raw=true)
 
 ## 5. 'customer_reviews' table
 
@@ -183,7 +183,7 @@ SELECT *
 FROM customer_reviews;
 ```
 Result:
-![](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/images/09_customer_reviews.png?raw=true)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/PowerBI/01_sql_powerBI_dashboard_ali_ahmad/images/09_customer_reviews.png?raw=true)
 
 As part of the data cleaning process, I aimed to replace double spaces (' ') with single spaces (' ') in the 'ReviewText' column. This step helps improve the data for future analysis.
 To achieve this, I used the following query:
@@ -199,7 +199,7 @@ SELECT
 FROM customer_reviews;
 ```
 Result
-![](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/images/10_customer_reviews_fixed.png?raw=true)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/PowerBI/01_sql_powerBI_dashboard_ali_ahmad/images/10_customer_reviews_fixed.png?raw=true)
 
 ## 6. 'engagement_data' table
 
@@ -209,7 +209,7 @@ SELECT *
 FROM engagement_data;
 ```
 Result:
-![](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/images/11_engagement_data.png?raw=true)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/PowerBI/01_sql_powerBI_dashboard_ali_ahmad/images/11_engagement_data.png?raw=true)
 
 I cleaned the data in this table to ensure a standardized format and added comments to my queries to clarify the purpose of each part.
 
@@ -233,7 +233,7 @@ FROM
 WHERE 
     ContentType != 'Newsletter';
 ```
-![](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/images/13_engagement_data_fixed.png?raw=true)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/PowerBI/01_sql_powerBI_dashboard_ali_ahmad/images/13_engagement_data_fixed.png?raw=true)
 
 ## 7. 'customer_journey' table. Looking for duplicates.
 
@@ -271,7 +271,7 @@ ORDER BY JourneyID;
 ```
 
 Result: there are 79 duplicate rows in this table
-![](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/images/14_duplicates.png?raw=true)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/PowerBI/01_sql_powerBI_dashboard_ali_ahmad/images/14_duplicates.png?raw=true)
 
 
 The final task in the analysis was to address 'NULL' values and remove all duplicates identified in the previous query. I accomplished this using the following query and included additional comments to explain the purpose of each part.
@@ -318,7 +318,7 @@ WHERE row_num = 1;
 ```
 
 Result:
-![](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/images/15_null_duplicates_fixed.png?raw=true)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/PowerBI/01_sql_powerBI_dashboard_ali_ahmad/images/15_null_duplicates_fixed.png?raw=true)
 
 ## 8. Analyzing 'customer_reviews' table in Python
 
@@ -428,7 +428,7 @@ customer_reviews_df.to_csv('fact_customer_reviews_with_sentiment.csv', index=Fal
 
 ```
 Result: [fact_customer_reviews_enrich.csv
-](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/fact_customer_reviews_enrich.csv)
+](https://github.com/VictoriaStetskevych/projects/blob/main/PowerBI/01_sql_powerBI_dashboard_ali_ahmad/fact_customer_reviews_enrich.csv)
 
 
 ## 9. Dashboards in Power BI
@@ -456,12 +456,12 @@ ADDCOLUMNS (
 )
 ```
 
-Result: Power BI Dashboards [PBIX file](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/Dashboard_sql.pbix)
+Result: Power BI Dashboards [PBIX file](https://github.com/VictoriaStetskevych/projects/blob/main/PowerBI/01_sql_powerBI_dashboard_ali_ahmad/Dashboard_sql.pbix)
 
-![](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/images/dashboard_01.png?raw=true)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/PowerBI/01_sql_powerBI_dashboard_ali_ahmad/images/dashboard_01.png?raw=true)
 
-![](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/images/dashboard_02.png?raw=true)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/PowerBI/01_sql_powerBI_dashboard_ali_ahmad/images/dashboard_02.png?raw=true)
 
-![](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/images/dashboard_03.png?raw=true)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/PowerBI/01_sql_powerBI_dashboard_ali_ahmad/images/dashboard_03.png?raw=true)
 
-![](https://github.com/VictoriaStetskevych/projects/blob/main/05_sql_powerBI_dashboard_ali_ahmad/images/dashboard_04.png?raw=true)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/PowerBI/01_sql_powerBI_dashboard_ali_ahmad/images/dashboard_04.png?raw=true)
