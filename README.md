@@ -5,12 +5,12 @@
 <tr>
 <td>
 <a href="https://github.com/VictoriaStetskevych/projects/tree/main/PowerBI/03_power_bi_finance_dashboard">
-  <img src="https://github.com/VictoriaStetskevych/projects/tree/main/PowerBI/03_power_bi_finance_dashboard/02_finance_image.png?raw=true">
+  <img src="https://github.com/VictoriaStetskevych/projects/blob/main/PowerBI/03_power_bi_finance_dashboard/02_finance_image.png?raw=true">
 </a>
 </td>
 <td>
-<a href="https://github.com/VictoriaStetskevych/projects/tree/main/PowerBI/02_power_bi_sport_dashboard">
-  <img src="https://github.com/VictoriaStetskevych/projects/tree/main/PowerBI/02_power_bi_sport_dashboard/01_sport_image.png">
+<a href="https://github.com/VictoriaStetskevych/projects/blob/main/PowerBI/02_power_bi_sport_dashboard">
+  <img src="https://github.com/VictoriaStetskevych/projects/blob/main/PowerBI/02_power_bi_sport_dashboard/01_sport_image.png?raw=true">
 </a>
 </td>
 </tr>
@@ -35,7 +35,7 @@
 </a>
 </td>
 <td>
-<a href="https://https://github.com/VictoriaStetskevych/projects/blob/main/Excel/03_excel_dashboard_coffee_sales_mo_chen">
+<a href="https://github.com/VictoriaStetskevych/projects/blob/main/Excel/03_excel_dashboard_coffee_sales_mo_chen">
   <img src="https://github.com/VictoriaStetskevych/projects/blob/main/Excel/03_excel_dashboard_coffee_sales_mo_chen/images/34_dashboard_image.png?raw=true" >
 </a>
 </td>
@@ -46,7 +46,7 @@
 <a href="https://github.com/VictoriaStetskevych/projects/blob/main/PowerBI/01_sql_powerBI_dashboard_ali_ahmad"> Microsoft SQL Server and <br> Power BI - dashboard</a><br>
 </td>
 <td>
-<a href="https://https://github.com/VictoriaStetskevych/projects/blob/main/Excel/03_excel_dashboard_coffee_sales_mo_chen"> Microsoft Excel <br> Pivot Table and <dr> dashboard</a><br>
+<a href="https://github.com/VictoriaStetskevych/projects/blob/main/Excel/03_excel_dashboard_coffee_sales_mo_chen"> Microsoft Excel <br> Pivot Table and <dr> dashboard</a><br>
 </td>
 </tr>
 </table>
@@ -99,7 +99,7 @@
 <a href="https://github.com/VictoriaStetskevych/projects/blob/main/SQL/01_sql_layoffs_alex_the_analyst"> Cleaning Data in<br> Microsoft SQL Server</a><br>
 </td>
 <td>
-<a href="https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game - in progress"> SQL Game<br> Based on the Squid Game TV Show</a><br>
+<a href="https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game - in progress"> SQL Game<br> Based on the Squid Game TV Show - in progress</a><br>
 </td>
 </tr>
 </table>
