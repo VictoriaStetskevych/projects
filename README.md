@@ -95,18 +95,18 @@
 </a>
 </td>
 <td>
-<a href="">
-  <img src="" >
+<a href="https://github.com/VictoriaStetskevych/projects/tree/main/08_squid_game_sql">
+  <img src="https://github.com/VictoriaStetskevych/projects/blob/main/08_squid_game_sql/images/01_squid_game_wallpaper.jpg?raw=true" >
 </a>
 </td>
 </tr>
 
 <tr>
 <td >
-<a href="https://github.com/VictoriaStetskevych/projects/tree/main/01_layoffs_alex_the_analyst"> Clean data in<br> Microsoft SQL Server</a><br>
+<a href="https://github.com/VictoriaStetskevych/projects/tree/main/01_layoffs_alex_the_analyst"> Cleaning Data in<br> Microsoft SQL Server</a><br>
 </td>
 <td>
-<a href="">  <br> <dr> </a><br>
+<a href="https://github.com/VictoriaStetskevych/projects/tree/main/08_squid_game_sql"> SQL Game<br> Based on the Squid Game TV Show</a><br>
 </td>
 </tr>
 </table>
