@@ -91,28 +91,23 @@
 <tr>
 <td>
 <a href="https://github.com/VictoriaStetskevych/projects/tree/main/01_layoffs_alex_the_analyst">
-  <img src="https://github.com/VictoriaStetskevych/projects/blob/main/03_dynamic_dashboard_leila_gharani/images/15_result.png?raw=true">
+  <img src="https://github.com/VictoriaStetskevych/media_library/blob/main/different_images/clean_data.png?raw=true">
 </a>
 </td>
 <td>
-<a href="https://github.com/VictoriaStetskevych/projects/tree/main/02_bike_sales_alex_the_analyst">
-  <img src="https://github.com/VictoriaStetskevych/projects/blob/main/02_bike_sales_alex_the_analyst/images/13_dashboards.png?raw=true" >
+<a href="">
+  <img src="" >
 </a>
 </td>
 </tr>
 
 <tr>
 <td >
-<a href="https://github.com/VictoriaStetskevych/projects/tree/main/03_dynamic_dashboard_leila_gharani"> Microsoft Excel <br> Dynamic dashboard</a><br>
+<a href="https://github.com/VictoriaStetskevych/projects/tree/main/01_layoffs_alex_the_analyst"> Clean data in<br> Microsoft SQL Server</a><br>
 </td>
 <td>
-<a href="https://github.com/VictoriaStetskevych/projects/tree/main/02_bike_sales_alex_the_analyst"> Microsoft Excel <br> Pivot Table and <dr> dashboard</a><br>
+<a href="">  <br> <dr> </a><br>
 </td>
 </tr>
 </table>
 <hr>
-
-
-This is the list of projects that I made.
-
-1. [Cleaning data in Microsoft SQL Server]() - layoffs from Alex the analyst
