@@ -52,13 +52,6 @@
 </table>
 <hr>
 
-
-
-
-
-
-
-
 <table>
 
 <tr>
