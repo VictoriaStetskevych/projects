@@ -96,7 +96,7 @@
 </td>
 <td>
 <a href="https://github.com/VictoriaStetskevych/projects/tree/main/08_squid_game_sql">
-  <img src="https://github.com/VictoriaStetskevych/projects/blob/main/08_squid_game_sql/images/02_squid_game_wallpaper.jpg?raw=true" >
+  <img src="https://github.com/VictoriaStetskevych/projects/blob/main/08_squid_game_sql/images/03_squid_game_wallpaper.jpg?raw=true" >
 </a>
 </td>
 </tr>
