@@ -17,10 +17,10 @@
 
 <tr>
 <td>
-<a href="https://github.com/VictoriaStetskevych/projects/tree/main/PowerBI/03_power_bi_finance_dashboard"> Power BI - finance dashboard</a><br>
+<a href="https://github.com/VictoriaStetskevych/projects/tree/main/PowerBI/03_power_bi_finance_dashboard"> Power BI <br> Finance dashboard</a><br>
 </td>
 <td>
-<a href="https://github.com/VictoriaStetskevych/projects/tree/main/PowerBI/02_power_bi_sport_dashboard"> Power BI - sport dashboard</a><br>
+<a href="https://github.com/VictoriaStetskevych/projects/tree/main/PowerBI/02_power_bi_sport_dashboard"> Power BI <br> Sport dashboard</a><br>
 </td>
 </tr>
 </table>
@@ -43,10 +43,10 @@
 
 <tr>
 <td >
-<a href="https://github.com/VictoriaStetskevych/projects/blob/main/PowerBI/01_sql_powerBI_dashboard_ali_ahmad"> Microsoft SQL Server and <br> Power BI - dashboard</a><br>
+<a href="https://github.com/VictoriaStetskevych/projects/blob/main/PowerBI/01_sql_powerBI_dashboard_ali_ahmad"> Analyze data in Microsoft SQL Server and <br> building Dashboards in Power BI</a><br>
 </td>
 <td>
-<a href="https://github.com/VictoriaStetskevych/projects/blob/main/Excel/03_excel_dashboard_coffee_sales_mo_chen"> Microsoft Excel <br> Pivot Table and <dr> dashboard</a><br>
+<a href="https://github.com/VictoriaStetskevych/projects/blob/main/Excel/03_excel_dashboard_coffee_sales_mo_chen"> Analyze data in Microsoft Excel <br> Pivot Table and <dr> dashboard</a><br>
 </td>
 </tr>
 </table>
@@ -69,10 +69,10 @@
 
 <tr>
 <td >
-<a href="https://github.com/VictoriaStetskevych/projects/blob/main/Excel/02_excel_dynamic_dashboard_leila_gharani"> Microsoft Excel <br> Dynamic dashboard</a><br>
+<a href="https://github.com/VictoriaStetskevych/projects/blob/main/Excel/02_excel_dynamic_dashboard_leila_gharani"> Microsoft Excel, <br> Dynamic dashboard</a><br>
 </td>
 <td>
-<a href="https://github.com/VictoriaStetskevych/projects/blob/main/Excel/01_excel_bike_sales_alex_the_analyst"> Microsoft Excel <br> Pivot Table and <dr> dashboard</a><br>
+<a href="https://github.com/VictoriaStetskevych/projects/blob/main/Excel/01_excel_bike_sales_alex_the_analyst"> Microsoft Excel, <br> Pivot Table, and <dr> Building a Dashboard</a><br>
 </td>
 </tr>
 </table>
