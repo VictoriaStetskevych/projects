@@ -114,22 +114,21 @@ WHERE
     AND (age > 65 OR (vice = 'Gambling' AND has_close_family = 'false'))
 ORDER BY debt DESC;               
 ```
-<br>
 <u>Result:</u><br>
 99 rows. Here a couple first players from this group of players<br>
-![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/14_level_1.png?raw=true) <br>
-<br>
+
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/14_level_1.png?raw=true)
 
 ## <u>LEVEL 2. Rations</u>
 
 <u>Task<br></u>
 "The organizers need to calculate how many food portions to withhold to create the right amount of tension. In a table, calculate how many rations would feed 90% of the remaining(alive) non-insider players (rounded down), and in another column, indicate if the current rations supply is sufficient. (True or False)"
-For this task I also had to use a new schema:<br>
+For this task I also had to use a new table 'rations':<br>
 ![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/15_new_schema.png?raw=true)<br>
 New table 'rations': [csv]() or [xlsx]()<br>
 
 <u>Solution:</u><br>
-Ar first I checked a new table:
+At first I checked a new table:
 ```sql
 SELECT *
 FROM rations;
@@ -155,7 +154,7 @@ WHERE status = 'alive' AND isinsider = 'false';
 ## <u>Level 3. Scenario </u>
 
 For the next level I got 2 new tables:<br>
-![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/18_level_3_new_schema.png)<br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/18_level_3_new_schema.png?raw=true)<br>
 - monthly_temperatures: [cvs](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/monthly_temperatures.csv) or [xlsx](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/monthly_temperatures.xlsx)<br>
 - honeycomb_game: [csv](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/honeycomb_game.csv) or [xlsx](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/honeycomb_game.xlsx)
 
