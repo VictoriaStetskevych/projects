@@ -117,7 +117,7 @@ ORDER BY debt DESC;
 <br>
 <u>Result:</u><br>
 99 rows. Here a couple first players from this group of players<br>
-![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/14_level_1.png?raw=true)<br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/14_level_1.png?raw=true) <br>
 <br>
 
 ## <u>LEVEL 2. Rations</u>
