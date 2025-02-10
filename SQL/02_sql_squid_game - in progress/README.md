@@ -15,7 +15,7 @@ SELECT *
 FROM player
 ```
 Result:
-04_data
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/04_data.png?raw=true)
 
 - Check the total amount of players
 ```sql
@@ -23,7 +23,7 @@ SELECT COUNT(DISTINCT id) AS unique_id_total
 FROM player;    
 ```
 Result:
-05_unique_id_total
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/05_unique_id_total.png?raw=true)
 
 - As a big fan of the Squid Game TV show, I couldn’t resist checking the player ID numbers from both seasons.
 ```sql
@@ -37,8 +37,8 @@ FROM player
 WHERE id IN (333, 388, 120, 7, 149, 390, 222);    
 ```
 Result;
-06_season_1
-07_season_2
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/06_season_1.png?raw=true)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/07_season_2.png?raw=true)
 
 - #001 in this dataset isn’t Oh Il-nam, In-ho, or Oh Young-il, but when I showed my husband who #001 was, he told me it’s a very well-known person. 
 ```sql
@@ -46,7 +46,7 @@ SELECT *
 FROM player 
 WHERE id = 001;
 ```
-08_player_001
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/08_player_001.png?raw=true)
 
 - I also checked MAX and MIN ages of players
 ```
@@ -56,7 +56,7 @@ SELECT
 FROM player;
 ```
 Result:
-09_max_min_age
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/09_max_min_age.png?raw=true)
 
 - Then I thought, what if there wasn’t just one player who was 19 or 85? Plus, I knew that the first game, "Red Light, Green Light," was over, so I decided to count the players with the maximum and minimum ages who survived.
 ```sql
@@ -67,7 +67,7 @@ FROM player
 WHERE status = 'alive';
 ```
 Result:
-10_max_min_age_alive
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/10_max_min_age_alive.png?raw=true)
 
 - Additionally, I decided to check the number of players who survived/died after the first game.
 ```sql
@@ -77,7 +77,7 @@ SELECT
 FROM player;
 ```
 Result:
-11_first_game_survived_died
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/11_first_game_survived_died.png?raw=true)
 
 - I also was curios to check people with biggest debt. I was really surprised to see such unexpected result and these players:
 ``` 
@@ -86,7 +86,7 @@ FROM player
 ORDER BY debt desc;
 ```
 Result:
-12_max_debt
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/12_max_debt.png?raw=true)
 
 - And players with smallest debt
 ```sql
@@ -95,7 +95,7 @@ FROM player
 ORDER BY debt asc;
 ```
 Result:
-13_min_debt
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/13_min_debt.png?raw=true)
 
 ## <u>LEVEL 1</u>
 
