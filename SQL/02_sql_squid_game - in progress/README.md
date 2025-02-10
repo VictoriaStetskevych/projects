@@ -15,7 +15,7 @@ SELECT *
 FROM player
 ```
 Result:
-![alt text](<Screenshot 2025-02-10 085741.png>)
+04_data
 
 - Check the total amount of players
 ```sql
@@ -23,7 +23,7 @@ SELECT COUNT(DISTINCT id) AS unique_id_total
 FROM player;    
 ```
 Result:
-![alt text](<Screenshot 2025-02-10 090931.png>)
+05_unique_id_total
 
 - As a big fan of the Squid Game TV show, I couldn’t resist checking the player ID numbers from both seasons.
 ```sql
@@ -37,14 +37,16 @@ FROM player
 WHERE id IN (333, 388, 120, 7, 149, 390, 222);    
 ```
 Result;
-![alt text](<Screenshot 2025-02-07 101931.png>) 
-![alt text](<Screenshot 2025-02-07 104817.png>)
+06_season_1
+07_season_2
 
-- #001 in the dataset isn’t Oh Il-nam, In-ho, or Oh Young-il, but when I showed my husband who #001 was, he told me it’s a very well-known person. 
+- #001 in this dataset isn’t Oh Il-nam, In-ho, or Oh Young-il, but when I showed my husband who #001 was, he told me it’s a very well-known person. 
 ```sql
-
+SELECT * 
+FROM player 
+WHERE id = 001;
 ```
-![alt text](image.png)
+08_player_001
 
 - I also checked MAX and MIN ages of players
 ```
@@ -54,7 +56,7 @@ SELECT
 FROM player;
 ```
 Result:
-![](image-1.png)
+09_max_min_age
 
 - Then I thought, what if there wasn’t just one player who was 19 or 85? Plus, I knew that the first game, "Red Light, Green Light," was over, so I decided to count the players with the maximum and minimum ages who survived.
 ```sql
@@ -65,7 +67,7 @@ FROM player
 WHERE status = 'alive';
 ```
 Result:
-![alt text](<Screenshot 2025-02-10 095034.png>)
+10_max_min_age_alive
 
 - Additionally, I decided to check the number of players who survived/died after the first game.
 ```sql
@@ -75,7 +77,7 @@ SELECT
 FROM player;
 ```
 Result:
-![alt text](image-2.png)
+11_first_game_survived_died
 
 - I also was curios to check people with biggest debt. I was really surprised to see such unexpected result and these players:
 ``` 
@@ -84,7 +86,7 @@ FROM player
 ORDER BY debt desc;
 ```
 Result:
-![](image-3.png)
+12_max_debt
 
 - And players with smallest debt
 ```sql
@@ -93,7 +95,7 @@ FROM player
 ORDER BY debt asc;
 ```
 Result:
-![alt text](image-4.png)
+13_min_debt
 
 ## <u>LEVEL 1</u>
 
