@@ -2,7 +2,7 @@
 
 I did this project using tasks from the DataLemur's [SQL game](https://datalemur.com/sql-game) inspired by Netflix's Squid Game. <br>
 
-The dataset for the game/project: [csv](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/02_squid_games_sql.csv) or [xlsx](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/02_squid_games_sql.xlsx)<br>
+The dataset for the game/project: [csv](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/player.csv) or [xlsx](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/player.xlsx)<br>
 
 The Goal - to help the Front Men to analyze data. <br>
 
@@ -98,10 +98,79 @@ ORDER BY debt asc;
 Result:<br>
 ![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/13_min_debt.png?raw=true)<br>
 
-## <u>LEVEL 1</u>
+## <u>LEVEL 1. Red Light, Green Light</u>
+
+<u>Task<br></u>
+"The organizers want to identify vulnerable living players who might be easily manipulated for the next game. Find all players who are alive, in severe debt (debt > 400,000,000 won), and are either elderly (age > 65) OR have a vice of Gambling with no family connections."<br>
+
+<u>Solution.<br></u>
+I wanted to see who had the biggest debt among this group of players, so I added 'ORDER BY debt DESC' to my query.
+```sql
+SELECT *
+FROM player
+WHERE 
+    status = 'alive'
+    AND debt > 400000000
+    AND (age > 65 OR (vice = 'Gambling' AND has_close_family = 'false'))
+ORDER BY debt DESC;               
+```
+<br>
+<u>Result:</u><br>
+99 rows. Here a couple first players from this group of players<br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/14_level_1.png?raw=true)<br>
+<br>
+
+## <u>LEVEL 2. Rations</u>
+
+<u>Task<br></u>
+"The organizers need to calculate how many food portions to withhold to create the right amount of tension. In a table, calculate how many rations would feed 90% of the remaining(alive) non-insider players (rounded down), and in another column, indicate if the current rations supply is sufficient. (True or False)"
+For this task I also had to use a new schema:<br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/15_new_schema.png?raw=true)<br>
+New table 'rations': [csv]() or [xlsx]()<br>
+
+<u>Solution:</u><br>
+Ar first I checked a new table:
+```sql
+SELECT *
+FROM rations;
+```
+<u>Result:<br></u>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/16_rations.png?raw=true)
+
+And now the solution for the Level 2 task:
+```sql
+SELECT 
+    FLOOR(COUNT(id) * 0.9) AS cut_food_portions,
+    CASE
+        WHEN (FLOOR(COUNT(id) * 0.9) <= (SELECT amount FROM rations)) THEN 'True'
+        ELSE 'False'
+    END AS rations_supply
+FROM player
+WHERE status = 'alive' AND isinsider = 'false';
+```
+<u>Result:</u><br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/17_level_2.png?raw=true)
 
 
-Resources:
+## <u>Level 3. Scenario </u>
+
+For the next level I got 2 new tables:<br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/18_level_3_new_schema.png)<br>
+- monthly_temperatures: [cvs](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/monthly_temperatures.csv) or [xlsx](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/monthly_temperatures.xlsx)<br>
+- honeycomb_game: [csv](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/honeycomb_game.csv) or [xlsx](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/honeycomb_game.xlsx)
+
+<u>Task<br></u>
+Analyze the average completion times for each shape in the honeycomb game during the hottest and coldest months, using data from the past 20 years only. Order the results by average completion time.<br>
+
+<u>Solution:</u>
+
+
+
+
+
+
+## <u>Resources:</u>
 
 DataLemur - https://datalemur.com/
 SQL Squid Game - https://datalemur.com/sql-game
+
