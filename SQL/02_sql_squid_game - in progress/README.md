@@ -12,7 +12,7 @@ So, before jumping into the game and answering the Front Man's questions, I deci
 
 ```sql
 SELECT *
-FROM player
+FROM player;
 ```
 Result:<br>
 ![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/04_data.png?raw=true)<br>
