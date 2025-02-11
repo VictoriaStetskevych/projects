@@ -1,0 +1,457 @@
+id,first_name,last_name,age,status,debt,vice,has_close_family,isinsider,team_id
+1,Luigi,Mangione,27,alive,3930975804,Healthcare,FALSE,FALSE,23
+2,Seokjin,Nam,68,alive,684587725,Negative thinking,FALSE,FALSE,23
+3,Chiho,Dae,54,alive,983907316,Gossiping,TRUE,FALSE,23
+4,Joonho,Choi,53,alive,1926314889,Procrastination,FALSE,FALSE,24
+5,Seokjin,Jung,23,alive,1853575930,Bad discipline,FALSE,FALSE,24
+6,Taehyung,Yu,84,alive,1262497885,Procrastination,FALSE,FALSE,24
+7,Yong-sik,Park,32,alive,800000000,Gambling,TRUE,FALSE,24
+8,Hyejin,Bi,35,alive,1213517404,Overeating,FALSE,FALSE,24
+9,Jian,Shin,20,alive,768884262,Overeating,FALSE,FALSE,24
+10,Harin,Kang,23,alive,1170204113,Screen addiction,FALSE,FALSE,24
+11,Harin,Choi,37,dead,1001282738,Negative thinking,FALSE,FALSE,null
+12,Jian,Bi,31,alive,1507095186,Procrastination,FALSE,FALSE,24
+13,Kyungsoo,Lee,44,alive,1348612834,Impulsiveness,TRUE,FALSE,24
+14,Kyungsoo,Bi,27,alive,477604041,Smoking,FALSE,FALSE,24
+15,Iseo,Dae,32,alive,1245211809,Bad discipline,FALSE,FALSE,25
+16,Chiho,Bi,66,dead,441138770,Bad discipline,TRUE,FALSE,null
+17,Taehyung,Yu,71,alive,864049939,Smoking,TRUE,FALSE,25
+18,Arin,Han,33,alive,836990891,Road rage,TRUE,FALSE,25
+19,Jiwoo,Oh,52,alive,433382411,Negative thinking,TRUE,FALSE,25
+20,Sua,Han,61,alive,786951272,Screen addiction,FALSE,FALSE,25
+21,Hyejin,Choi,66,dead,761413442,Road rage,FALSE,FALSE,null
+22,Taylor,Swift,35,alive,440374013,Carbon Emissions,TRUE,FALSE,25
+23,Yuna,Tang,76,alive,1118463531,Road rage,TRUE,FALSE,25
+24,Joonho,Kam,64,dead,416410332,Drinking,TRUE,FALSE,null
+25,Suho,Kang,65,alive,447228292,Overworking,TRUE,FALSE,25
+26,Jiwoo,Tang,54,alive,885951680,Drinking,TRUE,FALSE,25
+27,Hun,Han,68,alive,1116516209,Sleeping in,FALSE,FALSE,25
+28,Kyungsoo,Jung,36,dead,533860236,Being late,TRUE,FALSE,null
+29,Yuna,Seonu,59,alive,1022033908,Being late,FALSE,FALSE,26
+30,Jiwoo,Kam,35,alive,1838000417,Swearing,TRUE,FALSE,26
+31,Hyejin,Han,51,alive,1793874468,Nail-biting,TRUE,FALSE,26
+32,Eunji,Beom,74,alive,1135471726,Negative thinking,FALSE,FALSE,26
+33,Sooyoung,Yu,20,alive,1723348566,Gossiping,TRUE,FALSE,26
+34,Seokjin,Choi,23,alive,1115707608,Smoking,FALSE,FALSE,26
+35,Haeun,Shin,75,dead,1061758829,Road rage,FALSE,FALSE,null
+36,Hyejin,Kang,21,alive,251954979,Being late,TRUE,FALSE,26
+37,Eunji,Mi,20,alive,1660580044,Perfectionism,FALSE,FALSE,26
+38,Arin,Namgung,73,alive,1160460972,Drinking,TRUE,FALSE,26
+39,Ijun,Kam,39,alive,1416044416,Road rage,FALSE,FALSE,26
+40,Ijun,Yoon,83,alive,637085119,Negative thinking,TRUE,FALSE,27
+41,Chiho,Kang,58,alive,1260749787,Overworking,TRUE,FALSE,27
+42,Kyungsoo,Tang,53,alive,414662402,Bad discipline,TRUE,FALSE,27
+43,Kyungsoo,Un,29,dead,1740259748,Gossiping,FALSE,FALSE,null
+44,Joonho,Oh,56,alive,959403337,Bad discipline,FALSE,FALSE,27
+45,Donald,Trump,77,alive,572921294770,Immigrants,TRUE,TRUE,27
+46,Taehyung,Kam,36,alive,855030289,Smoking,FALSE,FALSE,27
+47,Seokjin,Un,57,alive,217509456,Swearing,FALSE,FALSE,27
+48,Minho,Dae,76,dead,215300902,Gambling,TRUE,FALSE,null
+49,Kyungsoo,Tang,80,alive,1085149381,Screen addiction,TRUE,FALSE,27
+50,Jiwoo,Kang,72,alive,681095056,Overworking,FALSE,FALSE,27
+51,Hyejin,Shin,66,alive,552932354,Drinking,FALSE,FALSE,27
+52,Seokjin,Park,59,alive,200782964,Impulsiveness,FALSE,FALSE,28
+53,Hun,Nam,27,alive,1688816250,Overworking,TRUE,FALSE,28
+54,Minho,Beom,72,alive,1316254106,Laziness,FALSE,FALSE,28
+55,Sooyoung,Mi,43,alive,832807979,Nail-biting,TRUE,FALSE,28
+56,Jiwoo,Han,80,alive,325887490,Laziness,TRUE,FALSE,28
+57,Arin,Han,29,dead,412017842,Nail-biting,TRUE,FALSE,null
+58,Kyungsoo,Choi,51,alive,472922812,Negative thinking,TRUE,FALSE,28
+59,Haeun,Nan,41,dead,1496079318,Overeating,FALSE,FALSE,null
+60,Hun,Han,72,alive,613710777,Overeating,FALSE,FALSE,28
+61,Iseo,Nan,77,alive,1933546131,Perfectionism,TRUE,FALSE,28
+62,Jian,Kang,49,alive,1268391844,Swearing,FALSE,FALSE,28
+63,Iseo,Un,24,alive,259773422,Perfectionism,TRUE,FALSE,28
+64,Eunji,Bi,55,alive,1924464701,Nail-biting,FALSE,FALSE,29
+65,Yuna,Shin,30,alive,568846372,Overeating,TRUE,FALSE,29
+66,Sooyoung,Nam,71,alive,1321045810,Screen addiction,TRUE,FALSE,29
+67,Sae-Byeok,Kang,20,alive,60000000,Misanthropy,FALSE,FALSE,29
+68,Arin,Nam,26,alive,1217905404,Smoking,FALSE,FALSE,29
+69,Joonho,Shin,30,alive,1414017039,Perfectionism,TRUE,FALSE,29
+70,Eunji,Bi,83,dead,1495715050,Smoking,TRUE,FALSE,null
+71,Suho,Kim,69,alive,1468688657,Overworking,TRUE,FALSE,29
+72,Minho,Seonu,85,alive,445912118,Procrastination,FALSE,FALSE,29
+73,Suho,Un,75,alive,323931232,Impulsiveness,FALSE,FALSE,29
+74,Sooyoung,Kim,60,dead,1993519313,Self-criticism,FALSE,FALSE,null
+75,Suho,Han,60,dead,1233808656,Gossiping,TRUE,FALSE,null
+76,Harin,Yoon,36,alive,448752549,Overeating,FALSE,FALSE,29
+77,Iseo,Oh,43,alive,1517200347,Sleeping in,TRUE,FALSE,30
+78,Kyungsoo,Han,25,alive,1405132872,Gossiping,TRUE,FALSE,30
+79,Sua,Gi,40,alive,780719396,Self-criticism,FALSE,FALSE,30
+80,Haeun,Shin,39,alive,1331718703,Screen addiction,FALSE,FALSE,30
+81,Yuna,Tang,82,alive,340982645,Bad discipline,FALSE,FALSE,30
+82,Sua,Mi,42,alive,842783538,Sleeping in,TRUE,FALSE,30
+83,Arin,Kam,58,dead,1591772156,Sleeping in,TRUE,FALSE,null
+84,Yuna,Kang,67,alive,1899935293,Being late,FALSE,FALSE,30
+85,Taehyung,Yoon,40,alive,1195611867,Overeating,TRUE,FALSE,30
+86,Harin,Gi,28,dead,742346686,Drinking,FALSE,FALSE,null
+87,Travis,Kelce,35,alive,240000000,Arrogannce,TRUE,FALSE,30
+88,Hyejin,Bi,70,alive,792687520,Laziness,TRUE,FALSE,30
+89,Arin,Jung,48,alive,758684938,Overeating,FALSE,FALSE,31
+90,Yuna,Beom,84,alive,1493557620,Overworking,TRUE,FALSE,31
+91,Jian,Lee,68,alive,823340612,Procrastination,FALSE,FALSE,31
+92,Jian,Nan,61,alive,251007592,Road rage,FALSE,FALSE,31
+93,Hun,Shin,65,alive,1366589570,Overworking,TRUE,FALSE,31
+94,Chiho,Gi,83,alive,1679245759,Smoking,FALSE,FALSE,31
+95,Sooyoung,Yu,37,alive,1007027847,Gossiping,TRUE,FALSE,31
+96,Ijun,Kang,38,alive,1803217346,Perfectionism,FALSE,FALSE,31
+97,Kyungsoo,Mi,57,alive,880666570,Overworking,FALSE,FALSE,31
+98,Taehyung,Gi,25,alive,1057758384,Impulsiveness,TRUE,FALSE,31
+99,Kyungsoo,Park,77,alive,357746720,Overeating,TRUE,FALSE,32
+100,Jimmy,Donaldson,26,alive,9425001176,Reputation,TRUE,FALSE,32
+101,Deok-su,Jang,44,alive,840000000,Sadism,FALSE,FALSE,32
+102,Taehyung,Dae,41,alive,1149979831,Smoking,FALSE,FALSE,32
+103,Chiho,Kam,72,alive,1170067306,Swearing,TRUE,FALSE,32
+104,Iseo,Tang,36,alive,1208888152,Perfectionism,TRUE,FALSE,32
+105,Suho,Gi,75,alive,1069396237,Procrastination,FALSE,FALSE,32
+106,Sooyoung,Nan,48,alive,990938208,Self-criticism,TRUE,FALSE,null
+107,Jiwoo,Jung,31,dead,1648640663,Screen addiction,FALSE,FALSE,null
+108,Hyejin,Dae,37,alive,980264714,Overeating,FALSE,FALSE,32
+109,Seokjin,Kam,65,alive,422489200,Drinking,TRUE,FALSE,32
+110,Jiwoo,Shin,42,alive,1489870571,Impulsiveness,TRUE,FALSE,32
+111,Ijun,Kang,43,alive,898488197,Overworking,FALSE,FALSE,33
+112,Jiwoo,Park,30,alive,1892572118,Laziness,FALSE,FALSE,33
+113,Seokjin,Shin,22,alive,1449609224,Impulsiveness,FALSE,FALSE,33
+114,Sooyoung,Jung,67,alive,792451279,Road rage,FALSE,FALSE,33
+115,Hun,Gi,51,alive,1541324594,Gambling,TRUE,FALSE,33
+116,Harin,Nan,64,dead,1122012965,Gossiping,FALSE,FALSE,null
+117,Suho,Nan,62,alive,969150923,Road rage,TRUE,FALSE,33
+118,Chiho,Mi,41,alive,1716898192,Procrastination,FALSE,FALSE,33
+119,Jian,Namgung,46,alive,578191031,Nail-biting,TRUE,FALSE,33
+120,Hyun-ju,Cho,31,alive,400000000,Insecure,FALSE,FALSE,33
+121,Minho,Gi,25,alive,1413811373,Overworking,FALSE,FALSE,33
+122,Chiho,Lee,20,alive,455666475,Nail-biting,FALSE,FALSE,34
+123,Suho,Yu,22,alive,1750220799,Bad discipline,TRUE,FALSE,34
+124,Harin,Dae,38,alive,540663750,Bad discipline,FALSE,FALSE,34
+125,Suho,Kang,52,alive,1830653677,Overworking,FALSE,FALSE,34
+126,Joonho,Seonu,54,dead,1206850795,Road rage,FALSE,FALSE,null
+127,Haeun,Nan,74,alive,1004032322,Perfectionism,TRUE,FALSE,34
+128,Chiho,Seonu,50,alive,947118548,Being late,FALSE,FALSE,34
+129,Chiho,Park,49,dead,1312443849,Sleeping in,FALSE,FALSE,null
+130,Kyungsoo,Lee,85,alive,1199098885,Drinking,TRUE,FALSE,34
+131,Joonho,Mi,76,alive,732244129,Road rage,TRUE,FALSE,34
+132,Taehyung,Park,31,alive,229811866,Procrastination,TRUE,FALSE,34
+133,Taehyung,Lee,70,alive,1133271954,Drinking,TRUE,FALSE,34
+134,Joonho,Kim,58,alive,393249910,Nail-biting,TRUE,FALSE,35
+135,Hyejin,Mi,79,alive,1227501306,Bad discipline,FALSE,FALSE,35
+136,Sooyoung,Seonu,54,alive,1142307387,Impulsiveness,TRUE,FALSE,35
+137,Joonho,Beom,79,alive,1442049085,Overworking,TRUE,FALSE,35
+138,Harin,Beom,57,alive,1480474931,Nail-biting,TRUE,FALSE,35
+139,Seokjin,Kam,33,dead,552569475,Laziness,FALSE,FALSE,null
+140,Seokjin,Beom,41,alive,1213378974,Nail-biting,FALSE,FALSE,35
+141,Joonho,Seonu,29,dead,1645832744,Self-criticism,TRUE,FALSE,null
+142,Minho,Gi,36,dead,1378235496,Being late,TRUE,FALSE,null
+143,Ijun,Nam,85,alive,795917856,Bad discipline,TRUE,FALSE,35
+144,Haeun,Gi,29,alive,1630441521,Swearing,TRUE,FALSE,35
+145,Iseo,Dae,23,dead,1911196257,Screen addiction,TRUE,FALSE,null
+146,Seokjin,Bi,26,alive,1119797468,Perfectionism,TRUE,FALSE,35
+147,Haeun,Jung,84,alive,1576919651,Procrastination,TRUE,FALSE,35
+148,Hyejin,Lee,19,dead,988021360,Bad discipline,FALSE,FALSE,null
+149,Geum-ja,Jang,66,alive,0,Overprotector,TRUE,FALSE,36
+150,Hun,Dae,81,dead,414618278,Negative thinking,TRUE,FALSE,null
+151,Sua,Beom,37,alive,1586579591,Gossiping,TRUE,FALSE,36
+152,Harin,Oh,68,alive,1609516570,Self-criticism,FALSE,FALSE,36
+153,Sooyoung,Seonu,50,alive,1414122724,Screen addiction,FALSE,FALSE,36
+154,Taehyung,Kam,57,alive,679177698,Overeating,TRUE,FALSE,36
+155,Suho,Han,84,dead,817602805,Impulsiveness,FALSE,FALSE,null
+156,Taehyung,Jung,40,alive,884863415,Road rage,TRUE,FALSE,36
+157,Jian,Yoon,58,alive,819986075,Nail-biting,FALSE,FALSE,36
+158,Joonho,Oh,27,dead,1190819720,Drinking,TRUE,FALSE,null
+159,Minho,Seonu,79,alive,1237013817,Perfectionism,TRUE,FALSE,36
+160,Arin,Un,28,alive,514492031,Gambling,TRUE,FALSE,36
+161,Arin,Kang,23,dead,1390723079,Drinking,FALSE,FALSE,null
+162,Eunji,Kang,48,dead,1022461241,Drinking,FALSE,FALSE,null
+163,Kyungsoo,Shin,77,alive,564035719,Gambling,TRUE,FALSE,36
+164,Eunji,Shin,41,alive,270738223,Bad discipline,TRUE,FALSE,null
+165,Yuna,Kang,51,dead,527908327,Swearing,TRUE,FALSE,null
+166,Jiwoo,Un,67,alive,1277408082,Screen addiction,TRUE,FALSE,null
+167,Minho,Park,30,dead,1287932154,Gambling,FALSE,FALSE,null
+168,Harin,Seonu,57,alive,1123731039,Bad discipline,TRUE,FALSE,null
+169,Taehyung,Oh,31,alive,534103204,Self-criticism,TRUE,FALSE,null
+170,Kyungsoo,Mi,84,alive,813194989,Self-criticism,FALSE,FALSE,null
+171,Harin,Namgung,63,alive,1251255604,Procrastination,FALSE,FALSE,null
+172,Jian,Beom,74,alive,258918669,Bad discipline,FALSE,FALSE,1
+173,Eunji,Seonu,71,alive,1638020496,Swearing,TRUE,FALSE,1
+174,Arin,Tang,41,alive,1566189043,Self-criticism,TRUE,FALSE,1
+175,Will,Smith,56,alive,941337787141,Wife,TRUE,FALSE,1
+176,Joonho,Namgung,52,alive,410304146,Overworking,TRUE,FALSE,1
+177,Haeun,Yoon,53,alive,918086498,Bad discipline,TRUE,FALSE,1
+178,Suho,Nam,39,alive,1131683842,Gambling,FALSE,FALSE,1
+179,Minho,Dae,42,dead,329606254,Smoking,FALSE,FALSE,null
+180,Eunji,Dae,47,alive,202649164,Self-criticism,FALSE,FALSE,1
+181,Chiho,Park,69,alive,1919160863,Sleeping in,TRUE,FALSE,1
+182,Jiwoo,Nam,45,alive,1400887066,Sleeping in,TRUE,FALSE,1
+183,Seokjin,Nan,53,alive,778729781,Being late,TRUE,FALSE,2
+184,Haeun,Shin,64,alive,1440840271,Procrastination,FALSE,FALSE,2
+185,Iseo,Nan,71,alive,1334955377,Overworking,TRUE,FALSE,2
+186,Sua,Kang,68,alive,451533838,Overworking,TRUE,FALSE,2
+187,Joonho,Yoon,19,alive,1386637809,Laziness,TRUE,FALSE,2
+188,Hun,Oh,54,alive,489818747,Screen addiction,TRUE,FALSE,2
+189,Jiwoo,Yu,59,dead,282142993,Being late,FALSE,FALSE,null
+190,Jian,Lee,70,alive,1226144551,Gambling,FALSE,FALSE,2
+191,Seokjin,Shin,37,alive,732858875,Overeating,FALSE,FALSE,2
+192,Suho,Park,38,alive,378331919,Drinking,FALSE,FALSE,2
+193,Yuna,Seonu,54,alive,924959553,Swearing,TRUE,FALSE,2
+194,Eunji,Yoon,19,alive,1687293622,Negative thinking,FALSE,FALSE,3
+195,Chiho,Nam,76,dead,1219494612,Sleeping in,FALSE,FALSE,null
+196,Minho,Nan,55,alive,1793982836,Procrastination,FALSE,FALSE,3
+197,Hyejin,Dae,20,alive,863757677,Swearing,FALSE,FALSE,3
+198,Joonho,Tang,29,alive,319051488,Overworking,FALSE,FALSE,3
+199,Ali,Abdul,34,alive,50000000,Naieve,TRUE,FALSE,3
+200,Hyejin,Namgung,20,alive,1167181464,Nail-biting,FALSE,FALSE,3
+201,Sooyoung,Gi,84,alive,1275298550,Swearing,TRUE,FALSE,3
+202,Haeun,Park,74,alive,442494263,Procrastination,TRUE,FALSE,3
+203,Haeun,Seonu,28,alive,850429379,Bad discipline,TRUE,FALSE,3
+204,Ijun,Kim,62,dead,1062782450,Negative thinking,TRUE,FALSE,null
+205,Seokjin,Kang,70,dead,356420478,Overeating,FALSE,FALSE,null
+206,Sooyoung,Beom,59,alive,637605511,Gossiping,FALSE,FALSE,3
+207,Suho,Park,40,alive,1809112721,Sleeping in,TRUE,FALSE,4
+208,Sua,Namgung,32,alive,994847660,Nail-biting,TRUE,FALSE,4
+209,Haeun,Seonu,63,dead,1633222847,Overworking,TRUE,FALSE,null
+210,Sooyoung,Yu,74,alive,1202876818,Road rage,FALSE,FALSE,4
+211,Suho,Tang,32,alive,918450709,Road rage,TRUE,FALSE,4
+212,Mi-nyeo,Han,34,alive,150000000,Manipulation,FALSE,FALSE,4
+213,Hyejin,Seonu,41,alive,657210956,Drinking,FALSE,FALSE,4
+214,Jiwoo,Choi,56,dead,514645093,Bad discipline,FALSE,FALSE,null
+215,Taehyung,Seonu,79,alive,729960851,Screen addiction,FALSE,FALSE,4
+216,Jiwoo,Nan,84,alive,1736991416,Laziness,FALSE,FALSE,4
+217,Harin,Nan,35,alive,1311530361,Bad discipline,FALSE,FALSE,4
+218,Sang-woo,Cho,45,alive,6000000000,Gambling,TRUE,FALSE,4
+219,Jiwoo,Mi,82,alive,1264046462,Smoking,FALSE,FALSE,5
+220,Arin,Un,28,alive,480910730,Swearing,TRUE,FALSE,5
+221,Chiho,Yoon,35,alive,1436822394,Smoking,FALSE,FALSE,5
+222,Jun-hee,Kim,23,alive,600000000,Stubborn,FALSE,FALSE,5
+223,Eunji,Han,25,alive,1445959139,Overworking,TRUE,FALSE,5
+224,Suho,Yoon,24,alive,781180581,Being late,TRUE,FALSE,5
+225,Jiwoo,Beom,48,alive,209110839,Self-criticism,TRUE,FALSE,5
+226,Harin,Mi,76,alive,979658351,Bad discipline,TRUE,FALSE,5
+227,Jiwoo,Bi,50,dead,369429833,Self-criticism,FALSE,FALSE,null
+228,Ijun,Lee,64,dead,1521190297,Sleeping in,FALSE,FALSE,null
+229,Iseo,Nan,26,alive,1193134552,Procrastination,FALSE,FALSE,5
+230,Suho,Beom,49,alive,669394121,Smoking,FALSE,FALSE,5
+231,Joonho,Tang,30,alive,1380135006,Nail-biting,FALSE,FALSE,6
+232,Arin,Nam,25,alive,728495872,Overeating,FALSE,FALSE,6
+233,Haeun,Nan,62,alive,347458127,Overworking,FALSE,FALSE,6
+234,Joonho,Nan,21,alive,1900948670,Procrastination,FALSE,FALSE,6
+235,Taehyung,Tang,75,alive,1071968825,Being late,TRUE,FALSE,6
+236,Haeun,Kim,85,dead,1078565389,Overeating,FALSE,FALSE,null
+237,Harin,Nam,50,alive,788881284,Nail-biting,FALSE,FALSE,6
+238,Hun,Oh,66,alive,1344138569,Nail-biting,TRUE,FALSE,6
+239,Sooyoung,Beom,58,alive,1969091729,Swearing,TRUE,FALSE,6
+240,Taehyung,Nam,40,dead,1644577164,Procrastination,TRUE,FALSE,null
+241,Sua,Han,75,alive,1210264865,Overworking,TRUE,FALSE,6
+242,Chiho,Nam,42,alive,801984355,Smoking,TRUE,FALSE,6
+243,Yuna,Nam,22,alive,912976991,Swearing,FALSE,FALSE,7
+244,Seokjin,Nan,51,dead,1702772992,Drinking,FALSE,FALSE,null
+245,Hyejin,Han,74,alive,384418083,Road rage,FALSE,FALSE,7
+246,Sua,Oh,25,dead,941846753,Being late,FALSE,FALSE,null
+247,Iseo,Dae,37,dead,846612039,Gambling,TRUE,FALSE,null
+248,Kyungsoo,Dae,21,alive,1564832221,Self-criticism,TRUE,FALSE,7
+249,Joonho,Beom,46,alive,1601544714,Screen addiction,FALSE,FALSE,7
+250,Sooyoung,Kim,81,alive,1786847776,Bad discipline,FALSE,FALSE,7
+251,Sooyoung,Nam,27,dead,273212434,Perfectionism,TRUE,FALSE,null
+252,Jiwoo,Kang,65,alive,906353677,Drinking,TRUE,FALSE,7
+253,Iseo,Han,67,dead,1900876375,Perfectionism,TRUE,FALSE,null
+254,Seokjin,Lee,36,dead,1757124735,Laziness,FALSE,FALSE,null
+255,Haeun,Kim,58,dead,1901460866,Impulsiveness,TRUE,FALSE,null
+256,Chiho,Yoon,29,dead,815650978,Gambling,FALSE,FALSE,null
+257,Suho,Tang,24,dead,463669370,Road rage,TRUE,FALSE,null
+258,Eunji,Choi,33,dead,1902673310,Impulsiveness,FALSE,FALSE,null
+259,Seokjin,Kam,83,alive,1942227708,Negative thinking,TRUE,FALSE,7
+260,Jiwoo,Lee,35,dead,547727652,Nail-biting,FALSE,FALSE,null
+261,Harin,Yoon,80,alive,814090711,Nail-biting,FALSE,FALSE,7
+262,Arin,Dae,81,alive,657767536,Bad discipline,TRUE,FALSE,7
+263,Arin,Kang,59,alive,1403634882,Perfectionism,FALSE,FALSE,7
+264,Seokjin,Seonu,84,dead,856635041,Gossiping,TRUE,FALSE,null
+265,Eunji,Beom,67,alive,1792438714,Bad discipline,TRUE,FALSE,8
+266,Iseo,Lee,55,alive,214121614,Gossiping,FALSE,FALSE,8
+267,Harin,Un,84,alive,432566768,Swearing,TRUE,FALSE,8
+268,Kyungsoo,Dae,50,alive,1764356178,Nail-biting,FALSE,FALSE,8
+269,Ijun,Jung,51,alive,1711810858,Bad discipline,TRUE,FALSE,8
+270,Jian,Namgung,51,alive,813331981,Self-criticism,FALSE,FALSE,8
+271,Hyejin,Kam,54,alive,1491776735,Negative thinking,FALSE,FALSE,8
+272,Jian,Dae,58,alive,233327551,Gossiping,TRUE,FALSE,8
+273,Andrew,Tate,36,alive,80391688098,Women,TRUE,FALSE,8
+274,Minho,Kam,30,dead,856734597,Bad discipline,FALSE,FALSE,null
+275,Ijun,Beom,85,alive,942349328,Overeating,TRUE,FALSE,8
+276,Harin,Lee,50,alive,301963984,Bad discipline,TRUE,FALSE,9
+277,Arin,Shin,72,alive,824842846,Being late,TRUE,FALSE,9
+278,Sua,Beom,71,alive,1358499634,Screen addiction,TRUE,FALSE,9
+279,Hun,Oh,74,alive,836433328,Being late,TRUE,FALSE,9
+280,Ijun,Seonu,60,alive,456488734,Gambling,FALSE,FALSE,9
+281,Hun,Bi,39,alive,1214660508,Perfectionism,FALSE,FALSE,9
+282,Harin,Nam,33,dead,446601501,Road rage,TRUE,FALSE,null
+283,Hyejin,Choi,35,dead,325142079,Screen addiction,TRUE,FALSE,null
+284,Ijun,Kang,34,alive,1256511430,Impulsiveness,TRUE,FALSE,9
+285,Suho,Nam,22,alive,1455998571,Negative thinking,TRUE,FALSE,9
+286,Jian,Namgung,27,alive,412026569,Overworking,FALSE,FALSE,9
+287,Eunji,Han,67,dead,896430923,Gossiping,FALSE,FALSE,null
+288,Hyejin,Shin,23,dead,347756527,Perfectionism,FALSE,FALSE,null
+289,Suho,Beom,39,alive,1599699366,Gossiping,FALSE,FALSE,9
+290,Sua,Han,55,alive,1177435699,Overworking,TRUE,FALSE,10
+291,Taehyung,Park,23,alive,1418012902,Laziness,FALSE,FALSE,10
+292,Hyejin,Lee,26,alive,832529870,Negative thinking,TRUE,FALSE,10
+293,Chiho,Beom,60,alive,1343777135,Laziness,TRUE,FALSE,10
+294,Iseo,Jung,58,alive,838255810,Negative thinking,FALSE,FALSE,10
+295,Arin,Seonu,46,alive,745011351,Impulsiveness,TRUE,FALSE,10
+296,Hyejin,Seonu,49,alive,1923080351,Drinking,TRUE,FALSE,10
+297,Sooyoung,Han,32,alive,509868397,Perfectionism,TRUE,FALSE,10
+298,Minho,Namgung,51,dead,888193489,Sleeping in,FALSE,FALSE,null
+299,Yuna,Bi,33,alive,223920803,Self-criticism,FALSE,FALSE,10
+300,Iseo,Shin,63,alive,929111354,Self-criticism,TRUE,FALSE,10
+301,Jian,Han,52,dead,1161249505,Impulsiveness,FALSE,FALSE,null
+302,Jian,Bi,34,alive,759061424,Impulsiveness,FALSE,FALSE,11
+303,Harin,Dae,23,alive,1124684665,Drinking,TRUE,FALSE,11
+304,Jiwoo,Beom,25,dead,211249223,Swearing,FALSE,FALSE,null
+305,Arin,Kam,54,dead,565357617,Sleeping in,TRUE,FALSE,null
+306,Haeun,Mi,69,alive,312693420,Gambling,FALSE,FALSE,11
+307,Kyungsoo,Bi,19,alive,711664431,Overeating,TRUE,FALSE,11
+308,Eunji,Namgung,82,alive,1615837950,Overeating,FALSE,FALSE,11
+309,Iseo,Nan,21,dead,1058878313,Self-criticism,TRUE,FALSE,null
+310,Jian,Nam,46,dead,673130201,Impulsiveness,TRUE,FALSE,null
+311,Haeun,Yoon,67,alive,1366463116,Overeating,TRUE,FALSE,11
+312,Jian,Lee,61,alive,452854373,Gossiping,TRUE,FALSE,11
+313,Jiwoo,Mi,31,alive,1456794230,Screen addiction,TRUE,FALSE,11
+314,Joonho,Un,82,alive,1352951696,Perfectionism,FALSE,FALSE,11
+315,Ijun,Namgung,30,alive,1866451525,Nail-biting,TRUE,FALSE,11
+316,Ijun,Beom,60,dead,1586713829,Overworking,TRUE,FALSE,null
+317,Minho,Nan,25,alive,1632651097,Gossiping,TRUE,FALSE,12
+318,Sooyoung,Un,73,alive,1309387993,Overeating,FALSE,FALSE,12
+319,Iseo,Seonu,36,alive,1940806393,Drinking,TRUE,FALSE,12
+320,Kyungsoo,Beom,19,alive,1743888520,Road rage,FALSE,FALSE,12
+321,Ijun,Kang,59,alive,1826576869,Sleeping in,TRUE,FALSE,12
+322,Sua,Kim,23,alive,1656464561,Gossiping,TRUE,FALSE,12
+323,Jian,Choi,54,alive,1631155480,Sleeping in,TRUE,FALSE,12
+324,Jian,Beom,36,dead,1803439404,Nail-biting,TRUE,FALSE,null
+325,Haeun,Jung,38,alive,1790922485,Screen addiction,TRUE,FALSE,12
+326,Taehyung,Dae,57,alive,1359169998,Drinking,FALSE,FALSE,12
+327,Sooyoung,Kam,38,alive,1186968242,Overeating,TRUE,FALSE,12
+328,Hyejin,Un,45,alive,1244846489,Impulsiveness,FALSE,FALSE,13
+329,Eunji,Mi,71,alive,509136335,Gambling,FALSE,FALSE,13
+330,Arin,Han,23,alive,801193055,Perfectionism,FALSE,FALSE,13
+331,Seokjin,Kang,46,dead,1885251603,Impulsiveness,TRUE,FALSE,null
+332,Kyungsoo,Shin,31,alive,1778714302,Impulsiveness,TRUE,FALSE,13
+333,Myung-gi,Lee,28,alive,1800000000,Narcissist,TRUE,FALSE,13
+334,Taehyung,Jung,33,dead,606714830,Gossiping,TRUE,FALSE,null
+335,Ijun,Yoon,77,alive,1606967664,Smoking,TRUE,FALSE,13
+336,Eunji,Beom,73,alive,441288548,Swearing,FALSE,FALSE,13
+337,Chiho,Dae,80,alive,318626536,Overeating,FALSE,FALSE,13
+338,Seokjin,Kang,19,alive,1005063788,Nail-biting,FALSE,FALSE,13
+339,Haeun,Jung,55,alive,671764111,Gambling,TRUE,FALSE,13
+340,Kyungsoo,Shin,25,alive,853830912,Swearing,TRUE,FALSE,14
+341,Seokjin,Nan,60,alive,563570590,Gossiping,TRUE,FALSE,14
+342,Sua,Seonu,71,alive,1795395739,Being late,FALSE,FALSE,14
+343,Sooyoung,Dae,31,alive,1082008294,Smoking,TRUE,FALSE,14
+344,Jian,Han,62,alive,1179402965,Bad discipline,TRUE,FALSE,14
+345,Sua,Nam,37,alive,1775708188,Laziness,FALSE,FALSE,14
+346,Kyungsoo,Choi,71,alive,820465031,Gossiping,FALSE,FALSE,14
+347,Chiho,Namgung,71,alive,282080649,Screen addiction,FALSE,FALSE,14
+348,Eunji,Yu,29,alive,1174884654,Swearing,TRUE,FALSE,14
+349,Hun,Mi,52,alive,1385977767,Procrastination,FALSE,FALSE,14
+350,Iseo,Park,19,alive,650305373,Gambling,TRUE,FALSE,15
+351,Haeun,Nam,66,alive,1511173285,Overeating,FALSE,FALSE,15
+352,Jian,Lee,61,alive,1064175038,Perfectionism,TRUE,FALSE,15
+353,Arin,Choi,77,alive,832720204,Gambling,FALSE,FALSE,15
+354,Iseo,Gi,41,alive,898361372,Smoking,FALSE,FALSE,15
+355,Minho,Nam,77,alive,826120995,Perfectionism,TRUE,FALSE,15
+356,Hun,Dae,82,alive,967307871,Sleeping in,TRUE,FALSE,15
+357,Kyungsoo,Yu,83,alive,1501591240,Screen addiction,TRUE,FALSE,15
+358,Yuna,Bi,60,dead,1408896051,Overworking,TRUE,FALSE,null
+359,Chiho,Dae,48,dead,1371652160,Gossiping,FALSE,FALSE,null
+360,Arin,Nan,57,alive,301279417,Laziness,TRUE,FALSE,15
+361,Hun,Beom,34,alive,1068761834,Bad discipline,FALSE,FALSE,15
+362,Eunji,Kim,33,dead,1031535923,Negative thinking,TRUE,FALSE,null
+363,Hyejin,Nam,62,alive,476602204,Overworking,FALSE,FALSE,16
+364,Jiwoo,Tang,59,alive,1458455923,Smoking,FALSE,FALSE,16
+365,Joonho,Beom,44,alive,1236051067,Self-criticism,FALSE,FALSE,16
+366,Kyungsoo,Bi,27,alive,854933007,Perfectionism,TRUE,FALSE,16
+367,Arin,Beom,37,dead,570801169,Laziness,TRUE,FALSE,null
+368,Jiwoo,Yoon,73,alive,1741926907,Smoking,FALSE,FALSE,16
+369,Yuna,Yoon,49,alive,1935609918,Overeating,TRUE,FALSE,16
+370,Suho,Mi,20,alive,407281654,Bad discipline,FALSE,FALSE,16
+371,Sua,Nan,49,alive,1197934104,Overworking,TRUE,FALSE,16
+372,Sooyoung,Kim,75,alive,562875874,Sleeping in,TRUE,FALSE,16
+373,Hun,Kang,21,alive,323368706,Impulsiveness,TRUE,FALSE,16
+374,Sua,Kang,67,dead,1043105613,Road rage,TRUE,FALSE,null
+375,Arin,Gi,79,alive,1690708022,Sleeping in,FALSE,FALSE,17
+376,Arin,Gi,74,alive,1735660537,Procrastination,TRUE,FALSE,17
+377,Sooyoung,Namgung,24,alive,1186387478,Road rage,TRUE,FALSE,17
+378,Hyejin,Yu,78,dead,1867710135,Impulsiveness,FALSE,FALSE,null
+379,Chiho,Nam,48,alive,213512976,Negative thinking,TRUE,FALSE,17
+380,Hyejin,Kang,41,alive,819191689,Sleeping in,TRUE,FALSE,17
+381,Haeun,Un,78,dead,1436488966,Being late,TRUE,FALSE,null
+382,Eunji,Bi,33,alive,1090641908,Overeating,FALSE,FALSE,17
+383,Ijun,Kang,47,alive,864572080,Smoking,TRUE,FALSE,17
+384,Harin,Jung,39,alive,1084293090,Smoking,TRUE,FALSE,17
+385,Harin,Kang,81,dead,346162557,Nail-biting,TRUE,FALSE,null
+386,Sooyoung,Choi,20,alive,1491054766,Bad discipline,TRUE,FALSE,17
+387,Yuna,Bi,66,alive,835481353,Smoking,TRUE,FALSE,17
+388,Dae-ho,Kang,28,alive,450000000,Coward,TRUE,FALSE,18
+389,Hyejin,Shin,74,dead,560669906,Overeating,FALSE,FALSE,null
+390,Jung-bae,Park,49,alive,260000000,Reckless,FALSE,FALSE,18
+391,Sooyoung,Yu,71,alive,255732428,Drinking,TRUE,FALSE,18
+392,Minho,Seonu,34,alive,525560808,Bad discipline,TRUE,FALSE,18
+393,Jiwoo,Park,56,dead,1945976106,Gambling,FALSE,FALSE,null
+394,Suho,Un,50,alive,1980219277,Being late,TRUE,FALSE,18
+395,Eunji,Oh,84,alive,1294862063,Road rage,FALSE,FALSE,18
+396,Sua,Yu,73,alive,1582665863,Being late,TRUE,FALSE,18
+397,Chiho,Namgung,22,alive,1767604256,Self-criticism,FALSE,FALSE,18
+398,Haeun,Kim,60,alive,717896484,Impulsiveness,FALSE,FALSE,18
+399,Chiho,Kang,50,alive,817559374,Negative thinking,TRUE,FALSE,18
+400,Eunji,Nan,35,alive,1447895697,Perfectionism,TRUE,FALSE,19
+401,Seokjin,Beom,24,alive,1041020144,Overworking,TRUE,FALSE,19
+402,Minho,Kang,24,alive,1844224368,Impulsiveness,FALSE,FALSE,19
+403,Minho,Jung,83,alive,1973595407,Gambling,TRUE,FALSE,19
+404,Sooyoung,Jung,33,alive,1231181648,Bad discipline,FALSE,FALSE,19
+405,Hyejin,Park,28,alive,858743388,Gossiping,TRUE,FALSE,19
+406,Joonho,Nan,62,dead,319820473,Laziness,TRUE,FALSE,null
+407,Jiwoo,Kam,66,alive,1392927685,Screen addiction,TRUE,FALSE,19
+408,Seokjin,Nan,58,alive,1602224314,Being late,TRUE,FALSE,19
+409,Eunji,Park,42,alive,289158652,Sleeping in,FALSE,FALSE,19
+410,Taehyung,Park,42,alive,782124102,Self-criticism,TRUE,FALSE,19
+411,Iseo,Yoon,80,alive,1025936677,Self-criticism,FALSE,FALSE,20
+412,Harin,Jung,59,alive,307148778,Being late,FALSE,FALSE,20
+413,Iseo,Dae,41,alive,1346090915,Laziness,FALSE,FALSE,20
+414,Arin,Kang,77,alive,1521772037,Screen addiction,FALSE,FALSE,20
+415,Yuna,Mi,71,dead,430175284,Drinking,FALSE,FALSE,null
+416,Iseo,Bi,72,alive,1540567430,Laziness,FALSE,FALSE,20
+417,Arin,Dae,41,alive,256000174,Gossiping,FALSE,FALSE,20
+418,Sooyoung,Nan,55,alive,1296174187,Laziness,TRUE,FALSE,20
+419,Eunji,Yu,73,alive,297240696,Overeating,TRUE,FALSE,20
+420,Elon,Musk,67,dead,1043105613,Road rage,TRUE,TRUE,null
+421,Minho,Bi,55,alive,877629052,Gossiping,FALSE,FALSE,20
+422,Sua,Lee,61,dead,902738564,Swearing,FALSE,FALSE,null
+423,Suho,Gi,84,alive,992445073,Nail-biting,TRUE,FALSE,20
+424,Sean,Combs,35,alive,2000000000,Baby Oil,FALSE,FALSE,21
+425,Hyejin,Kang,70,alive,1067246999,Laziness,FALSE,FALSE,21
+426,Minho,Seonu,36,alive,1098615127,Road rage,TRUE,FALSE,21
+427,Harin,Nam,24,alive,587110386,Impulsiveness,FALSE,FALSE,21
+428,Jian,Kim,52,alive,1565064024,Road rage,TRUE,FALSE,21
+429,Yuna,Choi,65,alive,451779468,Road rage,TRUE,FALSE,21
+430,Hyejin,Nan,20,alive,1209069130,Impulsiveness,TRUE,FALSE,21
+431,Kyungsoo,Namgung,68,alive,344467141,Swearing,TRUE,FALSE,21
+432,Hun,Tang,30,alive,1639442547,Gossiping,FALSE,FALSE,21
+433,Suho,Yoon,23,alive,1585345983,Screen addiction,FALSE,FALSE,21
+434,Yuna,Jung,40,dead,320989634,Road rage,FALSE,FALSE,null
+435,Suho,Bi,69,alive,559168711,Overworking,FALSE,FALSE,22
+436,Haeun,Lee,56,alive,442058194,Bad discipline,FALSE,FALSE,22
+437,Haeun,Shin,26,alive,434382509,Procrastination,FALSE,FALSE,22
+438,Harin,Namgung,38,alive,483412290,Drinking,FALSE,FALSE,22
+439,Seokjin,Beom,21,alive,1761519137,Drinking,TRUE,FALSE,22
+440,Hyejin,Nan,45,alive,1335926434,Nail-biting,TRUE,FALSE,22
+441,Iseo,Kam,80,dead,1303749713,Bad discipline,TRUE,FALSE,null
+442,Iseo,Park,33,alive,523782419,Bad discipline,FALSE,FALSE,22
+443,Arin,Tang,79,dead,648648894,Negative thinking,FALSE,FALSE,null
+444,Iseo,Dae,72,alive,1746855652,Gossiping,TRUE,FALSE,22
+445,Arin,Choi,35,alive,1856954192,Drinking,FALSE,FALSE,22
+446,Haeun,Yoon,74,alive,1143061365,Smoking,TRUE,FALSE,22
+447,Chiho,Choi,72,alive,446359178,Laziness,FALSE,FALSE,23
+448,Jiwoo,Lee,37,alive,766837118,Gambling,TRUE,FALSE,23
+449,Minho,Yoon,76,alive,581521502,Sleeping in,FALSE,FALSE,23
+450,Chiho,Choi,34,alive,717016866,Perfectionism,FALSE,FALSE,23
+451,Joonho,Han,26,alive,1141720370,Bad discipline,TRUE,FALSE,23
+452,Jiwoo,Mi,47,dead,390102568,Bad discipline,FALSE,FALSE,null
+453,Yuna,Kam,22,alive,515076932,Screen addiction,TRUE,FALSE,23
+454,Arin,Gi,32,dead,267276073,Gossiping,FALSE,FALSE,null
+455,J.,Epstein,66,dead,750276145,Pedo,FALSE,FALSE,null
+456,Gi-Hun,Seong,46,alive,410000000,Gambling,TRUE,FALSE,23

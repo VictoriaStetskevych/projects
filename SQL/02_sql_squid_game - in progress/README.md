@@ -2,7 +2,7 @@
 
 I did this project using tasks from the DataLemur's [SQL game](https://datalemur.com/sql-game) inspired by Netflix's Squid Game. <br>
 
-The dataset for the game/project: [csv](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/player.csv) or [xlsx](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/player.xlsx)<br>
+The dataset for the game/project: [csv](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/data/player.csv) or [xlsx](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/data/player.xlsx)<br>
 
 The Goal - to help the Front Men to analyze data. <br>
 
@@ -155,17 +155,107 @@ WHERE status = 'alive' AND isinsider = 'false';
 
 For the next level I got 2 new tables:<br>
 ![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/18_level_3_new_schema.png?raw=true)<br>
-- monthly_temperatures: [cvs](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/monthly_temperatures.csv) or [xlsx](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/monthly_temperatures.xlsx)<br>
-- honeycomb_game: [csv](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/honeycomb_game.csv) or [xlsx](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/honeycomb_game.xlsx)
+- monthly_temperatures: [cvs](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/data/monthly_temperatures.csv) or [xlsx](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/data/monthly_temperatures.xlsx)<br>
+- honeycomb_game: [csv](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/data/honeycomb_game.csv) or [xlsx](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/data/honeycomb_game.xlsx)
 
 <u>Task<br></u>
 Analyze the average completion times for each shape in the honeycomb game during the hottest and coldest months, using data from the past 20 years only. Order the results by average completion time.<br>
 
 <u>Solution:</u>
+step 1
+```
+-- find MAX/MIN temperatures from the monthly_temperatures table
+SELECT 
+	month,
+	avg_temperature
+FROM monthly_temperatures
+WHERE 
+	avg_temperature = (SELECT MAX(avg_temperature) FROM monthly_temperatures)
+    OR avg_temperature = (SELECT MIN(avg_temperature) FROM monthly_temperatures)
+```
+Result:
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/19_max_min_temp.png?raw=true)
 
+Step2. Level 3 - Solution
+```sql
+WITH temp_max_min AS (
+    -- Find the hottest and coldest months
+    SELECT 
+        month,
+        avg_temperature
+    FROM monthly_temperatures
+    WHERE 
+        avg_temperature = (SELECT MAX(avg_temperature) FROM monthly_temperatures)
+        OR avg_temperature = (SELECT MIN(avg_temperature) FROM monthly_temperatures)
+)
+SELECT 
+	-- Extract month from the date
+    EXTRACT(MONTH FROM h.date) AS month,  
+    h.shape,
+	-- Find average time
+    AVG(h.average_completion_time) AS avg_completion_time  
+FROM honeycomb_game h
+	-- Join table temp_max_min and honeycomb_game
+JOIN temp_max_min t 
+	ON EXTRACT(MONTH FROM h.date) = t.month 
+	-- Count the last 20 years only
+WHERE h.date >= CURRENT_DATE - INTERVAL '20 years'
+	-- Group by month and shape
+GROUP BY EXTRACT(MONTH FROM h.date), h.shape
+ORDER BY avg_completion_time;
+```
+Result:
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/20_level_3.png?raw=true)
 
+## Level 4. 
 
+<u>Task.</u><br>
+"The Front Man needs to analyze and rank the teams before the Tug of War game begins. For each team that has exactly 10 players, calculate their average player age. Additionally, categorize the teams based on their average player age into three age groups:
 
+'Fit': Average age < 40
+'Grizzled': Average age between 40 and 50 (inclusive)
+'Elderly': Average age > 50
+
+Show the team_id, average age, age group, and rank the teams based on their average player age (highest average age = rank 1)."
+
+For this level I had a new schema
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/21_level_4_new_schema.png?raw=true)
+
+<u>Solution</u><br>
+Step 1. <br>
+```sql
+-- Count amount of unique teams 
+SELECT 
+	COUNT(DISTINCT(team_id)) as teams
+FROM player;
+```
+Result: 36 teams <br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/22_unique_teams.png?raw=true)
+    
+ Step 2
+ ```sql
+ -- Divide all players into 3 age category
+ SELECT *,
+    CASE 
+        WHEN Age < 40 THEN 'Fit'
+        WHEN Age BETWEEN 40 AND 50 THEN 'Grizzled'
+        ELSE 'Elderly'
+    END AS age_category
+FROM player;
+ ```        
+
+ Step 3
+ ```sql
+ -- AVG age of each team
+ SELECT 	
+	COUNT(id) as total_players,
+	team_id,
+	AVG(age) as age_group
+FROM player
+GROUP BY team_id;
+```     
+Result (first 10 teams):
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/23_teams_avg_age.png?raw=true)
 
 
 ## <u>Resources:</u>
