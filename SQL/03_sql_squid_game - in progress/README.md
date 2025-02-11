@@ -2,7 +2,7 @@
 
 I did this project using tasks from the DataLemur's [SQL game](https://datalemur.com/sql-game) inspired by Netflix's Squid Game. <br>
 
-The dataset for the game/project: [csv](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/data/player.csv) or [xlsx](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/data/player.xlsx)<br>
+The dataset for the game/project: [csv](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/data/player.csv) or [xlsx](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/data/player.xlsx)<br>
 
 The Goal - to help the Front Men to analyze data. <br>
 
@@ -15,7 +15,7 @@ SELECT *
 FROM player;
 ```
 Result:<br>
-![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/04_data.png?raw=true)<br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/04_data.png?raw=true)<br>
 
 - Check the total amount of players<br>
 ```sql
@@ -23,7 +23,7 @@ SELECT COUNT(DISTINCT id) AS unique_id_total
 FROM player;    
 ```
 Result:<br>
-![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/05_unique_id_total.png?raw=true)<br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/05_unique_id_total.png?raw=true)<br>
 
 - As a big fan of the Squid Game TV show, I couldn’t resist checking the player ID numbers from both seasons.<br>
 ```sql
@@ -37,8 +37,8 @@ FROM player
 WHERE id IN (333, 388, 120, 7, 149, 390, 222);    
 ```
 Result:<br>
-![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/06_season_1.png?raw=true)
-![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/07_season_2.png?raw=true)<br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/06_season_1.png?raw=true)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/07_season_2.png?raw=true)<br>
 
 - #001 in this dataset isn’t Oh Il-nam, In-ho, or Oh Young-il, but when I showed my husband who #001 was, he told me it’s a very well-known person. <br>
 ```sql
@@ -47,7 +47,7 @@ FROM player
 WHERE id = 001;
 ```
 Result:<br>
-![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/08_player_001.png?raw=true)<br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/08_player_001.png?raw=true)<br>
 
 - I also checked MAX and MIN ages of players<br>
 ```sql
@@ -57,7 +57,7 @@ SELECT
 FROM player;
 ```
 Result:<br>
-![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/09_max_min_age.png?raw=true)<br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/09_max_min_age.png?raw=true)<br>
 
 - Then I thought, what if there wasn’t just one player who was 19 or 85? Plus, I knew that the first game, "Red Light, Green Light," was over, so I decided to count the players with the maximum and minimum ages who survived.<br>
 ```sql
@@ -68,7 +68,7 @@ FROM player
 WHERE status = 'alive';
 ```
 Result:<br>
-![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/10_max_min_age_alive.png?raw=true)<br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/10_max_min_age_alive.png?raw=true)<br>
 
 - Additionally, I decided to check the number of players who survived/died after the first game.<br>
 ```sql
@@ -78,7 +78,7 @@ SELECT
 FROM player;
 ```
 Result:<br>
-![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/11_first_game_survived_died.png?raw=true)<br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/11_first_game_survived_died.png?raw=true)<br>
 
 - I also was curios to check people with biggest debt. I was really surprised to see such unexpected result and these players:<br>
 ```sql
@@ -87,7 +87,7 @@ FROM player
 ORDER BY debt desc;
 ```
 Result:<br>
-![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/12_max_debt.png?raw=true)<br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/12_max_debt.png?raw=true)<br>
 
 - And players with smallest debt<br>
 ```sql
@@ -96,7 +96,7 @@ FROM player
 ORDER BY debt asc;
 ```
 Result:<br>
-![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/13_min_debt.png?raw=true)<br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/13_min_debt.png?raw=true)<br>
 
 ## <u>LEVEL 1. Red Light, Green Light</u>
 
@@ -117,14 +117,14 @@ ORDER BY debt DESC;
 <u>Result:</u><br>
 99 rows. Here a couple first players from this group of players<br>
 
-![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/14_level_1.png?raw=true)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/14_level_1.png?raw=true)
 
 ## <u>LEVEL 2. Rations</u>
 
 <u>Task<br></u>
 "The organizers need to calculate how many food portions to withhold to create the right amount of tension. In a table, calculate how many rations would feed 90% of the remaining(alive) non-insider players (rounded down), and in another column, indicate if the current rations supply is sufficient. (True or False)"
 For this task I also had to use a new table 'rations':<br>
-![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/15_new_schema.png?raw=true)<br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/15_new_schema.png?raw=true)<br>
 New table 'rations': [csv]() or [xlsx]()<br>
 
 <u>Solution:</u><br>
@@ -134,7 +134,7 @@ SELECT *
 FROM rations;
 ```
 <u>Result:<br></u>
-![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/16_rations.png?raw=true)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/16_rations.png?raw=true)
 
 And now the solution for the Level 2 task:
 ```sql
@@ -148,15 +148,15 @@ FROM player
 WHERE status = 'alive' AND isinsider = 'false';
 ```
 <u>Result:</u><br>
-![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/17_level_2.png?raw=true)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/17_level_2.png?raw=true)
 
 
 ## <u>Level 3. Scenario </u>
 
 For the next level I got 2 new tables:<br>
-![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/18_level_3_new_schema.png?raw=true)<br>
-- monthly_temperatures: [cvs](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/data/monthly_temperatures.csv) or [xlsx](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/data/monthly_temperatures.xlsx)<br>
-- honeycomb_game: [csv](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/data/honeycomb_game.csv) or [xlsx](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/data/honeycomb_game.xlsx)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/18_level_3_new_schema.png?raw=true)<br>
+- monthly_temperatures: [cvs](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/data/monthly_temperatures.csv) or [xlsx](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/data/monthly_temperatures.xlsx)<br>
+- honeycomb_game: [csv](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/data/honeycomb_game.csv) or [xlsx](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/data/honeycomb_game.xlsx)
 
 <u>Task<br></u>
 Analyze the average completion times for each shape in the honeycomb game during the hottest and coldest months, using data from the past 20 years only. Order the results by average completion time.<br>
@@ -174,7 +174,7 @@ WHERE
     OR avg_temperature = (SELECT MIN(avg_temperature) FROM monthly_temperatures)
 ```
 Result:
-![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/19_max_min_temp.png?raw=true)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/19_max_min_temp.png?raw=true)
 
 Step2. Level 3 - Solution
 ```sql
@@ -205,7 +205,7 @@ GROUP BY EXTRACT(MONTH FROM h.date), h.shape
 ORDER BY avg_completion_time;
 ```
 Result:
-![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/20_level_3.png?raw=true)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/20_level_3.png?raw=true)
 
 ## Level 4. 
 
@@ -219,7 +219,7 @@ Result:
 Show the team_id, average age, age group, and rank the teams based on their average player age (highest average age = rank 1)."
 
 For this level I had a new schema
-![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/21_level_4_new_schema.png?raw=true)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/21_level_4_new_schema.png?raw=true)
 
 <u>Solution</u><br>
 Step 1. <br>
@@ -230,7 +230,7 @@ SELECT
 FROM player;
 ```
 Result: 36 teams <br>
-![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/22_unique_teams.png?raw=true)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/22_unique_teams.png?raw=true)
     
  Step 2
  ```sql
@@ -255,7 +255,7 @@ FROM player
 GROUP BY team_id;
 ```     
 Result (first 10 teams):
-![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/images/23_teams_avg_age.png?raw=true)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/23_teams_avg_age.png?raw=true)
 
 
 ## <u>Resources:</u>
