@@ -162,7 +162,7 @@ For the next level I got 2 new tables:<br>
 Analyze the average completion times for each shape in the honeycomb game during the hottest and coldest months, using data from the past 20 years only. Order the results by average completion time.<br>
 
 <u>Solution:</u>
-step 1
+Step 1
 ```
 -- find MAX/MIN temperatures from the monthly_temperatures table
 SELECT 
@@ -176,7 +176,7 @@ WHERE
 Result:
 ![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/19_max_min_temp.png?raw=true)
 
-Step2. Level 3 - Solution
+Step 2. Level 3 - Solution
 ```sql
 WITH temp_max_min AS (
     -- Find the hottest and coldest months
@@ -231,22 +231,8 @@ FROM player;
 ```
 Result: 36 teams <br>
 ![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/22_unique_teams.png?raw=true)
-    
- Step 2
- ```sql
- -- Divide all players into 3 age category
- SELECT *,
-    CASE 
-        WHEN Age < 40 THEN 'Fit'
-        WHEN Age BETWEEN 40 AND 50 THEN 'Grizzled'
-        ELSE 'Elderly'
-    END AS age_category
-FROM player;
- ```        
-Result:
-![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/24_age_category.png?raw=true)
 
- Step 3
+ Step 2
  ```sql
  -- AVG age of each team
  SELECT 	
@@ -258,6 +244,48 @@ GROUP BY team_id;
 ```     
 Result (first 10 teams):
 ![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/23_teams_avg_age.png?raw=true)
+
+Step 3. Level 4 - Solution
+ ```sql
+ SELECT 
+    team_id,
+    AVG(age) AS avg_age,
+    -- Divide teams into 3 age categories
+    CASE 
+        WHEN AVG(age) < 40 THEN 'Fit'
+        WHEN AVG(age) BETWEEN 40 AND 50 THEN 'Grizzled'
+        ELSE 'Elderly'
+    END AS age_category,
+    RANK() OVER (ORDER BY AVG(age) DESC) AS rank
+FROM player
+GROUP BY team_id
+HAVING COUNT(id) = 10;
+ ```        
+Result:
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/24_level_4.png?raw=true)
+
+## <u >Level 5 </u>
+
+"For the Marbles game, the Front Man needs you to discover who Player 456's closest companion is. First, find the player who has interacted with Player 456 the most frequently in daily activities. Then, confirm this player is still alive and return a row with both players' first names, and the number of interactions they've had.
+"
+I have a new schema in this task
+daily_interactions: csv or xlsx
+
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/25_level_5_new_schema.png?raw=true)
+
+Step 1
+```sql
+-- Check #456 interactions
+select *
+from daily_interactions
+WHERE player1_id = 456	OR player2_id = 456;
+```
+Result:
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/26_456_interactions.png?raw=true)
+
+
+
+
 
 
 ## <u>Resources:</u>
