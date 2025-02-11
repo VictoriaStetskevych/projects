@@ -88,8 +88,8 @@
 </a>
 </td>
 <td>
-<a href="https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game - in progress">
-  <img src="https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game - in progress/images/03_squid_game_wallpaper.jpg?raw=true" >
+<a href="https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game - in progress">
+  <img src="https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game - in progress/images/03_squid_game_wallpaper.jpg?raw=true" >
 </a>
 </td>
 </tr>
@@ -99,7 +99,7 @@
 <a href="https://github.com/VictoriaStetskevych/projects/blob/main/SQL/01_sql_layoffs_alex_the_analyst"> Cleaning Data in<br> Microsoft SQL Server</a><br>
 </td>
 <td>
-<a href="https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game - in progress"> SQL Game<br> Based on the Squid Game TV Show - in progress</a><br>
+<a href="https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game - in progress"> SQL Game<br> Based on the Squid Game TV Show - in progress</a><br>
 </td>
 </tr>
 </table>
