@@ -125,7 +125,7 @@ ORDER BY debt DESC;
 "The organizers need to calculate how many food portions to withhold to create the right amount of tension. In a table, calculate how many rations would feed 90% of the remaining(alive) non-insider players (rounded down), and in another column, indicate if the current rations supply is sufficient. (True or False)"
 For this task I also had to use a new table 'rations':<br>
 ![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/15_new_schema.png?raw=true)<br>
-New table 'rations': [csv]() or [xlsx]()<br>
+New table 'rations': [csv](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/data/rations.csv) or [xlsx](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/02_sql_squid_game%20-%20in%20progress/data/rations.xlsx)<br>
 
 <u>Solution:</u><br>
 At first I checked a new table:
@@ -243,6 +243,8 @@ Result: 36 teams <br>
     END AS age_category
 FROM player;
  ```        
+Result:
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/24_age_category.png?raw=true)
 
  Step 3
  ```sql
