@@ -268,10 +268,10 @@ Result:
 
 "For the Marbles game, the Front Man needs you to discover who Player 456's closest companion is. First, find the player who has interacted with Player 456 the most frequently in daily activities. Then, confirm this player is still alive and return a row with both players' first names, and the number of interactions they've had.
 "
-I have a new schema in this task
-daily_interactions: csv or xlsx
+I have a new schema in this task<br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/25_level_5_new_schema.png?raw=true)<br>
 
-![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/25_level_5_new_schema.png?raw=true)
+daily_interactions: [csv](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/data/daily_interactions.csv) or [xlsx](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/data/daily_interactions.xlsx)<br>
 
 Step 1
 ```sql
@@ -282,6 +282,199 @@ WHERE player1_id = 456	OR player2_id = 456;
 ```
 Result:
 ![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/26_456_interactions.png?raw=true)
+
+Step 2
+```sql
+-- count player 456 interactions with other players 
+SELECT 
+    CASE 
+    WHEN d.player1_id = 456 THEN d.player2_id
+    WHEN d.player2_id = 456 THEN d.player1_id
+    END AS companion_id,
+    COUNT(d.type) AS interactions
+FROM daily_interactions d
+WHERE d.player1_id = 456 OR d.player2_id = 456
+GROUP BY companion_id
+ORDER BY interactions DESC;
+```
+Result:
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/27_456_companions.png?raw=true)
+
+Step 3. Level 5 - Solution
+```sql
+WITH interactions AS (
+    SELECT 
+        CASE 
+            WHEN d.player1_id = 456 THEN d.player2_id
+            WHEN d.player2_id = 456 THEN d.player1_id
+        END AS companion_id,
+        COUNT(d.type) AS interactions
+    FROM daily_interactions d
+    WHERE d.player1_id = 456 OR d.player2_id = 456
+    GROUP BY companion_id
+)
+SELECT 
+    p1.first_name AS player_456_first_name,
+    p2.first_name AS companion_first_name,
+    i.interactions
+FROM interactions i
+JOIN player p1 ON p1.id = 456
+JOIN player p2 ON p2.id = i.companion_id
+WHERE p2.status = 'alive'
+ORDER BY i.interactions DESC
+LIMIT 1;
+```
+Result:
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/28_level_5.png?raw=true)
+
+## <u> Level 6. Game Equipment Quality Control </u>
+
+<u>Task.</u> <br>
+"The guards are investigating equipment durability across different game types, as some equipment has been breaking prematurely. Determine the game type with the highest number of equipment failures and identify the supplier responsible for the most failures within that game type. Finally, calculate the average lifespan until first failure, in whole years (using 365.2425 days per year), of all failed equipment supplied by this supplier for the most faulty game type."
+
+I had a new schema in this level.<br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/29_level_6_new_schema.png?raw=true)<br>
+
+suppliers: [csv](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/data/suppliers.csv) or [xlsx](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/data/suppliers.xlsx)<br>
+equipment: [csv](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/data/equipment.csv) or [xlsx](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/data/equipment.xlsx)<br>
+failure_incidents: [csv](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/data/failure_incidents.csv) or [xlsx](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/data/failure_incidents.xlsx)<br>
+
+Step 1
+```sql
+-- equipment failures and the amount of total failures of each type 
+SELECT 
+	DISTINCT(failure_type),
+	COUNT(*) AS total_failures
+FROM failure_incidents
+GROUP BY failure_type
+ORDER BY total_failures DESC;
+```
+Result:
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/30_failures.png?raw=true)
+
+Step 2
+```sql
+-- total failures by game type and supplier id
+SELECT 
+	COUNT(f.*) AS total_failures,
+	e.game_type,
+	e.supplier_id
+FROM failure_incidents f
+JOIN equipment e ON f.failed_equipment_id=e.id
+JOIN suppliers s ON s.id = e.supplier_id
+GROUP BY e.game_type, e.supplier_id
+ORDER BY total_failures DESC
+LIMIT 10;
+```
+Result:
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/31_failures_game_supplier.png?raw=true)
+
+So, after running these queries, I concluded that the highest number of equipment failures occurred during the "Red Light, Green Light" game, with equipment from supplier ID 29.
+
+Step 3
+```sql
+-- check equipment ID from supplier 29 for the 'red light green light' game
+SELECT *
+FROM equipment
+WHERE supplier_id = 29 AND game_type = 'red light green light';
+```
+Result:
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/32_supplier_29.png?raw=true)
+
+Step 4
+```sql
+-- equipment 15, 104, 192 failure dates  
+SELECT *
+FROM failure_incidents
+WHERE failed_equipment_id IN (15, 104, 192);
+```
+Result. 24 rows:
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/33_equipment_failure_dates.png?raw=true)
+
+Step 5
+```sql
+-- the earliest equipment (15, 104, 192) failure 
+SELECT
+	failed_equipment_id,
+	MIN(failure_date) as earliest_failure
+FROM failure_incidents
+WHERE failed_equipment_id IN (15, 104, 192)
+GROUP BY failed_equipment_id
+LIMIT 1;
+```
+Result:
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/34_earliest_failure.png?raw=true)
+
+Step 6. Level 6 - Solution.
+```sql
+WITH first_failure AS (
+    SELECT
+        failed_equipment_id,
+        MIN(failure_date) AS earliest_failure
+    FROM failure_incidents
+    WHERE failed_equipment_id IN (15, 104, 192)
+    GROUP BY failed_equipment_id
+)
+SELECT 
+    FLOOR(AVG((f.earliest_failure - e.installation_date) / 365.2425)) AS avg_lifespan_years
+FROM first_failure f
+JOIN equipment e ON e.id = f.failed_equipment_id;
+```
+Result:
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/35_level_6.png?raw=true)
+
+
+## <u>Level 7. Suspicious Actions </u>
+
+Task:
+"Create a comprehensive report identifying guards who were missing from their sleeping quarters during off-duty hours. This report should include the following details for each missing guard, ordered by guard ID:<br>
+Guard Number<br>
+Code Name<br>
+Status<br>
+Last Seen in Room<br>
+Spotted Outside Room Time<br>
+Spotted Outside Room >Location<br>
+Time Between Room and Outside<br>
+Time Range from First to Last Detection of Any Guard"<br>
+
+I had a new schema in this level.<br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/36_level_7_new_schema.png?raw=true)<br>
+
+room: [csv](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/data/room.csv) or [xlsx](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/data/room.xlsx)<br>
+camera: [csv](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/data/equipment.csv) or [xlsx](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/data/camera.xlsx)<br>
+guard: [csv](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/data/guard.csv) or [xlsx](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/data/guard.xlsx)<br>
+
+Step 1
+```sql
+-- find what rooms were vacant 
+SELECT *
+FROM room
+WHERE isvacant = 'true';
+```
+Result:
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/37_room_vacant.png?raw=true)
+
+Step 2
+```sql
+-- join guard table to add more data
+SELECT
+	r.id as room_id, 
+	r.isvacant,
+	r.last_check_time,
+	g.id as guard_id,
+	g.code_name,
+	g.status
+FROM room r
+JOIN guard g ON g.assigned_room_id = r.id
+WHERE isvacant = 'true'
+ORDER BY g.id; 
+```
+Result:
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/38_room_and_guards.png?raw=true)
+
+
+
+
 
 
 

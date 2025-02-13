@@ -1,0 +1,51 @@
+id,location,movement_detected,guard_spotted_id,movement_detected_time
+1,Orange Doorway(A),TRUE,31,20:30:00
+2,Orange Doorway(B),FALSE,null,null
+3,Orange Doorway(C),FALSE,null,null
+4,Storage Room,FALSE,null,null
+5,Cyan Stairs(A),FALSE,null,null
+6,Cyan Stairs(B),FALSE,null,null
+7,Cyan Stairs(C),FALSE,null,null
+8,Cyan Stairs(D),FALSE,null,null
+9,Cyan Stairs(E),TRUE,27,20:35:00
+10,Cyan Stairs(F),FALSE,null,null
+11,Cyan Stairs(G),FALSE,null,null
+12,Basement(A),FALSE,null,null
+13,Basement(B),FALSE,null,null
+14,Basement(C),TRUE,49,20:28:00
+15,Basement(D),FALSE,null,null
+16,Red Roundabout(A),FALSE,null,null
+17,Red Roundabout(B),FALSE,null,null
+18,Red Roundabout(C),FALSE,null,null
+19,Red Roundabout(D),FALSE,null,null
+20,Red Roundabout(E),FALSE,null,null
+21,Red Roundabout(F),FALSE,null,null
+22,Red Roundabout(G),FALSE,null,null
+23,Incinerator,TRUE,88,20:31:00
+24,Yellow Stairs(A),FALSE,null,null
+25,Yellow Stairs(B),FALSE,null,null
+26,Yellow Stairs(C),FALSE,null,null
+27,Yellow Stairs(D),FALSE,null,null
+28,Yellow Stairs(E),FALSE,null,null
+29,Yellow Stairs(F),FALSE,null,null
+30,Cafeteria,FALSE,null,null
+31,Kitchen,FALSE,null,null
+32,Mens Washroom,FALSE,null,null
+33,Womens Washroom,FALSE,null,null
+34,Upper Management(A),FALSE,null,null
+35,Upper Management(B),TRUE,60,20:21:00
+36,Pink Hallway(A),FALSE,null,null
+37,Pink Hallway(B),FALSE,null,null
+38,Pink Hallway(C),FALSE,null,null
+39,Pink Hallway(D),FALSE,null,null
+40,Pink Hallway(E),FALSE,null,null
+41,Pink Hallway(F),FALSE,null,null
+42,Pink Hallway(G),FALSE,null,null
+43,Purple Stairs(A),FALSE,null,null
+44,Purple Stairs(B),TRUE,82,20:34:00
+45,Purple Stairs(C),FALSE,null,null
+46,Purple Stairs(D),FALSE,null,null
+47,Purple Stairs(E),FALSE,null,null
+48,Purple Stairs(F),FALSE,null,null
+49,Purple Stairs(G),FALSE,null,null
+50,Purple Stairs(H),FALSE,null,null
