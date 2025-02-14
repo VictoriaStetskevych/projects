@@ -1,0 +1,1002 @@
+id,first_name,last_name,game_id,survived,death_description,last_moved_time_seconds
+1,Luigi,Mangione,50,TRUE,null,39
+2,Tiffie,Bruckstein,3,FALSE,pushed,40
+3,Amalee,Kennaird,42,FALSE,Wrong panel,91
+4,Joonho,Choi,50,TRUE,null,7
+5,Seokjin,Jung,50,FALSE,Wrong panel,63
+6,Beatrice,Gilleon,33,FALSE,Stepped on the wrong panel,1
+7,Osbourne,Switsur,23,FALSE,Stepped on the wrong panel,85
+8,Hyejin,Bi,50,TRUE,null,20
+9,Chrissie,Graveston,45,FALSE,Wrong panel,32
+10,Gae,Pulster,7,FALSE,Wrong panel,67
+11,Marty,Thunders,39,FALSE,Wrong panel,114
+12,Jian,Bi,50,FALSE,Stepped on the wrong panel,41
+13,Kyungsoo,Lee,50,FALSE,Stepped on the wrong panel,89
+14,Dewain,Grise,17,TRUE,null,26
+15,Corri,Hartigan,11,FALSE,Stepped on the wrong panel,119
+16,Ad,Watson,26,FALSE,Stepped on the wrong panel,2
+17,Taehyung,Yu,50,FALSE,Stepped on the wrong panel,51
+18,Ethelda,Temby,28,TRUE,null,80
+19,Jiwoo,Oh,50,TRUE,null,28
+20,Ulla,Patey,17,TRUE,null,97
+21,Dari,Quincey,32,FALSE,Wrong panel,55
+22,Brigitte,Ruhben,43,TRUE,null,51
+23,Friedrick,Coll,36,TRUE,null,1
+24,Sherman,Skillanders,23,TRUE,null,1
+25,Jackie,Tibalt,33,FALSE,Wrong panel,62
+26,Valenka,Reckless,35,FALSE,Wrong panel,1
+27,Hun,Han,50,TRUE,null,70
+28,Abbot,Tebbit,13,TRUE,null,14
+29,Tatum,Stancliffe,46,TRUE,null,1
+30,Bayard,Dannehl,33,TRUE,null,73
+31,Lenora,Ridd,15,FALSE,Stepped on the wrong panel,67
+32,Rora,Deam,6,TRUE,null,32
+33,Sooyoung,Yu,50,FALSE,Wrong panel,33
+34,Elaine,Trenoweth,50,TRUE,null,37
+35,Lanny,Banger,49,TRUE,null,21
+36,Hyejin,Kang,50,TRUE,null,20
+37,Germain,Rizzillo,44,FALSE,Stepped on the wrong panel,25
+38,Lenka,Popeley,26,FALSE,Pushed!,85
+39,Alair,Burlay,45,FALSE,Pushed!,68
+40,Shantee,Crawforth,23,TRUE,null,36
+41,Lamar,Agge,18,FALSE,pushed,46
+42,Earvin,Tottle,41,TRUE,null,12
+43,Ardene,Mathwin,47,TRUE,null,20
+44,Francesco,Stilliard,32,FALSE,Stepped on the wrong panel,28
+45,Bo,Schout,46,TRUE,null,39
+46,Taehyung,Kam,50,TRUE,null,19
+47,Curtice,Gomme,25,TRUE,null,42
+48,Rosaline,Swalwel,8,FALSE,Stepped on the wrong panel,1
+49,Kyungsoo,Tang,50,FALSE,Pushed,72
+50,Elga,Diggle,30,TRUE,null,45
+51,Hyejin,Shin,50,FALSE,Pushed,73
+52,Seokjin,Park,50,FALSE,Wrong panel,41
+53,Dario,Kolak,19,FALSE,Wrong panel,68
+54,Minho,Beom,50,FALSE,Pushed!,31
+55,Ram,Laphorn,2,FALSE,Stepped on the wrong panel,63
+56,Marys,Ashley,50,FALSE,Stepped on the wrong panel,69
+57,Cart,Lomasny,12,TRUE,null,49
+58,Kyungsoo,Choi,50,TRUE,null,21
+59,Christin,Stucke,5,FALSE,Wrong panel,37
+60,Fabio,Lerohan,30,TRUE,null,62
+61,Iseo,Nan,50,TRUE,null,42
+62,Hercules,Rosettini,46,FALSE,Stepped on the wrong panel,53
+63,Iseo,Un,50,TRUE,null,26
+64,Lenard,Ackland,35,TRUE,null,65
+65,Yuna,Shin,50,TRUE,null,51
+66,Damita,Estick,18,FALSE,Wrong panel,59
+67,Alfred,Worboy,48,FALSE,Wrong panel,42
+68,Brunhilde,Masedon,49,TRUE,null,74
+69,Christoffer,MacDavitt,1,FALSE,Wrong panel,1
+70,Sula,Chumley,25,FALSE,Wrong panel,1
+71,Myrtie,Chamberlayne,19,TRUE,null,2
+72,Celisse,Fumagallo,16,TRUE,null,17
+73,Syd,Kunath,26,FALSE,Stepped on the wrong panel,1
+74,Lynnett,Janek,32,FALSE,Stepped on the wrong panel,31
+75,Robinia,Cammiemile,5,FALSE,Stepped on the wrong panel,26
+76,Conroy,Grindall,49,TRUE,null,52
+77,Brittni,Heers,39,TRUE,null,23
+78,Ahmad,Louisot,7,TRUE,null,25
+79,Kris,Le Floch,14,FALSE,Stepped on the wrong panel,67
+80,Ambrose,Labon,35,FALSE,pushed and fell,47
+81,Federico,Afonso,23,TRUE,null,1
+82,Sua,Mi,50,FALSE,Pushed!,87
+83,Teddi,Daniello,25,FALSE,Pushed!,63
+84,Suzi,Eakly,48,TRUE,null,106
+85,Taehyung,Yoon,50,FALSE,pushed,101
+86,Brendis,Standish,5,FALSE,Wrong panel,53
+87,Leta,Acland,33,TRUE,null,63
+88,Alasdair,Kull,50,TRUE,null,51
+89,Ericha,Aleksankov,26,FALSE,Stepped on the wrong panel,78
+90,Yuna,Beom,50,FALSE,pushed and fell,51
+91,Paddie,Tukesby,20,TRUE,null,20
+92,Jian,Nan,50,TRUE,null,13
+93,Hun,Shin,50,TRUE,null,43
+94,Chiho,Gi,50,FALSE,pushed,30
+95,Arabele,Leere,3,TRUE,null,28
+96,Ijun,Kang,50,FALSE,Wrong panel,34
+97,Valry,Ayce,33,TRUE,null,12
+98,Taehyung,Gi,50,FALSE,Wrong panel,59
+99,Fedora,Hawking,13,TRUE,null,4
+100,Jimmy,Donaldson,50,TRUE,null,6
+101,Deok-su,Jang,50,TRUE,null,5
+102,Tan,Juster,47,FALSE,Stepped on the wrong panel,13
+103,Maybelle,Sprull,10,FALSE,Stepped on the wrong panel,44
+104,Lorelle,Van Oort,9,TRUE,null,64
+105,Jacquette,Daout,49,FALSE,Stepped on the wrong panel,33
+106,Sooyoung,Nan,50,TRUE,null,46
+107,Sisely,McKillop,13,FALSE,pushed,58
+108,Hyejin,Dae,50,FALSE,Stepped on the wrong panel,25
+109,Bert,Hankinson,14,TRUE,null,43
+110,Jiwoo,Shin,50,FALSE,Stepped on the wrong panel,80
+111,Ijun,Kang,50,FALSE,Pushed!,102
+112,Reynard,Rutherford,8,FALSE,Stepped on the wrong panel,1
+113,Seokjin,Shin,50,TRUE,null,27
+114,Marty,Urlin,18,FALSE,Stepped on the wrong panel,34
+115,Aileen,Andrzejczak,8,TRUE,null,27
+116,Iormina,Ricson,32,TRUE,null,43
+117,Kathryne,Queree,40,TRUE,null,47
+118,Laurie,Roughley,23,FALSE,Stepped on the wrong panel,10
+119,Stephanus,Shackelton,15,TRUE,null,41
+120,Wood,Ellerey,15,TRUE,null,29
+121,Minho,Gi,50,TRUE,null,46
+122,Humfried,Isaksen,35,FALSE,Wrong panel,58
+123,Shanta,Klimentyonok,46,TRUE,null,83
+124,Kelwin,Fysh,11,FALSE,Wrong panel,17
+125,Suho,Kang,50,FALSE,Pushed!,25
+126,Frannie,Redmond,12,TRUE,null,71
+127,Dame,Woodrough,7,TRUE,null,11
+128,Mavra,Figge,39,TRUE,null,61
+129,Wendy,Robinett,41,TRUE,null,56
+130,Arabela,Doughill,15,FALSE,Stepped on the wrong panel,33
+131,Lesley,Coite,39,FALSE,Stepped on the wrong panel,1
+132,Jocelin,Daye,26,FALSE,Stepped on the wrong panel,128
+133,Katusha,Klimashevich,14,TRUE,null,58
+134,Stephani,Denge,18,TRUE,null,35
+135,Hyejin,Mi,50,FALSE,Wrong panel,45
+136,Anastassia,Hawkeridge,34,TRUE,null,69
+137,Barrett,Moyser,23,FALSE,Wrong panel,91
+138,Kamala,Harris,3,FALSE,Pushed!,197
+141,Katee,Grog,14,TRUE,null,134
+142,Michaela,Yantsev,5,FALSE,Wrong panel,29
+143,Ijun,Nam,50,TRUE,null,40
+144,Randolph,Cron,45,FALSE,Wrong panel,100
+145,Jodi,McDyer,10,FALSE,Stepped on the wrong panel,24
+146,Seokjin,Bi,50,TRUE,null,71
+147,Haeun,Jung,50,TRUE,null,61
+148,Shem,Bristoe,48,FALSE,pushed and fell,46
+149,Kacy,Santo,15,TRUE,null,45
+150,Panchito,Ivanusyev,23,FALSE,pushed,63
+151,Sua,Beom,50,FALSE,Pushed!,38
+152,Whittaker,MacElroy,35,FALSE,Wrong panel,1
+153,Jacky,Westwood,9,FALSE,Wrong panel,56
+154,Taehyung,Kam,50,FALSE,Pushed!,48
+155,Abe,Bangiard,19,FALSE,Stepped on the wrong panel,58
+156,Huntley,Conwell,25,FALSE,Pushed!,1
+157,Jian,Yoon,50,FALSE,Wrong panel,47
+158,Ahmad,Kermott,13,TRUE,null,19
+159,Minho,Seonu,50,TRUE,null,22
+160,Sigrid,Langthorn,3,FALSE,Pushed!,33
+161,Hettie,Laste,25,TRUE,null,1
+162,Arden,Binnie,26,TRUE,null,43
+163,Kyungsoo,Shin,50,TRUE,null,79
+164,Eunji,Shin,50,TRUE,null,22
+165,Cly,Anersen,9,TRUE,null,50
+166,Jiwoo,Un,50,TRUE,null,28
+167,Valencia,Abrey,20,FALSE,Wrong panel,1
+168,Cayla,Baylis,50,FALSE,Stepped on the wrong panel,1
+169,Alon,O'Hara,35,FALSE,Stepped on the wrong panel,6
+170,Kyungsoo,Mi,50,TRUE,null,90
+171,Harin,Namgung,50,TRUE,null,50
+172,Barrie,Yurivtsev,16,FALSE,pushed,17
+173,Juan,Davidson,36,TRUE,null,34
+174,Arin,Tang,50,TRUE,null,64
+175,Nevile,Skuce,18,FALSE,pushed,35
+176,Ettore,Serotsky,50,TRUE,null,75
+177,Haeun,Yoon,50,FALSE,Stepped on the wrong panel,31
+178,Virgina,Lillicrap,25,FALSE,Stepped on the wrong panel,86
+179,Pasquale,Curro,49,TRUE,null,22
+180,Eunji,Dae,50,FALSE,Stepped on the wrong panel,46
+181,Addie,Ferriday,5,TRUE,null,114
+182,Jiwoo,Nam,50,TRUE,null,50
+183,Seokjin,Nan,50,FALSE,pushed,20
+184,Haeun,Shin,50,FALSE,pushed and fell,43
+185,Johanna,Fanti,33,FALSE,Stepped on the wrong panel,1
+186,Sua,Kang,50,FALSE,Wrong panel,42
+187,Susette,Alans,39,FALSE,Wrong panel,78
+188,Hun,Oh,50,TRUE,null,89
+189,Lorenza,Collin,38,TRUE,null,46
+190,Mose,Dutnell,41,TRUE,null,72
+191,Ker,Crooks,49,FALSE,Stepped on the wrong panel,51
+192,Veda,Vauter,45,FALSE,Stepped on the wrong panel,98
+193,Annalise,Jaime,37,FALSE,Wrong panel,51
+194,Eunji,Yoon,50,TRUE,null,29
+195,Grace,McCullen,45,TRUE,null,18
+196,Minho,Nan,50,TRUE,null,39
+197,Sascha,Barnaclough,34,TRUE,null,96
+198,Joonho,Tang,50,TRUE,null,50
+199,Ezequiel,Jefferd,24,TRUE,null,6
+200,Hyejin,Namgung,50,FALSE,Wrong panel,62
+201,Scarface,Ovize,5,FALSE,pushed and fell,44
+202,Haeun,Park,50,FALSE,Wrong panel,38
+203,Haeun,Seonu,50,FALSE,pushed,13
+204,Angy,Dahlbom,30,TRUE,null,42
+205,Cameron,Redler,18,FALSE,Wrong panel,69
+206,Chiarra,Esby,24,TRUE,null,16
+207,Suho,Park,50,TRUE,null,63
+208,Sua,Namgung,50,TRUE,null,77
+209,Ludwig,Jewess,8,FALSE,Pushed!,23
+210,Denise,Given,20,TRUE,null,18
+211,Jonas,Chumley,25,TRUE,null,1
+212,Dede,Sainteau,18,FALSE,Wrong panel,74
+213,Powell,Fihelly,34,TRUE,null,71
+214,Darrel,Gocke,24,TRUE,null,65
+215,Taehyung,Seonu,50,FALSE,pushed,111
+216,Jiwoo,Nan,50,FALSE,pushed and fell,46
+217,Aron,Colthurst,23,TRUE,null,10
+218,Nial,Onians,47,TRUE,null,22
+219,Jermaine,Pinner,41,TRUE,null,32
+220,Robby,Welband,31,TRUE,null,51
+221,Beale,Kershow,15,TRUE,null,17
+222,Danice,Hallagan,17,FALSE,Pushed!,61
+223,Brenda,Matcham,9,TRUE,null,22
+224,Amble,Gemson,20,FALSE,pushed and fell,1
+225,Arlyn,Braidford,26,FALSE,Wrong panel,3
+226,Harin,Mi,50,FALSE,Stepped on the wrong panel,39
+227,Sebastian,Drysdall,43,FALSE,Stepped on the wrong panel,49
+228,Ilaire,Mazzia,38,TRUE,null,1
+229,Iseo,Nan,50,FALSE,Stepped on the wrong panel,19
+230,Marshall,Shutle,35,FALSE,Stepped on the wrong panel,11
+231,Harwell,Verdey,37,FALSE,Stepped on the wrong panel,92
+232,Evangelia,Ancliffe,47,TRUE,null,24
+233,Corine,Bradtke,23,FALSE,pushed,50
+234,Vallie,Gelland,37,TRUE,null,1
+235,Taehyung,Tang,50,TRUE,null,55
+236,Mella,Minear,23,TRUE,null,48
+237,Harin,Nam,50,TRUE,null,23
+238,Iago,Jillett,40,FALSE,pushed,55
+239,Sooyoung,Beom,50,TRUE,null,53
+240,Karna,Starbucke,10,TRUE,null,42
+241,Sua,Han,50,TRUE,null,105
+242,Chiho,Nam,50,TRUE,null,30
+243,Yuna,Nam,50,FALSE,Wrong panel,58
+244,Garwood,Blei,17,TRUE,null,32
+245,Gannon,Genney,43,FALSE,Stepped on the wrong panel,44
+246,Tomasine,Masdin,18,FALSE,Stepped on the wrong panel,33
+247,Melba,Babb,34,TRUE,null,81
+248,Terrye,Gerdes,4,TRUE,null,81
+249,Joonho,Beom,50,FALSE,Wrong panel,18
+250,Sooyoung,Kim,50,FALSE,Pushed!,19
+251,Drusi,Logesdale,19,TRUE,null,30
+252,Frederich,Mulford,20,TRUE,null,51
+253,Bret,Clarkson,33,FALSE,Pushed!,15
+254,Melisandra,Mathes,23,FALSE,Pushed!,85
+255,Sher,Ellsom,45,FALSE,Pushed!,76
+256,Winne,Halbord,48,TRUE,null,51
+257,Xenos,Jarmain,36,TRUE,null,17
+258,Libbie,Ashley,14,FALSE,pushed and fell,12
+259,Vin,Mc Pake,2,TRUE,null,9
+260,Melessa,Brinsford,17,FALSE,Pushed!,42
+261,Hyacintha,Isard,12,FALSE,Stepped on the wrong panel,23
+262,Tore,Mutlow,42,TRUE,null,34
+263,Arin,Kang,50,TRUE,null,56
+264,Keen,Jersh,39,FALSE,Stepped on the wrong panel,51
+265,Bobbi,Manhare,6,FALSE,pushed and fell,48
+266,Court,Dadson,18,FALSE,Wrong panel,56
+267,Mathilda,Boissier,43,FALSE,Wrong panel,1
+268,Shaylynn,Suggey,34,FALSE,Wrong panel,42
+269,Ijun,Jung,50,FALSE,Pushed!,70
+270,Jian,Namgung,50,FALSE,pushed,76
+271,Hyejin,Kam,50,FALSE,Stepped on the wrong panel,66
+272,Jian,Dae,50,FALSE,Stepped on the wrong panel,36
+273,Alfy,Woodyatt,19,FALSE,pushed,67
+274,Yolanda,Bisterfeld,15,FALSE,Wrong panel,1
+275,Horace,Burchatt,16,TRUE,null,9
+276,Auria,Skevington,24,TRUE,null,21
+277,Arin,Shin,50,TRUE,null,17
+278,Wylie,Denerley,45,FALSE,Stepped on the wrong panel,32
+279,Hun,Oh,50,TRUE,null,60
+280,Ijun,Seonu,50,TRUE,null,43
+281,Selie,Halliberton,41,FALSE,Stepped on the wrong panel,30
+282,Milo,Yorath,21,FALSE,Wrong panel,33
+283,Augustine,Gerrit,19,TRUE,null,14
+284,Dinnie,Cantor,49,TRUE,null,55
+285,Baxy,Coston,16,TRUE,null,40
+286,Arie,McCafferty,31,FALSE,Pushed!,26
+287,Gibb,Branney,18,FALSE,Stepped on the wrong panel,39
+288,Morgan,Howchin,14,FALSE,Stepped on the wrong panel,20
+289,Suho,Beom,50,FALSE,Stepped on the wrong panel,95
+290,Timmie,Huxster,23,FALSE,Pushed!,47
+291,Theo,Sherrocks,28,FALSE,pushed and fell,73
+292,Hyejin,Lee,50,FALSE,Pushed!,32
+293,Chiho,Beom,50,TRUE,null,88
+294,Katha,Rannigan,30,TRUE,null,54
+295,Arin,Seonu,50,FALSE,Pushed!,68
+296,Hyejin,Seonu,50,FALSE,Wrong panel,37
+297,Sooyoung,Han,50,FALSE,Wrong panel,71
+298,Kevyn,Waterdrinker,19,TRUE,null,96
+299,Yuna,Bi,50,TRUE,null,52
+300,Iseo,Shin,50,TRUE,null,36
+301,Judy,Kosiada,26,TRUE,null,67
+302,Hector,Hymor,9,TRUE,null,42
+303,Roley,Peters,22,TRUE,null,35
+304,Whitney,Longstreeth,9,TRUE,null,90
+305,Yvor,Vankov,26,FALSE,Wrong panel,47
+306,Haeun,Mi,50,TRUE,null,61
+307,Kyungsoo,Bi,50,TRUE,null,61
+308,Hamil,Neames,34,TRUE,null,73
+309,Lynnell,McLemon,31,TRUE,null,38
+310,Sunshine,Dikle,46,FALSE,Stepped on the wrong panel,51
+311,Aileen,Giorgielli,48,TRUE,null,17
+312,Jian,Lee,50,TRUE,null,9
+313,Berne,Luscombe,22,TRUE,null,46
+314,Joonho,Un,50,TRUE,null,59
+315,Ijun,Namgung,50,TRUE,null,37
+316,Mirilla,Glasscock,2,FALSE,pushed,1
+317,Nealson,Frewer,29,FALSE,pushed,1
+318,Sooyoung,Un,50,FALSE,Stepped on the wrong panel,13
+319,Rusty,Linnemann,38,FALSE,Wrong panel,3
+320,Nelly,Amiranda,37,TRUE,null,87
+321,Claus,Fintoph,32,FALSE,Wrong panel,47
+322,Brade,Dyet,49,FALSE,pushed and fell,54
+323,Jian,Choi,50,FALSE,Stepped on the wrong panel,97
+324,Olenka,Pepler,34,FALSE,Stepped on the wrong panel,12
+325,Webb,Georgi,40,TRUE,null,28
+326,Taehyung,Dae,50,FALSE,Stepped on the wrong panel,58
+327,Dinah,Stather,17,TRUE,null,73
+328,Tatiania,Brooke,26,TRUE,null,64
+329,Eunji,Mi,50,FALSE,Wrong panel,88
+330,Filmer,Romagosa,44,TRUE,null,1
+331,Lexi,Minter,35,TRUE,null,54
+332,Cristionna,Skermer,17,TRUE,null,25
+333,Orion,Beamson,23,TRUE,null,53
+334,Shay,Whichelow,30,FALSE,Wrong panel,1
+335,Ijun,Yoon,50,TRUE,null,38
+336,Jerrylee,Burford,35,FALSE,Wrong panel,1
+337,Wilek,Mc Giffin,44,TRUE,null,63
+338,Gage,McGaugey,45,TRUE,null,13
+339,Helaina,Pammenter,15,TRUE,null,47
+340,Bartel,Jelfs,35,TRUE,null,21
+341,Roosevelt,Spaight,5,TRUE,null,74
+342,Charyl,Blumson,3,FALSE,pushed,1
+343,Sooyoung,Dae,50,FALSE,pushed and fell,54
+344,Garwin,Shawyers,17,TRUE,null,71
+345,Jakob,Draysey,19,TRUE,null,77
+346,Kyungsoo,Choi,50,FALSE,pushed,13
+347,Zulema,Duckfield,6,FALSE,Stepped on the wrong panel,122
+348,Eunji,Yu,50,TRUE,null,53
+349,Benton,Eckh,45,TRUE,null,1
+350,Avrit,Lockitt,16,TRUE,null,34
+351,Vickie,Malone,27,FALSE,Stepped on the wrong panel,14
+352,Jian,Lee,50,TRUE,null,13
+353,Arin,Choi,50,TRUE,null,12
+354,Iseo,Gi,50,TRUE,null,51
+355,Minho,Nam,50,TRUE,null,16
+356,Hun,Dae,50,FALSE,Wrong panel,55
+357,Kyungsoo,Yu,50,FALSE,Wrong panel,109
+358,Cathee,McGlashan,1,TRUE,null,22
+359,Layton,Heatley,5,FALSE,Stepped on the wrong panel,42
+360,Neal,Velez,35,TRUE,null,55
+361,Hun,Beom,50,FALSE,Stepped on the wrong panel,28
+362,Starla,Geydon,13,TRUE,null,46
+363,Hatti,Earingey,11,FALSE,Wrong panel,1
+364,Janela,Allston,43,FALSE,pushed,57
+365,Sibylle,Grigorushkin,37,TRUE,null,1
+366,Niel,Cloutt,43,FALSE,Wrong panel,33
+367,Kerby,Sanzio,26,FALSE,Wrong panel,58
+368,Jiwoo,Yoon,50,TRUE,null,76
+369,Yuna,Yoon,50,TRUE,null,83
+370,Florance,Bindon,21,FALSE,Stepped on the wrong panel,44
+371,Sua,Nan,50,TRUE,null,61
+372,Alfredo,Rampton,2,FALSE,Stepped on the wrong panel,72
+373,Jeffy,Venour,47,FALSE,Wrong panel,59
+374,Lorrie,Tilly,2,TRUE,null,52
+375,Arin,Gi,50,FALSE,Stepped on the wrong panel,97
+376,Lowell,Northwood,22,FALSE,pushed and fell,15
+377,Rosemarie,O'Sherrin,14,FALSE,Wrong panel,62
+378,Fran,Quan,29,TRUE,null,49
+379,Chiho,Nam,50,FALSE,Stepped on the wrong panel,42
+380,Cece,Hurtic,34,FALSE,Stepped on the wrong panel,63
+381,Renado,Assiratti,39,FALSE,Stepped on the wrong panel,26
+382,Eunji,Bi,50,FALSE,Pushed!,71
+383,Lanna,Mylechreest,38,FALSE,Wrong panel,17
+384,Harin,Jung,50,FALSE,Pushed!,47
+385,Reamonn,Benoi,6,FALSE,Pushed!,19
+386,Everard,Durand,10,FALSE,pushed,52
+387,Drusie,Spiaggia,9,FALSE,Wrong panel,47
+388,Ferdinanda,Reiach,25,TRUE,null,89
+389,Selestina,Kleisel,36,FALSE,Wrong panel,50
+390,Jung-bae,Park,50,FALSE,Wrong panel,74
+391,Dur,Eltune,36,FALSE,Wrong panel,38
+392,Minho,Seonu,50,FALSE,Stepped on the wrong panel,47
+393,Margaret,Mackleden,27,TRUE,null,33
+394,Jay,Inglesent,18,FALSE,Stepped on the wrong panel,1
+395,Reider,Whinray,46,TRUE,null,62
+396,Sua,Yu,50,TRUE,null,57
+397,Karyl,Twelvetree,4,FALSE,pushed and fell,55
+398,Haeun,Kim,50,TRUE,null,39
+399,Tim,Gibbett,48,FALSE,Stepped on the wrong panel,34
+400,Eunji,Nan,50,TRUE,null,25
+401,Seokjin,Beom,50,TRUE,null,48
+402,Minho,Kang,50,TRUE,null,25
+403,Minho,Jung,50,FALSE,Wrong panel,72
+404,Sooyoung,Jung,50,FALSE,Wrong panel,5
+405,Stavros,Pinching,24,TRUE,null,36
+406,Kerwinn,Dinnis,47,TRUE,null,45
+407,Jiwoo,Kam,50,FALSE,Wrong panel,20
+408,Wolfie,Quan,27,FALSE,Wrong panel,67
+409,Elbertine,Pedri,27,TRUE,null,9
+410,Melany,Bowhay,40,FALSE,Wrong panel,13
+411,Wright,Casbolt,26,FALSE,Stepped on the wrong panel,16
+412,Harin,Jung,50,TRUE,null,56
+413,Rey,Charrisson,1,FALSE,Stepped on the wrong panel,28
+414,Bette,Thurling,7,TRUE,null,104
+415,Edee,Bank,38,TRUE,null,16
+416,Marabel,Kermeen,47,TRUE,null,93
+417,Arin,Dae,50,TRUE,null,50
+418,Sooyoung,Nan,50,FALSE,Pushed!,45
+419,Xylina,Wheeliker,18,TRUE,null,43
+420,Sabine,Bygate,48,FALSE,Pushed!,1
+421,Minho,Bi,50,FALSE,pushed,19
+422,Bobby,Fleis,22,FALSE,pushed,52
+423,Suho,Gi,50,TRUE,null,19
+424,Amata,Ball,39,TRUE,null,1
+425,Hewett,Newlin,49,FALSE,pushed and fell,4
+426,Minho,Seonu,50,TRUE,null,59
+427,Harin,Nam,50,TRUE,null,65
+428,Jian,Kim,50,FALSE,Wrong panel,42
+429,Akim,Sylvester,34,FALSE,Stepped on the wrong panel,40
+430,Robbyn,Paramore,16,FALSE,Stepped on the wrong panel,78
+431,Benedick,Nockolds,33,TRUE,null,1
+432,Rolland,Burris,9,TRUE,null,63
+433,Debby,Garoghan,48,TRUE,null,19
+434,Noelyn,Regardsoe,27,FALSE,Pushed!,6
+435,Hanan,Kubiak,10,FALSE,pushed,15
+436,Milo,Wix,20,FALSE,Wrong panel,66
+437,Anabelle,Clough,19,TRUE,null,25
+438,Harin,Namgung,50,FALSE,Wrong panel,85
+439,Seokjin,Beom,50,FALSE,Stepped on the wrong panel,41
+440,Madalena,De Miranda,16,TRUE,null,32
+441,Tally,Polhill,33,TRUE,null,1
+442,Denver,Slight,43,TRUE,null,55
+443,Viviene,Radbond,40,FALSE,Wrong panel,40
+444,Iseo,Dae,50,FALSE,Stepped on the wrong panel,61
+445,Aldis,Dafydd,44,TRUE,null,18
+446,Haeun,Yoon,50,TRUE,null,128
+447,Chiho,Choi,50,TRUE,null,23
+448,Killie,Duddin,40,FALSE,Stepped on the wrong panel,50
+449,Wilie,Baumford,49,TRUE,null,1
+450,Chiho,Choi,50,TRUE,null,57
+451,Joonho,Han,50,FALSE,Wrong panel,39
+452,Dorette,Rowett,8,FALSE,Stepped on the wrong panel,25
+453,Yuna,Kam,50,FALSE,Wrong panel,126
+454,Haven,Paterno,34,TRUE,null,90
+455,Laurens,Freer,48,FALSE,Stepped on the wrong panel,59
+456,Shanda,Grinnell,39,TRUE,null,12
+457,Ashlie,Mulran,29,FALSE,Wrong panel,39
+458,Whitman,Zarfai,27,TRUE,null,55
+459,Raven,Balasin,35,TRUE,null,34
+460,Willard,Bardwall,36,TRUE,null,50
+461,Felicity,Mealham,13,FALSE,Wrong panel,43
+462,Dannie,Vause,1,FALSE,pushed,19
+463,Janine,Dellit,46,FALSE,Stepped on the wrong panel,33
+464,Barr,Le feaver,15,TRUE,null,38
+465,Trixy,Grint,13,TRUE,null,22
+466,Dinny,Scutter,18,TRUE,null,44
+467,Roselle,Farncombe,49,TRUE,null,53
+468,Lauritz,Josowitz,20,TRUE,null,18
+469,Amelie,Padfield,4,FALSE,Stepped on the wrong panel,75
+470,Antonino,Paragreen,43,TRUE,null,1
+471,Halsey,Pinnock,3,FALSE,Wrong panel,59
+472,Sean,Cains,41,FALSE,Wrong panel,58
+473,Susana,Pitone,40,TRUE,null,6
+474,Phillipp,Perrins,19,FALSE,pushed and fell,19
+475,Heddie,Beslier,7,TRUE,null,14
+476,Mendel,Orpen,30,TRUE,null,4
+477,Osmond,Bootyman,18,FALSE,Pushed!,72
+478,Hanni,Coope,15,TRUE,null,77
+479,Finlay,McFetridge,30,TRUE,null,67
+480,Joannes,Godspede,21,FALSE,Wrong panel,28
+481,Kiele,Gilbart,21,TRUE,null,27
+482,Kaiser,Lynock,21,FALSE,Wrong panel,55
+483,Jonell,Biskupski,17,FALSE,Wrong panel,55
+484,Aeriel,Potebury,44,FALSE,Pushed!,94
+485,Gaylene,Kaysor,29,FALSE,pushed and fell,51
+486,Merl,Sothern,39,FALSE,Wrong panel,83
+487,Whitby,MacIlurick,50,TRUE,null,18
+488,Puff,Mockler,13,TRUE,null,65
+489,Merilyn,Reekie,9,TRUE,null,1
+490,Merwyn,Mongenot,31,FALSE,Stepped on the wrong panel,60
+491,Gigi,Julien,24,FALSE,Stepped on the wrong panel,34
+492,Remington,Hendrikse,15,FALSE,Stepped on the wrong panel,60
+493,Janel,Wilcocke,20,FALSE,Wrong panel,1
+494,Tymon,Golland,49,FALSE,pushed,33
+495,Bentlee,Lankford,19,FALSE,pushed,80
+496,Sargent,Onians,39,FALSE,Pushed!,8
+497,Desdemona,Kitcat,46,TRUE,null,53
+498,Shel,Le Noury,11,TRUE,null,14
+499,Selma,Mathelin,28,FALSE,Stepped on the wrong panel,123
+500,Corliss,Ayllett,17,TRUE,null,7
+501,Rita,Hamlyn,48,FALSE,Stepped on the wrong panel,35
+502,Iseabal,Gretton,8,FALSE,Wrong panel,5
+503,Zachary,Juliano,27,FALSE,Wrong panel,5
+504,Graham,Burrows,32,FALSE,Pushed!,63
+505,Thaddus,Fullylove,19,FALSE,pushed and fell,55
+506,Neron,Winch,36,FALSE,Wrong panel,2
+507,Prince,Champneys,19,TRUE,null,80
+508,Rick,Allwood,33,TRUE,null,48
+509,Jewel,Lenchenko,37,FALSE,Wrong panel,1
+510,Frieda,Cuss,35,TRUE,null,62
+511,Tab,Biasio,49,TRUE,null,3
+512,Sella,Pattlel,32,TRUE,null,30
+513,Leonie,Traynor,32,TRUE,null,68
+514,Winni,Hackelton,47,TRUE,null,61
+515,Eugenius,Passo,49,TRUE,null,1
+516,Randene,Clamp,41,TRUE,null,64
+517,Baxie,McLay,6,FALSE,Stepped on the wrong panel,33
+518,Ernesto,Luckin,34,FALSE,Stepped on the wrong panel,32
+519,Teddie,Fessions,26,FALSE,Stepped on the wrong panel,1
+520,Bax,Woodus,27,TRUE,null,68
+521,Kalvin,Loughnan,41,TRUE,null,4
+522,Foss,Bugdall,30,TRUE,null,44
+523,Gertrudis,Dubery,6,FALSE,Stepped on the wrong panel,15
+524,Carmon,Gerrit,24,FALSE,Wrong panel,47
+525,Hyatt,Davenell,16,TRUE,null,22
+526,Shirlee,Blood,3,TRUE,null,1
+527,Camila,Feaks,40,FALSE,pushed and fell,1
+528,Adolph,Gillham,28,FALSE,Pushed!,26
+529,Brittne,Oswald,4,FALSE,Wrong panel,50
+530,Becka,Robertshaw,23,FALSE,Wrong panel,82
+531,Tan,Dusting,36,TRUE,null,46
+532,Obediah,Stowell,32,TRUE,null,92
+533,Kamala,Harris,26,FALSE,pushed,175
+534,Lyman,Bleasdille,24,TRUE,null,68
+535,Anabal,MacEllen,3,FALSE,Pushed!,28
+536,Petr,Seawell,21,FALSE,Wrong panel,42
+537,Bobby,Casini,17,TRUE,null,18
+538,Vanny,Shird,3,TRUE,null,26
+539,Arley,Campa,31,FALSE,Stepped on the wrong panel,70
+540,Maynard,Bardell,42,FALSE,Stepped on the wrong panel,78
+541,Patten,Piotr,11,TRUE,null,40
+542,Josee,Secretan,9,TRUE,null,113
+543,Thorstein,Nattrass,28,TRUE,null,7
+544,Thekla,Zanuciolii,15,TRUE,null,59
+545,Sheri,Salamon,6,FALSE,Stepped on the wrong panel,90
+546,Andreana,McKniely,49,FALSE,pushed and fell,104
+547,Silvie,Kuhnert,44,TRUE,null,114
+548,Gerrie,Thecham,4,TRUE,null,43
+549,Micaela,Brewerton,14,TRUE,null,3
+550,Vinson,Amberg,27,TRUE,null,22
+551,Lanna,Millin,43,TRUE,null,68
+552,Heda,Ruffler,3,FALSE,Stepped on the wrong panel,55
+553,Dale,Britt,5,FALSE,Stepped on the wrong panel,60
+554,Marena,Jobb,28,FALSE,Stepped on the wrong panel,15
+555,Claudie,Ilott,33,FALSE,Stepped on the wrong panel,40
+556,Koral,Tomovic,36,TRUE,null,33
+557,Alwyn,Tetford,41,FALSE,pushed and fell,67
+558,Ed,McIlreavy,30,FALSE,Wrong panel,77
+559,Quintina,Faro,15,FALSE,Wrong panel,28
+560,Holly,Loudian,4,TRUE,null,4
+561,Antonio,Forsdicke,44,FALSE,Pushed!,10
+562,Antone,Lindwasser,48,FALSE,pushed,1
+563,Bealle,Hargraves,49,FALSE,Wrong panel,64
+564,Vally,LLelweln,33,TRUE,null,7
+565,Price,Gretham,38,FALSE,Stepped on the wrong panel,38
+566,Javier,Pentecost,27,TRUE,null,47
+567,Corenda,Holleran,32,TRUE,null,35
+568,Minnnie,Oswick,16,TRUE,null,17
+569,Jodee,Lomas,28,FALSE,Stepped on the wrong panel,75
+570,Nyssa,Ecclestone,30,FALSE,Stepped on the wrong panel,113
+571,Marijn,Mallison,40,FALSE,Wrong panel,66
+572,De,Vennart,28,FALSE,Wrong panel,7
+573,Della,Jakeman,7,FALSE,pushed and fell,22
+574,Dimitry,Joye,2,TRUE,null,14
+575,Krisha,Shewon,32,TRUE,null,27
+576,Micheal,Avramovsky,45,FALSE,Stepped on the wrong panel,7
+577,York,Offiler,3,TRUE,null,88
+578,Sherline,Casserly,2,TRUE,null,1
+579,Phedra,Rye,11,FALSE,Stepped on the wrong panel,47
+580,Margarete,Pohlke,7,TRUE,null,58
+581,Angeline,Vamplew,10,FALSE,Stepped on the wrong panel,20
+582,Conrade,Sellner,40,TRUE,null,19
+583,Ruthie,Arlidge,41,FALSE,Stepped on the wrong panel,1
+584,Dina,Corkish,50,FALSE,pushed,62
+585,Maryjane,Rudkin,43,FALSE,Wrong panel,7
+586,Lynnelle,Ettery,9,FALSE,Wrong panel,30
+587,Marwin,Schusterl,35,FALSE,Stepped on the wrong panel,71
+588,Manolo,Phizaclea,39,FALSE,Stepped on the wrong panel,43
+589,Rosalynd,Poyser,44,FALSE,Wrong panel,23
+590,Adrian,Davidson,35,TRUE,null,71
+591,Graehme,Gormally,23,TRUE,null,65
+592,Katrina,Malham,9,FALSE,pushed and fell,51
+593,Marillin,MacNeilly,7,TRUE,null,29
+594,Zacharias,Toretta,21,FALSE,Wrong panel,2
+595,Flinn,Jobke,10,TRUE,null,1
+596,Whitaker,Cubitt,2,TRUE,null,15
+597,Bourke,Padbury,19,TRUE,null,43
+598,Dalt,Tolan,40,TRUE,null,1
+599,Sayers,Hanretty,22,FALSE,Stepped on the wrong panel,59
+600,Elna,Klassman,16,TRUE,null,1
+601,Blayne,Kindread,6,TRUE,null,34
+602,Hi,Nockolds,7,TRUE,null,34
+603,Bridie,Beamont,46,TRUE,null,72
+604,Sybilla,Martyntsev,35,TRUE,null,1
+605,Saunder,Hopfner,35,FALSE,Stepped on the wrong panel,6
+606,Keen,Alred,34,FALSE,Stepped on the wrong panel,34
+607,Konrad,Ipplett,22,TRUE,null,1
+608,Ailbert,Murtimer,21,FALSE,Pushed!,18
+609,Tillie,Hanna,17,FALSE,pushed,1
+610,Findlay,Dust,27,TRUE,null,30
+611,Annecorinne,Lowfill,31,TRUE,null,16
+612,Nikos,Gotch,46,TRUE,null,110
+613,Violante,Krojn,1,TRUE,null,58
+614,Justen,Goudman,35,TRUE,null,63
+615,Devora,Hackin,49,FALSE,Stepped on the wrong panel,110
+616,Gregor,Growy,17,TRUE,null,11
+617,Brigham,Killock,7,TRUE,null,106
+618,Gail,Stilwell,46,TRUE,null,52
+619,Rycca,Prestige,11,TRUE,null,1
+620,Fan,Bullas,35,FALSE,Stepped on the wrong panel,54
+621,Tabb,Gagg,43,TRUE,null,24
+622,Ketti,Huke,10,FALSE,Stepped on the wrong panel,50
+623,Maryann,Forgan,39,FALSE,Stepped on the wrong panel,21
+624,Sandye,Stitle,4,TRUE,null,14
+625,Francoise,Bickerstasse,32,TRUE,null,14
+626,Shirleen,MacIan,12,FALSE,pushed and fell,1
+627,Briant,Saban,17,FALSE,Wrong panel,2
+628,Eimile,Crix,19,FALSE,Wrong panel,67
+629,Blisse,Fitzsymons,29,FALSE,Wrong panel,6
+630,Bradley,McCullouch,33,FALSE,Stepped on the wrong panel,4
+631,Lillis,Banasevich,24,TRUE,null,38
+632,Sheena,Cowp,21,TRUE,null,35
+633,Tallie,Adelberg,48,FALSE,Stepped on the wrong panel,23
+634,Laurent,Griniov,43,FALSE,Stepped on the wrong panel,33
+635,Hubert,Simm,34,FALSE,Stepped on the wrong panel,6
+636,Luisa,Oxlee,46,FALSE,Stepped on the wrong panel,23
+637,Lauri,Kornilyev,13,FALSE,pushed and fell,1
+638,Winnie,Beedell,42,TRUE,null,19
+639,Maisie,Ingleby,32,TRUE,null,22
+640,Rubi,Jahnisch,43,FALSE,Pushed!,70
+641,Marge,Vella,46,FALSE,Wrong panel,47
+642,Hayes,Ebbings,10,TRUE,null,78
+643,Pamella,Shillaber,26,TRUE,null,87
+644,Winni,Hargitt,12,FALSE,Stepped on the wrong panel,68
+645,Constantino,Evreux,4,FALSE,Stepped on the wrong panel,34
+646,Milka,Shorter,31,TRUE,null,65
+647,Delmer,Keyden,22,FALSE,pushed and fell,4
+648,Tania,Le Blanc,10,TRUE,null,55
+649,Cord,Vaggers,17,FALSE,Pushed!,44
+650,Marlin,Vannikov,44,FALSE,Wrong panel,30
+651,Urson,Collen,5,FALSE,Wrong panel,25
+652,Sharon,Arden,35,TRUE,null,37
+653,Anselma,Belch,30,FALSE,pushed,53
+654,Gratia,MacMarcuis,8,FALSE,Pushed!,1
+655,Gregoire,Shellcross,29,TRUE,null,43
+656,Everett,Owenson,30,TRUE,null,36
+657,Barbabra,Aikenhead,37,FALSE,Stepped on the wrong panel,47
+658,Garrick,Vequaud,11,TRUE,null,82
+659,Belle,Ryding,35,TRUE,null,1
+660,Brandy,Cosbey,43,TRUE,null,1
+661,Reeba,Leavy,11,FALSE,Stepped on the wrong panel,50
+662,Vernice,Harbord,5,TRUE,null,39
+663,Elli,Skitterel,11,FALSE,Stepped on the wrong panel,62
+664,Sinclare,Behne,8,FALSE,pushed and fell,44
+665,Brooks,Borsnall,4,TRUE,null,3
+666,Felic,Gillino,11,FALSE,Wrong panel,89
+667,Leyla,Happel,34,FALSE,Wrong panel,3
+668,Maure,Santori,7,TRUE,null,41
+669,Selinda,Pencot,49,TRUE,null,1
+670,Nydia,Edgington,32,FALSE,Pushed!,32
+671,Harman,Kenrack,18,TRUE,null,40
+672,Janela,Philips,20,TRUE,null,85
+673,Ira,Cammacke,33,FALSE,Stepped on the wrong panel,42
+674,Evelina,Bullon,6,TRUE,null,49
+675,Birgitta,Chadburn,18,FALSE,Stepped on the wrong panel,17
+676,Welby,Yukhnev,41,TRUE,null,14
+677,Darin,Rigate,27,TRUE,null,24
+678,Filip,Baudrey,30,FALSE,Stepped on the wrong panel,31
+679,Melonie,Goaks,33,TRUE,null,40
+680,Brander,Speedin,16,FALSE,pushed and fell,1
+681,Corey,Core,23,FALSE,Wrong panel,1
+682,Alysia,Folland,6,TRUE,null,85
+683,Hanny,Skellion,13,TRUE,null,18
+684,Sherill,Pawelke,18,FALSE,pushed,25
+685,Amery,De Bischop,49,TRUE,null,35
+686,Madelyn,Thorburn,47,TRUE,null,1
+687,Emlyn,Andrzejczak,17,TRUE,null,95
+688,Isobel,Ravilious,12,TRUE,null,49
+689,Shelley,Olley,20,FALSE,Stepped on the wrong panel,49
+690,Reade,Kerr,28,TRUE,null,39
+691,Antonius,Rhead,26,TRUE,null,70
+692,Clement,Bronot,11,FALSE,Stepped on the wrong panel,36
+693,Roda,Behr,32,FALSE,Stepped on the wrong panel,39
+694,Estevan,Hengoed,8,TRUE,null,22
+695,Augustus,Busfield,47,TRUE,null,112
+696,Darci,Beale,33,FALSE,Stepped on the wrong panel,20
+697,Alec,Breede,7,TRUE,null,59
+698,Birch,Dearsley,20,TRUE,null,99
+699,Townie,McCaskell,45,FALSE,pushed and fell,52
+700,Gardner,Connold,33,TRUE,null,3
+701,Marjy,Copeman,38,FALSE,Pushed!,80
+702,Clemmie,Almack,32,FALSE,Wrong panel,25
+703,Alvinia,Leipelt,15,TRUE,null,110
+704,Colet,Kendred,10,FALSE,Wrong panel,62
+705,Ardith,Fleming,10,TRUE,null,57
+706,Ronda,Baude,30,FALSE,Wrong panel,96
+707,Bryn,Hazel,11,TRUE,null,32
+708,Cecilius,Casolla,21,FALSE,Wrong panel,50
+709,Brinn,McCart,35,TRUE,null,86
+710,Gerda,Bowlesworth,28,FALSE,Pushed!,1
+711,Rocky,Fellis,33,TRUE,null,62
+712,Cristionna,Dine-Hart,15,TRUE,null,26
+713,Frayda,Chrstine,3,FALSE,Stepped on the wrong panel,51
+714,Rachele,Pickerill,22,TRUE,null,29
+715,Sena,Pfaffe,45,FALSE,Stepped on the wrong panel,39
+716,Delcina,Gothard,39,FALSE,Stepped on the wrong panel,25
+717,Ardisj,Comsty,49,FALSE,pushed and fell,67
+718,Agnesse,Kwietak,3,FALSE,Wrong panel,39
+719,Linn,Franies,25,FALSE,Wrong panel,13
+720,Dedie,Artindale,23,TRUE,null,85
+721,Perrine,Jiricka,49,FALSE,Stepped on the wrong panel,92
+722,Sheffield,Cleife,28,FALSE,Stepped on the wrong panel,14
+723,Tanney,Busek,23,FALSE,Stepped on the wrong panel,17
+724,Jeremy,Ahern,21,FALSE,Stepped on the wrong panel,48
+725,Verine,Simakov,13,FALSE,Pushed!,58
+726,Herbert,Davern,3,TRUE,null,54
+727,Nydia,Emlen,1,FALSE,Pushed!,28
+728,Marty,McQuilty,10,FALSE,pushed,99
+729,Shannon,Bellam,19,TRUE,null,52
+730,Giles,McGaugan,13,TRUE,null,47
+731,Rolando,Umpleby,47,FALSE,pushed and fell,44
+732,Emmerich,Stockwell,41,FALSE,Wrong panel,40
+733,Berri,O'Lunny,30,FALSE,Wrong panel,33
+734,Livvyy,Jantzen,35,TRUE,null,63
+735,Helga,Fuge,16,TRUE,null,45
+736,Kylila,Kittredge,42,TRUE,null,80
+737,Ragnar,O'Shiel,4,FALSE,Stepped on the wrong panel,30
+738,Robinet,Houlworth,39,FALSE,Stepped on the wrong panel,43
+739,Ludovika,Lucus,36,FALSE,Stepped on the wrong panel,30
+740,Fredric,Grindell,30,TRUE,null,44
+741,Ardith,Domenichini,30,FALSE,Wrong panel,108
+742,Reinaldo,De Dei,10,TRUE,null,38
+743,Marcia,MacBey,47,TRUE,null,48
+744,Brandea,Checcucci,7,TRUE,null,55
+745,Dickie,Sheron,33,FALSE,pushed,30
+746,Tiffi,Littlecote,10,TRUE,null,62
+747,Sibylla,Giblett,24,FALSE,Stepped on the wrong panel,40
+748,Sandie,Nyssen,44,FALSE,Stepped on the wrong panel,4
+749,Laurice,Purrier,27,FALSE,Stepped on the wrong panel,53
+750,Bobina,Kryszka,2,TRUE,null,31
+751,Marlo,Martinat,16,FALSE,Stepped on the wrong panel,53
+752,Bunnie,O' Neligan,27,FALSE,Pushed!,71
+753,Paton,Kenewel,8,TRUE,null,35
+754,Edna,Staden,22,FALSE,pushed and fell,39
+755,Tasha,Casazza,29,FALSE,Wrong panel,13
+756,Darya,Iacovo,39,FALSE,Wrong panel,19
+757,Ulises,Regan,3,FALSE,Wrong panel,48
+758,Dulcie,Whymark,33,FALSE,pushed and fell,61
+759,Emmott,Brauns,5,TRUE,null,31
+760,Kiele,Wemm,31,FALSE,Stepped on the wrong panel,47
+761,Waylin,Abendroth,42,TRUE,null,46
+762,Rriocard,Meins,49,TRUE,null,28
+763,Rici,Beardshall,25,FALSE,Stepped on the wrong panel,47
+764,Hazlett,Espinoza,4,TRUE,null,3
+765,Noby,Rames,30,FALSE,Stepped on the wrong panel,13
+766,Yuma,Filinkov,3,TRUE,null,38
+767,Hetty,Slate,37,TRUE,null,63
+768,Glenn,Schiementz,35,TRUE,null,42
+769,Dennis,Margetts,2,TRUE,null,1
+770,Daryn,Donlon,6,TRUE,null,40
+771,Katlin,Bootell,26,TRUE,null,28
+772,Tiler,Eardley,29,FALSE,Wrong panel,9
+773,Clarence,Richin,16,TRUE,null,28
+774,Elsworth,Dittson,44,FALSE,Wrong panel,55
+775,Romain,Shaves,23,TRUE,null,1
+776,Nevsa,Richen,9,FALSE,pushed and fell,52
+777,Madeleine,Bamlet,35,TRUE,null,43
+778,Jessi,Haslock,4,FALSE,Pushed!,22
+779,Adriana,Bettenson,20,TRUE,null,24
+780,Sybilla,Dowle,28,FALSE,Wrong panel,44
+781,Nial,Matanin,21,FALSE,Wrong panel,38
+782,Harald,Tigner,16,TRUE,null,46
+783,Jerrie,Elwill,39,FALSE,Stepped on the wrong panel,1
+784,Sloane,Pratton,13,FALSE,Stepped on the wrong panel,87
+785,Hugo,Ibbetson,22,FALSE,Stepped on the wrong panel,28
+786,Hugh,London,22,FALSE,Stepped on the wrong panel,54
+787,Tessa,Ilyukhov,7,FALSE,Wrong panel,63
+788,Fred,Huntar,20,FALSE,Wrong panel,48
+789,Selene,Gurdon,44,TRUE,null,43
+790,Carissa,Letterese,27,FALSE,pushed,12
+791,Bobinette,MacKessock,49,TRUE,null,57
+792,Cary,Gillcrist,50,FALSE,Wrong panel,1
+793,Dino,Botright,48,FALSE,Wrong panel,80
+794,Devi,McGinley,4,TRUE,null,54
+795,Shadow,Pidgley,33,TRUE,null,54
+796,Petunia,Grog,46,FALSE,pushed and fell,34
+797,Andrej,Umbers,22,TRUE,null,66
+798,Teodora,Laflin,31,TRUE,null,31
+799,Dorothy,Remnant,36,TRUE,null,29
+800,Ingar,Print,12,TRUE,null,15
+801,Kimble,Abramovitch,25,TRUE,null,55
+802,Even,Hassin,37,FALSE,Stepped on the wrong panel,24
+803,Greer,Etteridge,2,TRUE,null,7
+804,Gerrie,Dallas,42,TRUE,null,56
+805,Jeniffer,Swinburne,5,FALSE,Stepped on the wrong panel,36
+806,Erminie,Vedeniktov,12,FALSE,Stepped on the wrong panel,86
+807,Terrie,Dowsey,13,FALSE,Pushed!,74
+808,Joye,Duligal,4,FALSE,Wrong panel,34
+809,Lemmie,Steggals,47,FALSE,Wrong panel,61
+810,Jewell,Harland,29,FALSE,Wrong panel,34
+811,Cam,Pope,45,TRUE,null,57
+812,Mozes,Loveland,46,TRUE,null,1
+813,Ashia,Scamerden,45,FALSE,Stepped on the wrong panel,21
+814,Clem,Oattes,26,TRUE,null,40
+815,Bernita,Duxbury,28,FALSE,Stepped on the wrong panel,85
+816,Richie,Filintsev,1,FALSE,Stepped on the wrong panel,48
+817,Winni,Grunwald,37,FALSE,pushed,60
+818,Gabrielle,McDarmid,10,TRUE,null,25
+819,Tildie,Witherspoon,50,TRUE,null,69
+820,Merry,Danev,43,TRUE,null,69
+821,Josee,Baldinotti,10,FALSE,pushed and fell,15
+822,Reta,Holsey,32,TRUE,null,48
+823,Gayla,Batty,43,FALSE,Stepped on the wrong panel,70
+824,Kermie,Davidovics,14,TRUE,null,22
+825,Fifine,Rosenzwig,2,TRUE,null,46
+826,Peggy,Apps,26,FALSE,Stepped on the wrong panel,1
+827,Armand,Gipp,26,FALSE,Stepped on the wrong panel,37
+828,Annmarie,Gairdner,23,TRUE,null,36
+829,Bar,Emanuelli,1,TRUE,null,71
+830,Bridgette,Woodus,37,TRUE,null,55
+831,Frannie,Shillinglaw,28,FALSE,Stepped on the wrong panel,52
+832,Irina,Lerwill,37,TRUE,null,13
+833,Rosella,Bower,19,FALSE,pushed,39
+834,Grayce,Godding,41,TRUE,null,37
+835,Jarred,Askwith,20,FALSE,Wrong panel,28
+836,Rosmunda,Ashman,5,FALSE,Wrong panel,34
+837,Wat,Dumper,47,FALSE,Wrong panel,1
+838,Keriann,Boutell,37,FALSE,Wrong panel,47
+839,Brennan,Bryett,44,TRUE,null,27
+840,Lira,Carcass,41,TRUE,null,73
+841,Gerianne,Greguoli,25,TRUE,null,74
+842,Valentijn,Dudmarsh,30,TRUE,null,75
+843,Pincas,Almond,2,FALSE,Pushed!,1
+844,Bren,Brocks,31,FALSE,Pushed!,1
+845,Martin,Gobbett,33,FALSE,pushed and fell,80
+846,Kipp,Boyn,15,FALSE,Stepped on the wrong panel,54
+847,Maurizio,Monnery,46,TRUE,null,48
+848,Garvy,Spawell,13,TRUE,null,1
+849,Stephi,Barker,40,FALSE,Stepped on the wrong panel,96
+850,Golda,Cuolahan,10,TRUE,null,41
+851,Sayres,Toffanini,44,FALSE,pushed and fell,40
+852,Kerwin,McIlharga,7,TRUE,null,3
+853,Jennica,D'Angeli,14,TRUE,null,1
+854,Loretta,Efford,22,FALSE,Pushed!,54
+855,Duke,Hugk,24,TRUE,null,98
+856,Nanete,Gruszczak,22,FALSE,Wrong panel,51
+857,Mechelle,Kauscher,46,FALSE,Wrong panel,28
+858,Langsdon,Philson,28,TRUE,null,17
+859,Tasha,Kennerley,33,FALSE,Stepped on the wrong panel,16
+860,Elsinore,Firsby,34,FALSE,Stepped on the wrong panel,63
+861,Car,Plenderleith,19,TRUE,null,49
+862,Adelina,Deer,37,TRUE,null,48
+863,Octavia,Cummungs,43,TRUE,null,27
+864,Nahum,Brittles,12,TRUE,null,1
+865,Danika,Fishleigh,42,FALSE,pushed,52
+866,Antonius,Kettles,9,TRUE,null,72
+867,Barnie,Lewin,46,TRUE,null,65
+868,Jenn,Fussen,2,TRUE,null,65
+869,Jay,Roney,25,FALSE,Pushed!,110
+870,Veda,Comizzoli,41,TRUE,null,18
+871,Crawford,Torri,29,TRUE,null,45
+872,Daron,MacSkeagan,1,FALSE,Stepped on the wrong panel,52
+873,Gilemette,Purkis,43,TRUE,null,44
+874,Koralle,Rivalant,19,FALSE,Stepped on the wrong panel,45
+875,Alexei,Iban,11,TRUE,null,16
+876,Halley,Giannazzo,3,TRUE,null,88
+877,Billy,Pont,26,FALSE,Stepped on the wrong panel,35
+878,Ronald,Robjohns,28,FALSE,Wrong panel,122
+879,Sophey,Boldock,15,TRUE,null,39
+880,Victoria,Dollard,39,TRUE,null,34
+881,Curcio,Aubrey,40,FALSE,Wrong panel,92
+882,Carroll,Pittle,3,TRUE,null,79
+883,Maxim,Coneau,17,TRUE,null,45
+884,Erna,Vasse,24,FALSE,pushed and fell,1
+885,Dorrie,Roaf,23,TRUE,null,16
+886,Jerrold,Illwell,40,TRUE,null,54
+887,Melonie,Yorke,39,FALSE,Stepped on the wrong panel,104
+888,Frans,Fibbitts,41,FALSE,Stepped on the wrong panel,62
+889,Frederic,Chevin,45,FALSE,Stepped on the wrong panel,68
+890,Jeralee,Strowlger,19,FALSE,pushed,36
+891,Emmalee,Adamiec,39,FALSE,Wrong panel,83
+892,Carlina,Michelotti,16,FALSE,Wrong panel,86
+893,Ethelind,Gutowska,44,TRUE,null,13
+894,Emalia,Skellion,32,FALSE,Wrong panel,95
+895,Elmo,Eisak,36,FALSE,pushed,1
+896,Lynnell,Hellyer,39,TRUE,null,12
+897,Brien,Tiltman,23,TRUE,null,53
+898,Natty,Kinsella,48,FALSE,Stepped on the wrong panel,42
+899,Sari,Scarsbrooke,41,TRUE,null,64
+900,Ware,Lyptrit,45,TRUE,null,14
+901,Felisha,Corden,45,TRUE,null,31
+902,Gretel,Tackett,29,TRUE,null,31
+903,Dolly,Rogers,32,FALSE,Wrong panel,55
+904,Gerty,Kinchin,11,TRUE,null,30
+905,Rosette,McIlroy,20,TRUE,null,29
+906,Simone,Raoult,46,TRUE,null,20
+907,Lizzie,Sedwick,20,FALSE,pushed,84
+908,Dorey,Wegener,48,FALSE,Stepped on the wrong panel,36
+909,Crichton,Skeel,44,FALSE,Stepped on the wrong panel,39
+910,Gertruda,Rowden,42,FALSE,Stepped on the wrong panel,20
+911,Hatti,Lillicrop,2,TRUE,null,2
+912,Henrietta,Note,9,TRUE,null,40
+913,Stearn,Briggs,4,TRUE,null,53
+914,Wye,Nardi,7,FALSE,Wrong panel,27
+915,Baillie,Rummin,4,TRUE,null,82
+916,Effie,Peabody,47,FALSE,Wrong panel,71
+917,Cullin,Mileham,50,TRUE,null,84
+918,Zarla,Spradbery,22,FALSE,pushed and fell,60
+919,Thomasine,Unitt,5,TRUE,null,29
+920,Cale,Dougher,15,TRUE,null,36
+921,Lindy,Schollick,25,TRUE,null,110
+922,Leticia,Oxbie,40,FALSE,Wrong panel,16
+923,Sidonnie,Cracoe,1,FALSE,Wrong panel,33
+924,Kristine,Chadbourne,21,TRUE,null,55
+925,Rickard,Attlee,45,FALSE,Stepped on the wrong panel,22
+926,Kiersten,Bunch,44,TRUE,null,26
+927,Domingo,Hebbs,25,FALSE,Stepped on the wrong panel,9
+928,Valerye,Frankiss,38,FALSE,Wrong panel,29
+929,Bamby,Dales,21,TRUE,null,1
+930,Juliann,Anglin,24,TRUE,null,49
+931,Dukey,Bootes,31,TRUE,null,81
+932,Nigel,MacDearmont,12,TRUE,null,1
+933,Gwendolyn,Jopling,3,TRUE,null,13
+934,Etienne,Millbank,5,TRUE,null,39
+935,Linnet,Rosgen,22,FALSE,Wrong panel,13
+936,Consolata,Dulson,43,TRUE,null,89
+937,Jessamine,Giannazzi,24,TRUE,null,35
+938,Kort,Revel,29,FALSE,pushed and fell,59
+939,Carree,Dimond,26,TRUE,null,1
+940,Aline,Caizley,22,TRUE,null,40
+941,Skippie,Coste,7,TRUE,null,96
+942,Koo,Viegas,1,TRUE,null,18
+943,Kylynn,Hunstone,10,TRUE,null,1
+944,Gerry,Goor,43,TRUE,null,1
+945,Violette,Mellmoth,30,FALSE,Stepped on the wrong panel,4
+946,Phillipe,Giorgione,49,FALSE,Stepped on the wrong panel,42
+947,Nathan,Margerrison,23,TRUE,null,101
+948,Cathrine,Furlow,17,FALSE,Stepped on the wrong panel,99
+949,Inger,Eschelle,39,FALSE,Wrong panel,12
+950,Danny,Castellucci,16,FALSE,Wrong panel,5
+951,Evered,Gabriel,45,FALSE,Wrong panel,41
+952,Simone,Blaszczyk,11,TRUE,null,6
+953,Clevey,Novello,26,FALSE,Wrong panel,53
+954,Cathlene,Tingley,17,FALSE,Wrong panel,67
+955,Netta,Collett,50,FALSE,Wrong panel,44
+956,Calhoun,des Remedios,34,TRUE,null,65
+957,Alexei,Keable,39,TRUE,null,24
+958,Jania,Linde,18,TRUE,null,37
+959,Darsie,Knowlson,34,FALSE,Stepped on the wrong panel,1
+960,Gawain,Vannoni,20,FALSE,Stepped on the wrong panel,35
+961,Danella,Hadigate,1,FALSE,Wrong panel,27
+962,Amery,Shepard,40,TRUE,null,1
+963,Baxie,MacIntosh,33,TRUE,null,81
+964,Gregorio,Menat,48,TRUE,null,128
+965,Anna-diane,Manifold,19,TRUE,null,10
+966,Keene,Eastope,3,FALSE,pushed,48
+967,Keir,Armsden,43,TRUE,null,33
+968,Aeriell,Costerd,48,TRUE,null,29
+969,Wylie,Ricketts,46,TRUE,null,21
+970,Inesita,Pymm,30,TRUE,null,39
+971,Hailey,MacEveley,46,TRUE,null,76
+972,Lexie,Angeli,33,TRUE,null,91
+973,Allie,Mosedall,19,TRUE,null,89
+974,Caron,Hallas,35,TRUE,null,45
+975,Cariotta,McTeggart,9,TRUE,null,52
+976,Lettie,Sodo,14,FALSE,Stepped on the wrong panel,56
+977,Tiffany,Straniero,23,FALSE,Stepped on the wrong panel,25
+978,Nealson,Arsnell,6,TRUE,null,37
+979,Shelby,Rubery,14,TRUE,null,71
+980,Guido,Loton,36,FALSE,Stepped on the wrong panel,21
+981,Milt,Paddle,28,TRUE,null,12
+982,Quill,Cannon,24,FALSE,Wrong panel,49
+983,Chelsie,Heinemann,47,FALSE,Wrong panel,44
+984,Amerigo,Grono,48,FALSE,Wrong panel,29
+985,Bobbie,Haye,23,FALSE,Wrong panel,9
+986,Urbain,Cuppitt,31,TRUE,null,1
+987,Lenette,McKerton,49,FALSE,Wrong panel,126
+988,Bart,Busswell,14,TRUE,null,39
+989,Meade,Tutchener,4,FALSE,Pushed,30
+990,Leesa,Allanby,43,TRUE,null,1
+991,Alana,Volker,49,TRUE,null,71
+992,Rhodia,Gibke,22,FALSE,Stepped on the wrong panel,46
+993,Doria,Ambrozik,34,TRUE,null,49
+994,Hilly,Cardo,35,TRUE,null,33
+995,Thoma,Orgill,34,TRUE,null,53
+996,Michal,Tupper,5,FALSE,Stepped on the wrong panel,32
+997,Marney,Renny,37,FALSE,Stepped on the wrong panel,31
+998,Hyatt,Lawrie,49,FALSE,Stepped on the wrong panel,9
+999,Edward,Janicek,24,FALSE,Wrong panel,5
+1000,Morris,Paoletti,37,FALSE,Wrong panel,28
+,,,,,,
+1,,,,,,
+?,,,,,,

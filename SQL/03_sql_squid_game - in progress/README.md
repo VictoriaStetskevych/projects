@@ -441,7 +441,7 @@ I had a new schema in this level.<br>
 ![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/36_level_7_new_schema.png?raw=true)<br>
 
 room: [csv](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/data/room.csv) or [xlsx](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/data/room.xlsx)<br>
-camera: [csv](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/data/equipment.csv) or [xlsx](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/data/camera.xlsx)<br>
+camera: [csv](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/data/camera.csv) or [xlsx](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/data/camera.xlsx)<br>
 guard: [csv](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/data/guard.csv) or [xlsx](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/data/guard.xlsx)<br>
 
 Step 1
@@ -472,14 +472,256 @@ ORDER BY g.id;
 Result:
 ![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/38_room_and_guards.png?raw=true)
 
+Step 3
+```sql
+-- join camera table and select only needed tables with specific names / order, as was requested in the Task
+SELECT
+	g.id as guard_number,
+	g.code_name,
+	g.status,
+	r.last_check_time as last_seen_in_room,
+	c.movement_detected_time as spotted_outside_room_time,
+	c.location as spotted_outside_room_location
+FROM room r
+JOIN guard g ON g.assigned_room_id = r.id
+JOIN camera c ON g.id = c.guard_spotted_id 
+WHERE isvacant = 'true'
+ORDER BY g.id; 
+```
+Result:
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/39_add_camera_data.png?raw=true)
+
+Step 4
+```sql
+-- add between room and outside
+SELECT
+	g.id as guard_number,
+	g.code_name,
+	g.status,
+	r.last_check_time as last_seen_in_room,
+	c.movement_detected_time as spotted_outside_room_time,
+	c.location as spotted_outside_room_location,
+	c.movement_detected_time - r.last_check_time AS time_between_room_and_outside
+FROM room r
+JOIN guard g ON g.assigned_room_id = r.id
+JOIN camera c ON g.id = c.guard_spotted_id 
+WHERE isvacant = 'true' AND c.movement_detected = TRUE
+ORDER BY g.id;
+```
+Result:
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/40_time_difference.png?raw=true)
+
+Step 5. Level 7 - Solution
+```sql
+SELECT
+	g.id as guard_number,
+	g.code_name,
+	g.status,
+	r.last_check_time as last_seen_in_room,
+	c.movement_detected_time as spotted_outside_room_time,
+	c.location as spotted_outside_room_location,
+	c.movement_detected_time - r.last_check_time AS time_between_room_and_outside,
+	(SELECT MAX(c2.movement_detected_time) - MIN(c2.movement_detected_time)
+    FROM camera c2
+    WHERE c2.guard_spotted_id IS NOT NULL) AS time_range
+FROM room r
+JOIN guard g ON g.assigned_room_id = r.id
+JOIN camera c ON g.id = c.guard_spotted_id 
+WHERE isvacant = 'true' AND c.movement_detected = TRUE
+ORDER BY g.id;
+```
+Result:
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/41_level_7_part_1.png?raw=true)
+
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/42_level_7_part_2.png?raw=true)
 
 
+## <u>Level 8. Glass Bridge</u>
+
+Task.<br>
+"Find and display the information for the player with the highest hesitation time among those who were pushed off in the game that has the highest average hesitation time before a push occurred.
+For some advice, some of the inputs in this data were entered manually by inexperienced employees, so inconsistency is to be expected. "
+
+I had a new schema in this level:
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/43_level_8_new_schema.png?raw=true)
+
+player_level_8: [csv](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/data/player_level_8.csv) or [xlsx](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/data/player_level_8.xlsx)<br>
+glass_bridge: [csv](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/data/glass_bridge.csv) or [xlsx](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/data/glass_bridge.xlsx)<br>
+
+Step 1
+```sql
+-- check death_description column and to see if there are inconsistencies 
+select DISTINCT(death_description)
+from player;
+```
+Result: 
+As a result, I ended up with four variations of the word "pushed," written in both uppercase and lowercase letters.
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/44_death_description.png?raw=true)
 
 
+LIKE operator in SQL is case-sensitive so I had to combine LIKE '%push%' with the LOWER function.
+
+Step 2
+```sql
+-- find a game with a highest average hesitation time
+SELECT
+	AVG(p.last_moved_time_seconds) AS avg_hesitation_time,
+	gb.id AS game_id
+FROM player p
+JOIN glass_bridge gb ON gb.id = p.game_id
+WHERE LOWER(p.death_description) LIKE '%push%'
+GROUP BY gb.id
+ORDER BY avg_hesitation_time DESC
+LIMIT 10;
+```
+Result: 
+Game # 26 had the highest average hesitation time
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/45_avg_hesitation.png?raw=true)
+
+Step 3. Level 8 - Solution
+```sql
+SELECT
+    id AS player_id,
+    first_name,
+    last_name,
+    MAX(last_moved_time_seconds) AS max_hesitation_time
+FROM player 
+WHERE LOWER(death_description) LIKE '%push%' AND game_id = 26
+GROUP BY id, first_name, last_name
+ORDER BY max_hesitation_time DESC 
+LIMIT 1;
+```
+Result:
+"Really unexpected result"
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/46_max_hesitation.png?raw=true)
 
 
+## <u> Level 9. SQL Game </u>
+
+Task
+"Identify who deviated from their assigned position during the Squid Game, and then output a list of guard IDs and access times of any OTHER guards who visited the same location during the disappearance time frame."
+
+I had a new schema in this level:
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/47_level_9_new_schema.png?raw=true)
+
+Step 1.
+```sql
+-- check a list of games to make sure we have a 'Squid Game' in this data 
+SELECT DISTINCT(type)
+FROM game_schedule;
+```
+Result:
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/48_games.png?raw=true)
 
 
+Step 2
+```sql
+-- find the last game and the exact time when it was played
+SELECT 
+	date, 
+	start_time, 
+	end_time
+FROM game_schedule
+WHERE type = 'Squid Game'
+ORDER BY date DESC
+LIMIT 1;
+```
+Result:
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/49_last_squid_game.png?raw=true)
+
+Step 3.
+In this step, I found one guard(#31) who wasn’t at his post during my time frame, but when I checked access at a different location, it was much earlier than when the Squid Game was played.
+```sql
+WITH disappearance_time_frame AS (
+  	SELECT 
+  		date, 
+  		start_time, 
+  		end_time
+    FROM game_schedule
+    WHERE type = 'Squid Game'
+    ORDER BY date DESC
+    LIMIT 1
+)
+SELECT
+	g.id AS guard_id,
+	g.assigned_post,
+	g.shift_start,
+	g.shift_end,
+	ddal.door_location AS wrong_access,
+	ddal.access_time
+FROM guard g
+JOIN disappearance_time_frame dtf 
+	ON g.shift_start < dtf.start_time AND g.shift_end > dtf.end_time
+JOIN daily_door_access_logs ddal
+	ON ddal.guard_id = g.id
+WHERE g.assigned_post != ddal.door_location;
+```
+Result:
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/50_guard_31.png?raw=true)
+
+Step 4
+I decided to run another query to check the list of guards who were spotted in my data frame in the same location. <br>
+So I deleted  this condition from my query<br>
+"g.assigned_post != ddal.door_location"<br>
+and added the following condition<br>
+"WHERE ddal.access_time BETWEEN dtf.start_time AND dtf.end_time":
+```sql
+WITH disappearance_time_frame AS (
+  	SELECT 
+  		date, 
+  		start_time, 
+  		end_time
+    FROM game_schedule
+    WHERE type = 'Squid Game'
+    ORDER BY date DESC
+    LIMIT 1
+)
+SELECT
+	g.id AS guard_id,
+	g.assigned_post,
+	g.shift_start,
+	g.shift_end,
+	ddal.door_location AS wrong_access,
+	ddal.access_time
+FROM guard g
+JOIN disappearance_time_frame dtf 
+	ON g.shift_start < dtf.start_time AND g.shift_end > dtf.end_time
+JOIN daily_door_access_logs ddal
+	ON ddal.guard_id = g.id
+WHERE ddal.access_time BETWEEN dtf.start_time AND dtf.end_time;            
+```
+Result:
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/51_guards_access.png?raw=true)
+
+Step 5. Level 9 - Solution
+After previous step my conclusion was that I need to find a guard who had an access to the "Upper Management" during my time frame
+```sql
+WITH disappearance_time_frame AS (
+  	SELECT 
+  		date, 
+  		start_time, 
+  		end_time
+    FROM game_schedule
+    WHERE type = 'Squid Game'
+    ORDER BY date DESC
+    LIMIT 1
+)
+SELECT
+	g.id AS guard_id,
+	ddal.access_time
+FROM guard g
+JOIN disappearance_time_frame dtf 
+	ON g.shift_start < dtf.start_time AND g.shift_end > dtf.end_time
+JOIN daily_door_access_logs ddal
+	ON ddal.guard_id = g.id
+WHERE ddal.access_time BETWEEN dtf.start_time AND dtf.end_time
+AND ddal.door_location = 'Upper Management';            
+```
+Result:
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/03_sql_squid_game%20-%20in%20progress/images/52_level_9.png?raw=true)
+
+# THE END!
+Wow! That was an amazing, exciting game, and incredible SQL practice!
 
 ## <u>Resources:</u>
 
