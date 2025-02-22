@@ -5,7 +5,7 @@
 <tr>
 <td>
 <a href="https://github.com/VictoriaStetskevych/projects">
-  <img src="https://github.com/VictoriaStetskevych/media_library/tree/main/different_images/white_background.png?raw=true">
+  <img src="https://github.com/VictoriaStetskevych/media_library/blob/main/different_images/white_background.png?raw=true">
 </a>
 </td>
 <td>
