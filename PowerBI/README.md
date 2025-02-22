@@ -6,6 +6,22 @@
    <tr>
 <td width=60%>
 
+https://github.com/user-attachments/assets/db95c30f-4e1b-41c6-93d6-0dc3bb05699b
+
+</td>
+     <td>
+        - Project files <a href="https://github.com/VictoriaStetskevych/projects/tree/main/PowerBI/04_power_bi_netflix"> link</a><br>
+        - Tutorial 
+        <a href="https://www.youtube.com/watch?v=InYxu2h7o6I&t=121s">link</a><br>
+        - tv icon <a href="https://www.flaticon.com/free-icon/youtube_15465598?term=tv&page=6&position=10&origin=search&related_id=15465598"> link</a><br>
+        - camera icon <a href="https://www.flaticon.com/free-icon/camera_15762061?term=movie&page=1&position=38&origin=search&related_id=15762061">link</a><br>
+        - PNG Color Replacer <a href="https://onlinepngtools.com/change-png-color">online</a><br>
+      </td>
+   </tr>
+
+   <tr>
+<td width=60%>
+
 https://github.com/user-attachments/assets/c08074be-788d-415b-9e8a-b2148bcc8126
 
 </td>
