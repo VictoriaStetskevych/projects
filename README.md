@@ -10,7 +10,7 @@
 </td>
 <td>
 <a href="https://github.com/VictoriaStetskevych/projects/tree/main/PowerBI/04_power_bi_netflix">
-  <img src="https://github.com/VictoriaStetskevych/projects/blob/main/PowerBI/03_power_bi_netflix/images/04_image.png?raw=true">
+  <img src="https://github.com/VictoriaStetskevych/projects/blob/main/PowerBI/04_power_bi_netflix/images/04_image.png?raw=true">
 </a>
 </td>
 </tr>
