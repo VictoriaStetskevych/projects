@@ -4,8 +4,8 @@
 
 <tr>
 <td>
-<a href="   ">
-  <img src="   ">
+<a href="https://github.com/VictoriaStetskevych/projects">
+  <img src="https://github.com/VictoriaStetskevych/media_library/tree/main/different_images/white_background.png?raw=true">
 </a>
 </td>
 <td>
@@ -17,7 +17,7 @@
 
 <tr>
 <td>
-<a href="https://github.com/VictoriaStetskevych/projects/tree/main/PowerBI/04_power_bi_netflix">       <br>       </a><br>
+<a href="https://github.com/VictoriaStetskevych/projects">       <br>       </a><br>
 </td>
 <td>
 <a href="https://github.com/VictoriaStetskevych/projects/tree/main/PowerBI/04_power_bi_netflix"> Power BI <br> Netflix Analytics Dashboard</a><br>
