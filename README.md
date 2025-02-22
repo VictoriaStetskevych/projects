@@ -4,6 +4,37 @@
 
 <tr>
 <td>
+<a href="   ">
+  <img src="   ">
+</a>
+</td>
+<td>
+<a href="https://github.com/VictoriaStetskevych/projects/tree/main/PowerBI/04_power_bi_netflix">
+  <img src="https://github.com/VictoriaStetskevych/projects/blob/main/PowerBI/03_power_bi_netflix/images/04_image.png?raw=true">
+</a>
+</td>
+</tr>
+
+<tr>
+<td>
+<a href="https://github.com/VictoriaStetskevych/projects/tree/main/PowerBI/04_power_bi_netflix">       <br>       </a><br>
+</td>
+<td>
+<a href="https://github.com/VictoriaStetskevych/projects/tree/main/PowerBI/04_power_bi_netflix"> Power BI <br> Netflix Analytics Dashboard</a><br>
+</td>
+</tr>
+</table>
+<hr>
+
+
+
+
+
+
+<table>
+
+<tr>
+<td>
 <a href="https://github.com/VictoriaStetskevych/projects/tree/main/PowerBI/03_power_bi_finance_dashboard">
   <img src="https://github.com/VictoriaStetskevych/projects/blob/main/PowerBI/03_power_bi_finance_dashboard/02_finance_image.png?raw=true">
 </a>

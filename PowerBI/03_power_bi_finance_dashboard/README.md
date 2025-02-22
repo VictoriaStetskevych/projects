@@ -1,10 +1,10 @@
-## Finance Power BI Dashboard 
+# Finance Power BI Dashboard 
 
 This project was made using Nicole Thompson's [tutorial](https://www.youtube.com/watch?v=BLxW9ZSuuVI) that I found on Mo Chen's Youtube [channel](https://www.youtube.com/@mo-chen)
 
 https://github.com/user-attachments/assets/c08074be-788d-415b-9e8a-b2148bcc8126
 
-# Process 
+## Process 
 
 Here are some important steps and functions I used in this project:
 
