@@ -28,7 +28,7 @@ CALENDAR(
 > It will return TRUE or FALSE for each row based on the condition.<br>
 > EDATE function in DAX moves a date forward or backward by a specified number of months.<br>
 
-```
+```sql
 Inpact = 
 VAR lastsalesdate = MAX(Fact_sales[Date_Time])
 VAR lastsalesdatePY = EDATE(lastsalesdate, -12)
@@ -43,23 +43,23 @@ Dim_Date[Date]<=lastsalesdatePY
 
 <u>The list of measures:<br></u>
 - Sales
-```
+```sql
 Sales = SUM(Fact_sales[Sales_USD])<br>
 ```
 - Quantity
-```
+```sql
 Quantity = SUM(Fact_sales[quantity])<br>
 ```
 - COGs - Cost of Goods <br>
-```
+```sql
 COGs = SUM(Fact_sales[COGS_USD])<br> 
 ```
 - Gross Profit<br>
-```
+```sql
 Gross Profit = [Sales]-[COGs]
 ``` 
 - PYTD_Sales - Prior Year to Date Sales
-```
+```sql
   PYTD_Sales = 
 CALCULATE(
     [Sales],
@@ -82,7 +82,7 @@ CALCULATE(
 )
 ```
 - PYTD_Quantity - Prior Year to Date Gross Profit
-```
+```sql
 PYTD_GrossProfit = 
 CALCULATE(
     [Gross Profit],
@@ -115,7 +115,7 @@ YTD_GrossProfit = TOTALYTD([Gross Profit],Fact_sales[Date_Time])
 YTD_GrossProfit = CALCULATE([Gross Profit],Fact_sales[Date_Time])
 ```
 - Switch prior year to date
-```
+```sql
 S_PYTD = 
 VAR selected_value = SELECTEDVALUE(Slc_Values[Values])
 VAR result = SWITCH(selected_value,
@@ -133,7 +133,7 @@ result
 > RETURN result - gives back the chosen measure’s value.
 - Switch year to date
 
-```
+```sql
 S_YTD = 
 VAR selected_value = SELECTEDVALUE(Slc_Values[Values])
 VAR result = SWITCH(selected_value,
@@ -145,6 +145,7 @@ VAR result = SWITCH(selected_value,
 RETURN
 result
 ```
+
 - Compare two switch data
 ```sql
 -- original formula
