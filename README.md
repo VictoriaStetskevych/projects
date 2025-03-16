@@ -17,7 +17,7 @@
 
 <tr>
 <td>
-<a href="https://github.com/VictoriaStetskevych/projects">Power BI<br>Chocolate Company Sales Analysis Dashboard</a><br>
+<a href="https://github.com/VictoriaStetskevych/projects/tree/main/PowerBI/05_power_bi_sales_chocolate">Power BI<br>Chocolate Company Sales Analysis Dashboard</a><br>
 </td>
 <td>
 <a href="https://github.com/VictoriaStetskevych/projects/tree/main/PowerBI/04_power_bi_netflix"> Power BI <br> Netflix Analytics Dashboard</a><br>
