@@ -4,8 +4,8 @@
 
 <tr>
 <td>
-<a href="https://github.com/VictoriaStetskevych/projects">
-  <img src="https://github.com/VictoriaStetskevych/media_library/blob/main/different_images/white_background.png?raw=true">
+<a href="https://github.com/VictoriaStetskevych/projects/tree/main/PowerBI/05_power_bi_sales_chocolate">
+  <img src="https://github.com/VictoriaStetskevych/projects/blob/main/PowerBI/05_power_bi_sales_chocolate/Dashboard.png?raw=true">
 </a>
 </td>
 <td>
@@ -17,7 +17,7 @@
 
 <tr>
 <td>
-<a href="https://github.com/VictoriaStetskevych/projects">       <br>       </a><br>
+<a href="https://github.com/VictoriaStetskevych/projects">Power BI<br>Chocolate Company Sales Analysis Dashboard</a><br>
 </td>
 <td>
 <a href="https://github.com/VictoriaStetskevych/projects/tree/main/PowerBI/04_power_bi_netflix"> Power BI <br> Netflix Analytics Dashboard</a><br>
