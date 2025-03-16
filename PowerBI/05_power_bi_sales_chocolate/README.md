@@ -5,6 +5,7 @@ This project was made using Chandoo's [tutorial](https://www.youtube.com/watch?v
 Goal: to built an interactive sales analytics dashboard.  
 
 Result:<br>
+
 https://github.com/user-attachments/assets/b19c7357-a5cf-4e62-af3f-0f43d0a97655
 
 ## Resources
