@@ -14,10 +14,10 @@ https://github.com/user-attachments/assets/b19c7357-a5cf-4e62-af3f-0f43d0a97655
         - checked icon 
         <a href="https://www.flaticon.com/free-icon/check_5610944?term=done&page=1&position=6&origin=search&related_id=5610944">link</a><br>
         - error icon <a href="https://www.flaticon.com/free-icon/close_9068699?term=cancell&page=1&position=41&origin=search&related_id=9068699"> link</a><br>
-        - cocoa beans icon <a href="(https://thenounproject.com/icon/cocoa-beans-54521">link</a><br>
-        - home icon <a href="(https://thenounproject.com/icon/home-7613019">link</a><br>
-        - product icon <a href="(https://www.flaticon.com/free-icon/product_9252074?term=products&page=1&position=27&origin=search&related_id=9252074">link</a><br>
-        - world icon <a href="(https://thenounproject.com/icon/country-7254670">link</a><br>
+        - cocoa beans icon <a href="https://thenounproject.com/icon/cocoa-beans-54521">link</a><br>
+        - home icon <a href="https://thenounproject.com/icon/home-7613019">link</a><br>
+        - product icon <a href="https://www.flaticon.com/free-icon/product_9252074?term=products&page=1&position=27&origin=search&related_id=9252074">link</a><br>
+        - world icon <a href="https://thenounproject.com/icon/country-7254670">link</a><br>
       </td>
    </tr>
    <tr>
