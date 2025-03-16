@@ -1,9 +1,10 @@
-## Dashboard in Power BI
+## Sport Data Dashboard in Power BI
 
 https://github.com/user-attachments/assets/367e75c1-0af2-451e-a337-86618fa5182a
 
 This project was made using Bas Dohmen’s YouTube [tutorials](https://www.youtube.com/watch?v=cYwioeHu_OU&t=1041s).<br>
 
+Goal: create a dashboard that displays key fitness metrics: steps, calories, heart rate, and exercise sessions for each individual. <br>
 
 Unfortunately, the profile images were unavailable, so I followed these steps to add them to my dashboard:<br>
 

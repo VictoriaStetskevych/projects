@@ -2,6 +2,8 @@
 
 This project was made using Nicole Thompson's [tutorial](https://www.youtube.com/watch?v=BLxW9ZSuuVI) that I found on Mo Chen's Youtube [channel](https://www.youtube.com/@mo-chen)
 
+Goal: To build a financial dashboard to analyze sales, profit, and quantity of sales (YoY, MoM), Top/Bottom countries.   
+
 https://github.com/user-attachments/assets/c08074be-788d-415b-9e8a-b2148bcc8126
 
 ## Process 

@@ -2,7 +2,7 @@
 
 This project was made using Robert Lau's [tutorial](https://www.youtube.com/watch?v=InYxu2h7o6I&t=121s) that I found on his Youtube [channel](https://www.youtube.com/@PowerBIBro)
 
-Goal: To build a dashboard to be able analyze movies' and tv shows' rate, countries, genre. <br>
+Goal: To build a dashboard to analyze movies' and tv shows' rate, countries, genre. <br>
 
 Result: <br>
 

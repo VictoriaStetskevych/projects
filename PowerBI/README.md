@@ -10,7 +10,11 @@ https://github.com/user-attachments/assets/b19c7357-a5cf-4e62-af3f-0f43d0a97655
 
 </td>
      <td>
-        <b>Chocolate Company Sales Analysis Dashboard</b><br> 
+        <b><u>Chocolate Company Sales Dashboard</u></b><br>
+        <b><u>Goal:</b></u> Build an interactive sales dashboard to analyze month-over-month (MoM) sales, profit, and cost across all products and the countries where they were sold.<br>
+        - Project <a href="https://github.com/VictoriaStetskevych/projects/tree/main/PowerBI/05_power_bi_sales_chocolate"> link</a><br>
+        - Tutorial 
+        <a href="https://www.youtube.com/watch?v=ooJO7NW4uJU&t=6370s">link</a><br>
         - "CACAO chocolate" logo <a href="https://www.canva.com/search?q=chocolate%20logo">link</a><br>
         - checked icon 
         <a href="https://www.flaticon.com/free-icon/check_5610944?term=done&page=1&position=6&origin=search&related_id=5610944">link</a><br>

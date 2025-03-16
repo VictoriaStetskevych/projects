@@ -1,8 +1,8 @@
-# Chocolate Company Sale Analysis Dashboard
+# Chocolate Company Sales Analysis Dashboard
 
 This project was made using Chandoo's [tutorial](https://www.youtube.com/watch?v=ooJO7NW4uJU&t=6370s) that I found on his Youtube [channel](https://www.youtube.com/@chandoo_)
 
-Goal: to built an interactive sales analytics dashboard.  
+Goal: Build an interactive sales dashboard to analyze month-over-month (MoM) sales, profit, and cost across all products and the countries where they were sold.   
 
 Result:<br>
 
