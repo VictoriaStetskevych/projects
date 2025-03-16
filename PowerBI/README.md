@@ -5,11 +5,11 @@
    </thead>
    <tr>
 <td width=60%>
-Chocolate Company Sales Dashboard <br> 
 https://github.com/user-attachments/assets/b19c7357-a5cf-4e62-af3f-0f43d0a97655
 
 </td>
      <td>
+        <b>Chocolate Company Sales Analysis Dashboard</b><br> 
         - "CACAO chocolate" logo <a href="https://www.canva.com/search?q=chocolate%20logo">link</a><br>
         - checked icon 
         <a href="https://www.flaticon.com/free-icon/check_5610944?term=done&page=1&position=6&origin=search&related_id=5610944">link</a><br>
