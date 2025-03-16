@@ -84,7 +84,8 @@ https://github.com/user-attachments/assets/367e75c1-0af2-451e-a337-86618fa5182a
    <tr>
 <td width=60%>
 
-https://github.com/user-attachments/assets/c08074be-788d-415b-9e8a-b2148bcc8126
+<a href="https://github.com/VictoriaStetskevych/projects/blob/main/PowerBI/01_sql_powerBI_dashboard_ali_ahmad">
+  <img src="https://github.com/VictoriaStetskevych/projects/blob/main/PowerBI/01_sql_powerBI_dashboard_ali_ahmad/images/dashboard_resize.png?raw=true">
 
 </td>
      <td>
