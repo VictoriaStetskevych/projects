@@ -11,7 +11,7 @@ https://github.com/user-attachments/assets/b19c7357-a5cf-4e62-af3f-0f43d0a97655
 </td>
      <td>
         <b>Chocolate Company Sales Dashboard</b><br>
-        <b>Goal:</b> Build an interactive sales dashboard to analyze month-over-month (MoM) sales, profit, and cost across all products and the countries where they were sold.<br>
+        <b>Goal:</b> build an interactive sales dashboard to analyze month-over-month (MoM) sales, profit, and cost across all products and the countries where they were sold.<br>
         - Project <a href="https://github.com/VictoriaStetskevych/projects/tree/main/PowerBI/05_power_bi_sales_chocolate"> link</a><br>
         - Tutorial <a href="https://www.youtube.com/watch?v=ooJO7NW4uJU&t=6370s">link</a><br>
         - "CACAO chocolate" logo <a href="https://www.canva.com/search?q=chocolate%20logo">link</a><br>
@@ -32,7 +32,7 @@ https://github.com/user-attachments/assets/db95c30f-4e1b-41c6-93d6-0dc3bb05699b
 </td>
      <td>
         <b>Netflix Analytics Dashboard</b><br>
-        <b>Goal:</b> Build a dashboard to analyze the ratings, countries, and genres of Netflix movies and TV shows.<br>
+        <b>Goal:</b> build a dashboard to analyze the ratings, countries, and genres of Netflix movies and TV shows.<br>
         - Project <a href="https://github.com/VictoriaStetskevych/projects/tree/main/PowerBI/04_power_bi_netflix"> link</a><br>
         - Tutorial <a href="https://www.youtube.com/watch?v=InYxu2h7o6I&t=121s">link</a><br>
         - tv icon <a href="https://www.flaticon.com/free-icon/youtube_15465598?term=tv&page=6&position=10&origin=search&related_id=15465598"> link</a><br>
@@ -49,7 +49,7 @@ https://github.com/user-attachments/assets/c08074be-788d-415b-9e8a-b2148bcc8126
 </td>
      <td>
         <b>Finance Dashboard</b><br>
-        <b>Goal:</b> To build a financial dashboard to analyze sales, profit, and quantity of sales (YoY, MoM), Top/Bottom countries. <br>
+        <b>Goal:</b> build a financial dashboard to analyze sales, profit, and quantity of sales (YoY, MoM), Top/Bottom countries. <br>
         - Project <a href="https://github.com/VictoriaStetskevych/projects/tree/main/PowerBI/03_power_bi_finance_dashboard"> link</a><br>
         - Tutorial <a href="https://www.youtube.com/watch?v=BLxW9ZSuuVI">link</a><br>
         - Icon image <a href="https://www.canva.com/design/DAGeV7w-amE/rjTZo8ow7WEnHoTUWRK8Xg/edit"> link</a><br>
