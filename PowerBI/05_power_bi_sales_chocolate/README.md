@@ -4,22 +4,23 @@ This project was made using Chandoo's [tutorial](https://www.youtube.com/watch?v
 
 Goal: to built an interactive sales analytics dashboard.  
 
-Result:
+Result:<br>
+https://github.com/user-attachments/assets/1284848c-f985-43da-940a-233823523679
 
 ## Resources
 
-"CACAO chocolate" logo [link](https://www.canva.com/search?q=chocolate%20logo)
+"CACAO chocolate" logo [link](https://www.canva.com/search?q=chocolate%20logo)<br>
 
-checked_icon [link](https://www.flaticon.com/free-icon/check_5610944?term=done&page=1&position=6&origin=search&related_id=5610944)
+checked_icon [link](https://www.flaticon.com/free-icon/check_5610944?term=done&page=1&position=6&origin=search&related_id=5610944)<br>
 
-error_icon [link](https://www.flaticon.com/free-icon/close_9068699?term=cancell&page=1&position=41&origin=search&related_id=9068699)
+error_icon [link](https://www.flaticon.com/free-icon/close_9068699?term=cancell&page=1&position=41&origin=search&related_id=9068699)<br>
 
-Cocoa Beans [link](https://thenounproject.com/icon/cocoa-beans-54521/)
+Cocoa Beans [link](https://thenounproject.com/icon/cocoa-beans-54521/)<br>
 
-Home icon [link](https://thenounproject.com/icon/home-7613019/)
+Home icon [link](https://thenounproject.com/icon/home-7613019/)<br>
 
-product [link](https://www.flaticon.com/free-icon/product_9252074?term=products&page=1&position=27&origin=search&related_id=9252074)
+product [link](https://www.flaticon.com/free-icon/product_9252074?term=products&page=1&position=27&origin=search&related_id=9252074)<br>
 
-world icon [link](https://thenounproject.com/icon/country-7254670/)
+world icon [link](https://thenounproject.com/icon/country-7254670/)<br>
 
 remove background [site](https://www.remove.bg/)
