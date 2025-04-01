@@ -61,11 +61,11 @@ https://github.com/user-attachments/assets/db95c30f-4e1b-41c6-93d6-0dc3bb05699b
    <tr>
 <td width=60%>
 
-https://github.com/user-attachments/assets/6644d178-0528-43e2-8524-2755a25bf2fe
+https://github.com/user-attachments/assets/c08074be-788d-415b-9e8a-b2148bcc8126
 
 </td>
      <td>
-        <b>Online Market Ana Dashboard</b><br>
+        <b>Finance Dashboard </b><br>
         <b>Goal:</b> build a financial dashboard to analyze sales, profit, and quantity of sales (YoY, MoM), Top/Bottom countries. <br>
         - Project <a href="https://github.com/VictoriaStetskevych/projects/tree/main/PowerBI/03_power_bi_finance_dashboard"> link</a><br>
         - Tutorial <a href="https://www.youtube.com/watch?v=BLxW9ZSuuVI">link</a><br>
