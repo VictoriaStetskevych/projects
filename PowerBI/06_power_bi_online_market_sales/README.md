@@ -13,8 +13,8 @@ https://github.com/user-attachments/assets/6644d178-0528-43e2-8524-2755a25bf2fe
 
 Performance icon [link](https://www.flaticon.com/free-icon/performance_1013386)<br>
 
-product [link](https://www.flaticon.com/free-icon/product_9252074?term=products&page=1&position=27&origin=search&related_id=9252074)<br>
+product icon [link](https://www.flaticon.com/free-icon/product_9252074?term=products&page=1&position=27&origin=search&related_id=9252074)<br>
 
 world icon [link](https://thenounproject.com/icon/country-7254670/)<br>
 
-clear filters [link](https://www.flaticon.com/free-icon/clear-filter_6726840?term=clear+filters&page=1&position=64&origin=search&related_id=6726840)
+clear filters icon [link](https://www.flaticon.com/free-icon/clear-filter_6726840?term=clear+filters&page=1&position=64&origin=search&related_id=6726840)

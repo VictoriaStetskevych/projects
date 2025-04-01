@@ -10,6 +10,23 @@ https://github.com/user-attachments/assets/b19c7357-a5cf-4e62-af3f-0f43d0a97655
 
 </td>
      <td>
+        <b>Online Market Sales Dashboard</b><br>
+        <b>Goal:</b> build an interactive sales dashboard to analyze sales, profit, and cost across all products.<br>
+        - Project <a href="https://github.com/VictoriaStetskevych/projects/tree/main/PowerBI/06_power_bi_online_market_sales"> link</a><br>
+        - Tutorial <a href="https://www.youtube.com/watch?v=ASCnLj8XHww&t=2036s">link</a><br>
+        - Performance icon <a href="https://www.flaticon.com/free-icon/performance_1013386">link</a><br>
+        - product icon <a href="https://www.flaticon.com/free-icon/product_9252074?term=products&page=1&position=27&origin=search&related_id=9252074">link</a><br>
+        - world icon <a href="https://thenounproject.com/icon/country-7254670">link</a><br>
+        - clear filters <a href="https://www.flaticon.com/free-icon/clear-filter_6726840?term=clear+filters&page=1&position=64&origin=search&related_id=6726840">link</a><br>
+      </td>
+   </tr>
+   <tr>
+<td width=60%>
+
+https://github.com/user-attachments/assets/b19c7357-a5cf-4e62-af3f-0f43d0a97655
+
+</td>
+     <td>
         <b>Chocolate Company Sales Dashboard</b><br>
         <b>Goal:</b> build an interactive sales dashboard to analyze month-over-month (MoM) sales, profit, and cost across all products and the countries where they were sold.<br>
         - Project <a href="https://github.com/VictoriaStetskevych/projects/tree/main/PowerBI/05_power_bi_sales_chocolate"> link</a><br>
@@ -44,11 +61,11 @@ https://github.com/user-attachments/assets/db95c30f-4e1b-41c6-93d6-0dc3bb05699b
    <tr>
 <td width=60%>
 
-https://github.com/user-attachments/assets/c08074be-788d-415b-9e8a-b2148bcc8126
+https://github.com/user-attachments/assets/6644d178-0528-43e2-8524-2755a25bf2fe
 
 </td>
      <td>
-        <b>Finance Dashboard</b><br>
+        <b>Online Market Ana Dashboard</b><br>
         <b>Goal:</b> build a financial dashboard to analyze sales, profit, and quantity of sales (YoY, MoM), Top/Bottom countries. <br>
         - Project <a href="https://github.com/VictoriaStetskevych/projects/tree/main/PowerBI/03_power_bi_finance_dashboard"> link</a><br>
         - Tutorial <a href="https://www.youtube.com/watch?v=BLxW9ZSuuVI">link</a><br>
