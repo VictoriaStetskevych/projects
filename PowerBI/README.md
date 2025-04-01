@@ -69,7 +69,7 @@ https://github.com/user-attachments/assets/c08074be-788d-415b-9e8a-b2148bcc8126
         <b>Goal:</b> build a financial dashboard to analyze sales, profit, and quantity of sales (YoY, MoM), Top/Bottom countries. <br>
         - Project <a href="https://github.com/VictoriaStetskevych/projects/tree/main/PowerBI/03_power_bi_finance_dashboard"> link</a><br>
         - Tutorial <a href="https://www.youtube.com/watch?v=BLxW9ZSuuVI">link</a><br>
-        - Icon image <a href="https://www.canva.com/design/DAGeV7w-amE/rjTZo8ow7WEnHoTUWRK8Xg/edit"> link</a><br>
+        - Icon image <a href="https://www.canva.com/templates/EADaobrlzUY-white-and-green-plant-environment-logo/"> link</a><br>
         - Remove background <a href="https://www.remove.bg/">link</a><br>
       </td>
    </tr>
