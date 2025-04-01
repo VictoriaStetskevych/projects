@@ -6,7 +6,8 @@ Goal: Build an interactive sales dashboard to analyze sales, profit, and cost ac
 
 Result:<br>
 
-https://github.com/user-attachments/assets/b19c7357-a5cf-4e62-af3f-0f43d0a97655
+https://github.com/user-attachments/assets/6644d178-0528-43e2-8524-2755a25bf2fe
+
 
 ## Resources
 
