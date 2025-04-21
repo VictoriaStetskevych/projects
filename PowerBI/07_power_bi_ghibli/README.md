@@ -8,7 +8,8 @@ It shows movie ratings from IMDb, Rotten Tomatoes, and Metacritic, along with ti
 You can also compare box office results and budgets to see how each movie performed.
 
 Result:<br>
-https://github.com/user-attachments/assets/dd8b0253-6a45-4cb2-bbfc-16489367c9f6
+https://github.com/user-attachments/assets/13002991-a0ab-441b-9a55-ac641fce0594
+
 
 
 Recourses <br>
