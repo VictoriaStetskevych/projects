@@ -11,7 +11,8 @@ Result:<br>
 
 https://github.com/user-attachments/assets/e3949c67-e3de-447a-84fb-2111cc5bc415
 
-Recourses <br>
+## Recourses <br>
+
 Rotten Tomatoes<br>
 https://editorial.rottentomatoes.com/guide/all-studio-ghibli-movies-ranked-by-tomatometer/
 
