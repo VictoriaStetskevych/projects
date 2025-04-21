@@ -3,6 +3,24 @@
       <th>Dashboard</th>
       <th>Resources</th>
    </thead>
+     <tr>
+<td width=60%>
+
+https://github.com/user-attachments/assets/e3949c67-e3de-447a-84fb-2111cc5bc415
+
+</td>
+     <td>
+        <b>Studio Ghibli Power BI Dashboard</b><br>
+        <b>Goal:</b> to build an interactive Power BI dashboard that provides a comprehensive analysis of Studio Ghibli’s film production and performance metrics. <br>
+        - Project <a href="https://github.com/VictoriaStetskevych/projects/tree/main/PowerBI/07_power_bi_ghibli"> link</a><br>
+        - Ghibli logo <a href="https://www.pngegg.com/en/png-dojar"> link</a><br>
+        - IMDb logo <a href="https://www.stickpng.com/img/icons-logos-emojis/iconic-brands/imdb-logo">link</a><br>
+        - Metacritic logo <a href="https://www.cleanpng.com/png-metacritic-logo-portable-network-graphics-brand-tr-6885515/download-png.html">link</a><br>
+        - eraser <a href="https://www.flaticon.com/free-icon/eraser_2015014?term=eraser&page=1&position=8&origin=search&related_id=2015014">link</a><br>
+      </td>
+   </tr>
+
+
    <tr>
 <td width=60%>
 
