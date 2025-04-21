@@ -1,5 +1,38 @@
 # Projects
 
+
+<table>
+
+<tr>
+<td>
+<a href="https://github.com/VictoriaStetskevych/projects/tree/main/PowerBI/07_power_bi_ghibli">
+  <img src="https://github.com/VictoriaStetskevych/projects/blob/main/PowerBI/07_power_bi_ghibli/images/dashboard.png?raw=true">
+</a>
+</td>
+<td>
+<a href="https://github.com/VictoriaStetskevych/projects/tree/main/PowerBI/06_power_bi_online_market_sales">
+  <img src="https://github.com/VictoriaStetskevych/projects/blob/main/PowerBI/06_power_bi_online_market_sales/dashboard.png?raw=true">
+</a>
+</td>
+</tr>
+
+<tr>
+<td>
+<a href="https://github.com/VictoriaStetskevych/projects/tree/main/PowerBI/07_power_bi_ghibli">Power BI<br>Studio Ghibli Dashboard</a><br>
+</td>
+<td>
+<a href="https://github.com/VictoriaStetskevych/projects/tree/main/PowerBI/06_power_bi_online_market_sales"> Power BI <br> Market Sales Dashboard</a><br>
+</td>
+</tr>
+</table>
+<hr>
+
+
+
+
+
+
+
 <table>
 
 <tr>
