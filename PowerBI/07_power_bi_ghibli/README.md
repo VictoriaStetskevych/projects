@@ -1,20 +1,24 @@
-Work in progress
+# Studio Ghibli Power BI Dashboard
 
-[!NOTE]
-> Revenue (also called sales or total revenue) is the total amount of money a business earns from selling goods or services before any expenses are deducted.  
+This interactive Power BI dashboard provides a comprehensive analysis of Studio Ghibli’s film production and performance metrics. 
 
->COGS (cost of goods sold) - costs involved in producing or purchasing the goods that a business sells. It includes expenses directly tied to making or acquiring products but does not include indirect costs like rent, marketing, or administrative expenses. 
-(([x]) Raw materials, ([x]) Direct labor, ([x]) Manufacturing costs (utilities for production, packaging), ([x]) Wholesale purchase costs (if reselling products instead of making them)).
+It highlights key crew members such as directors, screenwriters, composers, and art directors.
+It shows movie ratings from IMDb, Rotten Tomatoes, and Metacritic, along with timelines of when the films were made.
 
-> Gross income (or gross profit) = Revenue - COGS
+You can also compare box office results and budgets to see how each movie performed.
 
-Rotten Tomatoes
+Result:<br>
+https://github.com/user-attachments/assets/dd8b0253-6a45-4cb2-bbfc-16489367c9f6
+
+
+Recourses <br>
+Rotten Tomatoes<br>
 https://editorial.rottentomatoes.com/guide/all-studio-ghibli-movies-ranked-by-tomatometer/
 
-IMDb
+IMDb <br>
 https://www.imdb.com/list/ls076439519/
 
-Metacritic
+Metacritic <br>
 https://www.metacritic.com/pictures/every-studio-ghibli-animated-film-ranked-worst-to-best/
 
 
