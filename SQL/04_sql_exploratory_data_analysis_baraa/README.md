@@ -17,22 +17,22 @@ In this project I was using three datasets
 SELECT Top 10 *
 FROM [gold.dim_customers];
 ```
-Result:
-01_customers
+Result:<br>
+https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/SQL/04_sql_exploratory_data_analysis_baraa/images/01_customers.png
 
 ```sql
 SELECT Top 10 *
 FROM [gold.dim_products];
 ```
-Result:
-02_products
+Result:<br>
+https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/SQL/04_sql_exploratory_data_analysis_baraa/images/02_products.png
 
 ```sql
 SELECT Top 10 *
 FROM [gold.fact_sales];
 ```
-Result:
-03_sales.png
+Result:<br>
+https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/SQL/04_sql_exploratory_data_analysis_baraa/images/03_sales.png
 
 Additional way to explore data tables
 ```sql
@@ -40,8 +40,8 @@ SELECT *
 FROM INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = 'gold.dim_customers';
 ```
-Result:
-04_explore.png
+Result:<br>
+https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/SQL/04_sql_exploratory_data_analysis_baraa/images/04_explore.png
 
 ## 2. Dimensions Exploration 
 
@@ -52,32 +52,32 @@ Goal: Identify the unique values (or categories) in each dimensions. Recognize h
 SELECT DISTINCT country
 FROM [gold.dim_customers];
 ```
-Result: 6 countries
-05_countries.png
+Result:<br> 6 countries
+https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/SQL/04_sql_exploratory_data_analysis_baraa/images/05_countries.png
 
 - product categories 
 ```sql
 SELECT DISTINCT category
 FROM [gold.dim_products];
 ```
-Result: 4 categories
-06_categories.png
+Result:<br> 4 categories
+https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/SQL/04_sql_exploratory_data_analysis_baraa/images/06_categories.png
 
 - product subcategories
 ```sql
 SELECT DISTINCT category, subcategory
 FROM [gold.dim_products];
 ```
-Result: 36 subcategories
-07_subcategories.png
+Result:<br> 36 subcategories
+https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/SQL/04_sql_exploratory_data_analysis_baraa/images/07_subcategories.png
 
 - products
 ```sql
 SELECT DISTINCT category, subcategory, product_name
 FROM [gold.dim_products];
 ```
-Result: 295 positions 
-08_products.png
+Result:<br> 295 positions 
+https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/SQL/04_sql_exploratory_data_analysis_baraa/images/08_products.png
 
 - min / max prices
 ```sql
@@ -101,8 +101,8 @@ JOIN [gold.dim_products] p
     ON s.product_key = p.product_key
 ORDER BY s.price ASC;
 ```
-Result:
-14_max_min_price.png
+Result:<br>
+https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/SQL/04_sql_exploratory_data_analysis_baraa/images/14_max_min_price.png
 
 ## 3. Date Exploration
 
@@ -121,8 +121,8 @@ SELECT MIN(order_date) as first_order,
 	   DATEDIFF(year, MIN(order_date), MAX(order_date)) as order_range_years
 FROM [gold.fact_sales];
 ```
-Result:
-15_first_last_order.png
+Result:<br>
+https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/SQL/04_sql_exploratory_data_analysis_baraa/images/15_first_last_order.png
 
 - youngest and oldest customer's age
 ```sql
@@ -133,8 +133,8 @@ MAX(birthdate) as youngest_birthday,
 DATEDIFF(year, MAX(birthdate), GETDATE()) as youngest_age
 FROM [gold.dim_customers];
 ```
-Result:
-11_age.png
+Result:<br>
+https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/SQL/04_sql_exploratory_data_analysis_baraa/images/11_age.png
 
 -- age and age category
 ```sql
@@ -157,8 +157,8 @@ CASE
 END AS [age_category]
 FROM AgeCalculatiion;
 ```
-Result:
-13_age_category.png
+Result:<br>
+https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/SQL/04_sql_exploratory_data_analysis_baraa/images/13_age_category.png
 
 ## 3. Measures Exploration
 
@@ -170,7 +170,7 @@ SELECT
 	SUM(sales_amount) as total_sales
 FROM [gold.fact_sales];
 ```
-Result: 16_total_sales.png
+Result:<br> 16_total_sales.png
 
 - total quantity (items sold)
 ```sql
@@ -178,7 +178,7 @@ SELECT
 	SUM(quantity) as total_quantity
 FROM [gold.fact_sales];
 ```
-Result: 17_total_quantity.png
+Result:<br> https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/SQL/04_sql_exploratory_data_analysis_baraa/images/17_total_quantity.png
 
 - average price
 ```sql
@@ -186,7 +186,7 @@ SELECT
 	AVG(price) as avg_price
 FROM [gold.fact_sales];
 ```
-Result: 18_average_price.png
+Result:<br> 18_average_price.png
 
 - total number of orders
 ```sql
@@ -194,7 +194,7 @@ SELECT
 	COUNT(DISTINCT order_number) as total_orders
 FROM [gold.fact_sales];
 ```
-Result: 19_total_orders.png
+Result:<br> 19_total_orders.png
 
 - total number of product
 ```sql
@@ -202,14 +202,14 @@ SELECT
 	COUNT(product_key) as total_products
 FROM [gold.dim_products];
 ```
-Result: 20_total_products.png
+Result:<br> https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/SQL/04_sql_exploratory_data_analysis_baraa/images/20_total_products.png
 
 - total amount of customers
 ```sql
 SELECT COUNT(DISTINCT customer_id) AS distinct_customers_count
 FROM [gold.dim_customers];
 ```
-Result: 18484
+Result:<br> 18484
 12_total_customers.png
 
 - total number of customers that has placed an order
@@ -218,7 +218,7 @@ SELECT
 	COUNT(DISTINCT customer_key) as total_customers_who_ordered
 FROM [gold.fact_sales];
 ```
-Result: 21_customers_who_ordered.png
+Result:<br> https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/SQL/04_sql_exploratory_data_analysis_baraa/images/21_customers_who_ordered.png
 
 ## 4. Generate a report that shows all key metrics of the business
 
@@ -235,7 +235,7 @@ SELECT 'Total Nr Product' as  measure_name, COUNT(product_key) as measure_value 
 UNION ALL
 SELECT 'Total Nr Customers' as  measure_name, COUNT(DISTINCT customer_key) as measure_value FROM [gold.fact_sales];
 ```
-Result: 22_report.png
+Result:<br> 22_report.png
 
 ## 4. Magnitude Analysis 
 
@@ -249,7 +249,7 @@ FROM [gold.dim_customers]
 GROUP BY country
 ORDER BY total_customers DESC;
 ```
-Result: 23_customers_country.png
+Result:<br> https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/SQL/04_sql_exploratory_data_analysis_baraa/images/23_customers_country.png
 
 - gender 
 ```sql
@@ -258,7 +258,7 @@ SELECT gender,
 FROM [gold.dim_customers]
 GROUP BY gender;
 ```
-Result:
+Result:<br>
 09_gender.png
 
 - gender and marital status
@@ -269,8 +269,8 @@ SELECT gender,
 FROM [gold.dim_customers]
 GROUP BY gender, marital_status;
 ```
-Result:
-10_marital_status.png
+Result:<br>
+https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/SQL/04_sql_exploratory_data_analysis_baraa/images/10_marital_status.png
 
 - total products by category
 ```sql
@@ -281,7 +281,7 @@ FROM [gold.dim_products]
 GROUP BY category
 ORDER BY total_product DESC;
 ```
-Result:24_products_category.png
+Result:<br> https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/SQL/04_sql_exploratory_data_analysis_baraa/images/24_products_category.png
 
 - average cost in each category
 ```sql
@@ -293,7 +293,7 @@ FROM [gold.dim_products]
 GROUP BY category
 ORDER BY avg_cost DESC;
 ```
-Result: 25_category_avg_cost.png
+Result:<br> https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/SQL/04_sql_exploratory_data_analysis_baraa/images/25_category_avg_cost.png
 
 - total revenue for each category
 ```sql
@@ -306,7 +306,7 @@ ON p.product_key = s.product_key
 GROUP BY category
 ORDER BY total_revenue DESC;
 ```
-Result: 26_total_revenue.png
+Result:<br> https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/SQL/04_sql_exploratory_data_analysis_baraa/images/26_total_revenue.png
 
 - total revenue by each customer
 ```SQL
@@ -321,7 +321,7 @@ ON c.customer_key = s.customer_key
 GROUP BY s.customer_key, c.first_name, c.last_name
 ORDER BY total_revenue DESC;
 ```
-Result:27_customers_total_revenue.png
+Result:<br> https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/SQL/04_sql_exploratory_data_analysis_baraa/images/27_customers_total_revenue.png
 
 - sold items across countries 
 ```sql
@@ -334,7 +334,7 @@ ON c.customer_key = s.customer_key
 GROUP BY c.country
 ORDER BY total_sold_items  DESC;
 ```
-Result: 28_country_sold_items.png
+Result:<br> https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/SQL/04_sql_exploratory_data_analysis_baraa/images/28_country_sold_items.png
 
 ## 5. Ranking Analysis 
 
@@ -351,7 +351,7 @@ ON p.product_key = s.product_key
 GROUP BY p.product_name
 ORDER BY total_revenue DESC;
 ```
-Result: 29_top_products.png
+Result:<br> https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/SQL/04_sql_exploratory_data_analysis_baraa/images/29_top_products.png
 
 - bottom 5 products. The lowest revenue
 ```sql 
@@ -364,7 +364,7 @@ ON p.product_key = s.product_key
 GROUP BY p.product_name
 ORDER BY total_revenue ASC; 
 ```
-Result: 30_bottom_products.png
+Result:<br> https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/SQL/04_sql_exploratory_data_analysis_baraa/images/30_bottom_products.png
 
 - top 5 subcategories. The highest revenue
 ```sql
@@ -377,7 +377,7 @@ ON p.product_key = s.product_key
 GROUP BY p.subcategory
 ORDER BY total_revenue DESC;
 ```
-Result:31_top_subcategory.png
+Result:<br> https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/SQL/04_sql_exploratory_data_analysis_baraa/images/31_top_subcategory.png
 
 - bottom 5 subcategories. The highest revenue
 ```sql 
@@ -390,7 +390,7 @@ ON p.product_key = s.product_key
 GROUP BY p.subcategory
 ORDER BY total_revenue ASC;
 ```
-Result: 32_bottom_subcategory.png
+Result:<br> https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/SQL/04_sql_exploratory_data_analysis_baraa/images/32_bottom_subcategory.png
 
 - product ranking
 ```sql
@@ -406,7 +406,7 @@ FROM(
 		GROUP BY p.product_name) as rank_products
 WHERE rank_products <= 5;
 ```
-Result: 33_product_rank.png
+Result:<br> https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/SQL/04_sql_exploratory_data_analysis_baraa/images/33_product_rank.png
 
 - top 10 customers with the highest revenue
 ```sql
@@ -424,7 +424,7 @@ FROM(
 	GROUP BY c.customer_key, c.first_name, c.last_name) as rank_customers
 WHERE rank_customers <=10;
 ```
-Result: 34_customers_rank.png
+Result:<br> https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/SQL/04_sql_exploratory_data_analysis_baraa/images/34_customers_rank.png
 
 - top 11 customers with the fewest Nr of Orders
 ```sql
@@ -444,4 +444,4 @@ FROM (
 WHERE rank_customers <= 11
 ORDER BY customer_key;
 ```
-Result: 35_customers_low_orders.png
+Result:<br> https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/SQL/04_sql_exploratory_data_analysis_baraa/images/35_customers_low_orders.png
