@@ -235,7 +235,7 @@ SELECT 'Total Nr Product' as  measure_name, COUNT(product_key) as measure_value 
 UNION ALL
 SELECT 'Total Nr Customers' as  measure_name, COUNT(DISTINCT customer_key) as measure_value FROM [gold.fact_sales];
 ```
-Result:<br> 22_report.png?raw=true
+Result:<br> ![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/SQL/04_sql_exploratory_data_analysis_baraa/images/22_report.png?raw=true)
 
 ## 4. Magnitude Analysis 
 
