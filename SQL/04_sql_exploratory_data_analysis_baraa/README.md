@@ -11,7 +11,7 @@ To continue to Part 2 of the analysis, please visit the following [link](https:/
 
 This project was made using Baraa Khatib Salkini's YouTube [tutorials](https://www.youtube.com/watch?v=6cJ5Ji8zSDg) that I found on Baraa's YouTube Channel ["Data with Baraa"](https://www.youtube.com/@DataWithBaraa).
 
-## Steps and Goals of This Part of the Project<br>
+## Steps and Goals of Part 1 of the Project<br>
 
 <table>
    <thead>
