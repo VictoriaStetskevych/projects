@@ -1,13 +1,13 @@
 # SQL Analysis. Part 1 - Exploratory Data Analysis (EDA) Project
 
-The project consists of two parts:
-Part 1: Exploratory Data Analysis (EDA)
-Part 2: Advanced Data Analytics
+The project consists of two parts:<br>
+Part 1: Exploratory Data Analysis (EDA)<br>
+Part 2: Advanced Data Analytics<br>
 
-This page presents Part 1: Exploratory Data Analysis (EDA).
+This page presents Part 1: Exploratory Data Analysis (EDA).<br>
 To continue to Part 2 of the analysis, please visit the following [link](https://github.com/VictoriaStetskevych/projects/tree/main/SQL/05_sql_advanced_data_analytics_baraa).
 
-# Part 1 
+# Part 1 <br>
 
 This project was made using Baraa Khatib Salkini's YouTube [tutorials](https://www.youtube.com/watch?v=6cJ5Ji8zSDg) that I found on Baraa's YouTube Channel ["Data with Baraa"](https://www.youtube.com/@DataWithBaraa).
 
@@ -20,12 +20,20 @@ In this project I was using three datasets
 - [gold.dim_products.csv](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/04_sql_exploratory_data_analysis_baraa/data/gold.dim_products.csv), 
 - [gold.fact_sales.csv](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/04_sql_exploratory_data_analysis_baraa/data/gold.fact_sales.csv):
 
+<table>
+<hr>
+</table>
+
 ```sql
 SELECT Top 10 *
 FROM [gold.dim_customers];
 ```
 Result:<br>
 ![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/SQL/04_sql_exploratory_data_analysis_baraa/images/01_customers.png?raw=true)
+
+<table>
+<hr>
+</table>
 
 ```sql
 SELECT Top 10 *
