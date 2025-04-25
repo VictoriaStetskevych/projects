@@ -11,6 +11,33 @@ To continue to Part 2 of the analysis, please visit the following [link](https:/
 
 This project was made using Baraa Khatib Salkini's YouTube [tutorials](https://www.youtube.com/watch?v=6cJ5Ji8zSDg) that I found on Baraa's YouTube Channel ["Data with Baraa"](https://www.youtube.com/@DataWithBaraa).
 
+## <u>Steps and Goals of This Part of the Project</u><br>
+
+1. Upload and Explore Data<br>
+- Basic inspection of the dataset to understand its structure and contents.<br>
+2. Dimensions Exploration<br>
+Goal:<br>
+- Identify the unique values (or categories) in each dimension<br>
+- Recognize how data might be grouped or segmented<br>
+3. Date Exploration<br>
+Goal:<br>
+- Identify the earliest and latest dates<br>
+- Understand the scope and timespan of the data<br>
+4. Measures Exploration<br>
+Goal:<br>
+- Calculate the key business metrics (Big Numbers)<br>
+- Explore data at different aggregation levels (e.g., SUM, AVERAGE, COUNT)<br>
+- Identify both the highest-level summaries and the lowest-level details.<br>
+5. Generate a Business Report<br>
+Goal:<br>
+- Create a report summarizing all key metrics identified in previous steps.<br>
+6. Magnitude Analysis<br>
+Goal:<br>
+- Compare measure values across different categories to understand their relative scale.<br>
+7. Ranking Analysis<br>
+Goal:<br>
+- Rank dimension values by measures to identify top and bottom performers.<br>
+
 # Process
 
 ## 1. Upload and Explore data.
@@ -199,7 +226,7 @@ Result:<br>
 <hr>
 </table>
 
--- age and age category
+- age and age category
 ```sql
 WITH AgeCalculatiion AS (
 SELECT *,
@@ -227,7 +254,7 @@ Result:<br>
 <hr>
 </table>
 
-## 3. Measures Exploration
+## 4. Measures Exploration
 
 Goal: calculate the key metrics of the business (Big Numbers). Highest level of Aggregation / Lowest levels of Details. (SUM, AVERAGE, COUNT)
 
@@ -319,7 +346,7 @@ Result:<br> ![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/r
 <hr>
 </table>
 
-## 4. Generate a report that shows all key metrics of the business
+## 5. Generate a report that shows all key metrics of the business
 
 <table>
 <hr>
@@ -344,7 +371,7 @@ Result:<br> ![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/r
 <hr>
 </table>
 
-## 4. Magnitude Analysis 
+## 6. Magnitude Analysis 
 
 Goal: Compare the measure values by categories. 
 
@@ -479,7 +506,7 @@ Result:<br> ![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/r
 <hr>
 </table>
 
-## 5. Ranking Analysis 
+## 7. Ranking Analysis 
 
 Goal: order the values of dimensions by measure to identify top and bottom performers
 
