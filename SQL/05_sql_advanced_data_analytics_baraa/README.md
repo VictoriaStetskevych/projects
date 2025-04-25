@@ -28,6 +28,7 @@ This project was made using Baraa Khatib Salkini's YouTube [tutorials](https://w
 (by Year, by Month)<br>
 </td>
 </tr>
+</table>
 
 # Process
 
