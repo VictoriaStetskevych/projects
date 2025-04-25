@@ -5,7 +5,7 @@ Part 1: Exploratory Data Analysis (EDA)
 Part 2: Advanced Data Analytics
 
 This page presents Part 1: Exploratory Data Analysis (EDA).
-To continue to Part 2 of the analysis, please visit the following link:
+To continue to Part 2 of the analysis, please visit the following [link](https://github.com/VictoriaStetskevych/projects/tree/main/SQL/05_sql_advanced_data_analytics_baraa).
 
 # Part 1 
 
