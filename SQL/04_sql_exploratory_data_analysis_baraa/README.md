@@ -1,6 +1,13 @@
-# SQL Exploratory Data Analysis (EDA) Project
+# SQL Analysis. Part 1 - Exploratory Data Analysis (EDA) Project
 
-In Progress!
+The project consists of two parts:
+Part 1: Exploratory Data Analysis (EDA)
+Part 2: Advanced Data Analytics
+
+This page presents Part 1: Exploratory Data Analysis (EDA).
+To continue to Part 2 of the analysis, please visit the following link:
+
+# Part 1 
 
 This project was made using Baraa Khatib Salkini's YouTube [tutorials](https://www.youtube.com/watch?v=6cJ5Ji8zSDg) that I found on Baraa's YouTube Channel ["Data with Baraa"](https://www.youtube.com/@DataWithBaraa).
 
@@ -445,3 +452,6 @@ WHERE rank_customers <= 11
 ORDER BY customer_key;
 ```
 Result:<br> ![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/SQL/04_sql_exploratory_data_analysis_baraa/images/35_customers_low_orders.png?raw=true)
+
+To continue with the second part of this analysis, please visit the following link:
+
