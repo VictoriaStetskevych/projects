@@ -28,40 +28,57 @@ This project was made using Baraa Khatib Salkini's YouTube [tutorials](https://w
 </tr>
 <tr>
 <td>
-1. Dimensions Exploration
+2. Dimensions Exploration
 </td>
 <td>
 - Identify the unique values (or categories) in each dimension<br>
 - Recognize how data might be grouped or segmented<br>
 </td>
 </tr>
-</table>
-
-
-1. Upload and Explore Data<br>
-- Basic inspection of the dataset to understand its structure and contents.<br>
-2. Dimensions Exploration<br>
-Goal:<br>
-- Identify the unique values (or categories) in each dimension<br>
-- Recognize how data might be grouped or segmented<br>
+<tr>
+<td>
 3. Date Exploration<br>
-Goal:<br>
+</td>
+<td>
 - Identify the earliest and latest dates<br>
 - Understand the scope and timespan of the data<br>
+</td>
+</tr>
+<tr>
+<td>
 4. Measures Exploration<br>
-Goal:<br>
+</td>
+<td>
 - Calculate the key business metrics (Big Numbers)<br>
 - Explore data at different aggregation levels (e.g., SUM, AVERAGE, COUNT)<br>
 - Identify both the highest-level summaries and the lowest-level details.<br>
+</td>
+</tr>
+<tr>
+<td>
 5. Generate a Business Report<br>
-Goal:<br>
+</td>
+<td>
 - Create a report summarizing all key metrics identified in previous steps.<br>
+</td>
+</tr>
+<tr>
+<td>
 6. Magnitude Analysis<br>
-Goal:<br>
+</td>
+<td>
 - Compare measure values across different categories to understand their relative scale.<br>
+</td>
+</tr>
+<tr>
+<td>
 7. Ranking Analysis<br>
-Goal:<br>
+</td>
+<td>
 - Rank dimension values by measures to identify top and bottom performers.<br>
+</td>
+</tr>
+</table>
 
 # Process
 
