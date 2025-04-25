@@ -15,7 +15,7 @@ This project was made using Baraa Khatib Salkini's YouTube [tutorials](https://w
 
 <table>
    <thead>
-      <th>Task</th>
+      <th>Step</th>
       <th>Goal</th>
    </thead>
 <tr>
