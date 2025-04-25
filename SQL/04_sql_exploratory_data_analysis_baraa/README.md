@@ -18,12 +18,21 @@ This project was made using Baraa Khatib Salkini's YouTube [tutorials](https://w
       <th>Task</th>
       <th>Goal</th>
    </thead>
-     <tr>
+<tr>
 <td>
-Upload and Explore Data
+1. Upload and Explore Data
 </td>
 <td>
 - Basic inspection of the dataset to understand its structure and contents.
+</td>
+</tr>
+<tr>
+<td>
+1. Dimensions Exploration
+</td>
+<td>
+- Identify the unique values (or categories) in each dimension<br>
+- Recognize how data might be grouped or segmented<br>
 </td>
 </tr>
 </table>
