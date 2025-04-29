@@ -196,3 +196,75 @@ SELECT
 	END avg_change
 FROM yearly_product_sales
 ORDER BY product_name, order_year;
+
+-- yearly performance by product, compared to previous year sales
+WITH yearly_product_sales AS (
+  SELECT
+    YEAR(s.order_date) AS order_year,
+    p.product_name,
+    SUM(s.sales_amount) AS current_sales
+  FROM [gold.fact_sales] s
+  LEFT JOIN [gold.dim_products] p
+    ON s.product_key = p.product_key
+  WHERE s.order_date IS NOT NULL
+  GROUP BY YEAR(s.order_date), p.product_name
+)
+-- Year-over-Year analysis 
+SELECT
+	order_year,
+	product_name,
+	current_sales,
+	AVG(current_sales) OVER (PARTITION BY product_name) AS avg_sales,
+	current_sales - AVG(current_sales) OVER (PARTITION BY product_name) AS diff_avg,
+	CASE 
+		 WHEN current_sales - AVG(current_sales) OVER (PARTITION BY product_name) > 0 THEN 'Above Avg'
+		 WHEN current_sales - AVG(current_sales) OVER (PARTITION BY product_name) < 0 THEN 'Below Avg'
+		 ELSE 'Avg'
+	END avg_change,
+	LAG(current_sales) OVER (PARTITION BY product_name ORDER BY order_year) py_sales, 
+	current_sales - LAG(current_sales) OVER (PARTITION BY product_name ORDER BY order_year) as diff_py,
+	CASE 
+		 WHEN current_sales - LAG(current_sales) OVER (PARTITION BY product_name ORDER BY order_year) > 0 THEN 'Increase'
+		 WHEN current_sales - LAG(current_sales) OVER (PARTITION BY product_name ORDER BY order_year) < 0 THEN 'Decrease'
+		 ELSE 'No change'
+	END py_change
+FROM yearly_product_sales
+ORDER BY product_name, order_year;
+
+
+-- yearly performance by product, compared to previous month sales 
+WITH yearly_product_sales AS (
+  SELECT
+    YEAR(s.order_date) AS order_year,
+    MONTH(s.order_date) AS order_month,
+    p.product_name,
+    SUM(s.sales_amount) AS current_sales
+  FROM [gold.fact_sales] s
+  LEFT JOIN [gold.dim_products] p
+    ON s.product_key = p.product_key
+  WHERE s.order_date IS NOT NULL
+  GROUP BY YEAR(s.order_date), MONTH(s.order_date), p.product_name
+)
+-- Month-over-Month analysis 
+SELECT
+	order_year,
+	order_month,
+	product_name,
+	current_sales,
+	AVG(current_sales) OVER (PARTITION BY product_name) AS avg_sales,
+	current_sales - AVG(current_sales) OVER (PARTITION BY product_name) AS diff_avg,
+	CASE 
+		 WHEN current_sales - AVG(current_sales) OVER (PARTITION BY product_name) > 0 THEN 'Above Avg'
+		 WHEN current_sales - AVG(current_sales) OVER (PARTITION BY product_name) < 0 THEN 'Below Avg'
+		 ELSE 'Avg'
+	END avg_change,
+	LAG(current_sales) OVER (PARTITION BY product_name ORDER BY order_month) prevmonth_sales, 
+	current_sales - LAG(current_sales) OVER (PARTITION BY product_name ORDER BY order_month) as diff_prevmonth,
+	CASE 
+		 WHEN current_sales - LAG(current_sales) OVER (PARTITION BY product_name ORDER BY order_month) > 0 THEN 'Increase'
+		 WHEN current_sales - LAG(current_sales) OVER (PARTITION BY product_name ORDER BY order_month) < 0 THEN 'Decrease'
+		 ELSE 'No change'
+	END py_change
+FROM yearly_product_sales
+ORDER BY product_name, order_month, order_year;
+
