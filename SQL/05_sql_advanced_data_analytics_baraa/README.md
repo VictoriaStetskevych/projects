@@ -413,7 +413,7 @@ SELECT
 	category,
 	total_sales,
 	SUM (total_sales) OVER () as overall_sales,
-	ROUND((CAST(total_sales as FLOAT) / SUM (total_sales) OVER ())*100, 2) as persentage_of_total
+	CONCAT(ROUND((CAST(total_sales as FLOAT) / SUM (total_sales) OVER ())*100, 2), '%') as persentage_of_total
 FROM category_sales
 ORDER BY total_sales DESC;
 ```
