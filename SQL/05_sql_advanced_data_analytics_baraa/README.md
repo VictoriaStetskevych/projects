@@ -1,5 +1,7 @@
 # SQL Analysis. Part 2 - Advanced Data Analytics
 
+IN PROGRESS!
+
 The project consists of two parts:<br>
 Part 1: Exploratory Data Analysis (EDA)<br>
 Part 2: Advanced Data Analytics<br>
@@ -373,6 +375,57 @@ Result: <br>
 <table>
 <hr>
 </table>
+
+## 4. Part-to-Whole, % (Proportional Analysis)
+
+Goal: analyze how an individual part is performing compared to overall, to understand which category has the greatest impact on the business 
+
+- total sales by each category
+```sql
+SELECT
+	p.category,
+	SUM(s.sales_amount) as total_sales
+FROM [gold.fact_sales] s
+LEFT JOIN [gold.dim_products] p
+ON p.product_key = s.product_key
+GROUP BY p.category
+ORDER BY total_sales DESC;
+```
+Result: <br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/05_sql_advanced_data_analytics_baraa/images/15_sales_by_each_category.png?raw=true)
+
+<table>
+<hr>
+</table>
+
+- which categories contribute the most to overall sales
+```sql
+WITH category_sales AS (
+SELECT
+	p.category,
+	SUM(s.sales_amount) as total_sales
+FROM [gold.fact_sales] s
+LEFT JOIN [gold.dim_products] p
+ON p.product_key = s.product_key
+GROUP BY p.category
+)
+SELECT 
+	category,
+	total_sales,
+	SUM (total_sales) OVER () as overall_sales,
+	ROUND((CAST(total_sales as FLOAT) / SUM (total_sales) OVER ())*100, 2) as persentage_of_total
+FROM category_sales
+ORDER BY total_sales DESC;
+```
+Result: <br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/05_sql_advanced_data_analytics_baraa/images/16_categories_percentage.png.png?raw=true)
+
+<table>
+<hr>
+</table>
+
+
+
 
 
 

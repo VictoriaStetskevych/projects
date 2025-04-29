@@ -268,3 +268,33 @@ SELECT
 FROM yearly_product_sales
 ORDER BY product_name, order_month, order_year;
 
+
+--------------------------------------------------------------------- Part-to-Whole, % (Proportional Analysis) ------------------------------------------------------------------------------------------------------------
+
+-- total sales by each category
+SELECT
+	p.category,
+	SUM(s.sales_amount) as total_sales
+FROM [gold.fact_sales] s
+LEFT JOIN [gold.dim_products] p
+ON p.product_key = s.product_key
+GROUP BY p.category
+ORDER BY total_sales DESC;
+
+-- which categories contribute the most to overall sales
+WITH category_sales AS (
+SELECT
+	p.category,
+	SUM(s.sales_amount) as total_sales
+FROM [gold.fact_sales] s
+LEFT JOIN [gold.dim_products] p
+ON p.product_key = s.product_key
+GROUP BY p.category
+)
+SELECT 
+	category,
+	total_sales,
+	SUM (total_sales) OVER () as overall_sales,
+	CONCAT(ROUND((CAST(total_sales as FLOAT) / SUM (total_sales) OVER ())*100, 2), '%') as persentage_of_total
+FROM category_sales
+ORDER BY total_sales DESC;
