@@ -135,5 +135,202 @@ Result: <br>
 <hr>
 </table>
 
+- order_date together year_month
+```sql
+SELECT 
+	DATETRUNC(month, order_date) as order_date,
+	SUM(sales_amount) as total_sales,
+	COUNT(DISTINCT customer_key) as total_customers,
+	SUM(quantity) as total_quantity
+FROM [gold.fact_sales]
+WHERE order_date is not NULL
+GROUP BY DATETRUNC(month, order_date)
+ORDER BY DATETRUNC(month, order_date);
+```
+Result: <br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/05_sql_advanced_data_analytics_baraa/images/06_together_year_month_sales.png?raw=true)
+
+<table>
+<hr>
+</table>
+
+## 2. Cumulative Analysis
+
+Goal: aggregate the data progressively over time to understand whether the business is growing or declining
+
+<table>
+<hr>
+</table>
+
+- calculate the total sales per month and the running total of sales over time 
+
+```sql
+SELECT 
+	DATETRUNC(month, order_date) as order_date,
+	SUM(sales_amount) as total_sales
+FROM [gold.fact_sales]
+WHERE order_date is not NULL
+GROUP BY DATETRUNC(month, order_date)
+ORDER BY DATETRUNC(month, order_date);
+```
+Result: <br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/05_sql_advanced_data_analytics_baraa/images/07_sales_per_month.png?raw=true)
+
+<table>
+<hr>
+</table>
+
+- with running totals
+```sql
+SELECT 
+	order_date,
+	total_sales,
+	SUM(total_sales) OVER (ORDER BY order_date) AS running_total_sales
+FROM
+(
+SELECT 
+	DATETRUNC(month, order_date) as order_date,
+	SUM(sales_amount) as total_sales
+FROM [gold.fact_sales]
+WHERE order_date is not NULL
+GROUP BY DATETRUNC(month, order_date)
+) t
+```
+Result: <br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/05_sql_advanced_data_analytics_baraa/images/08_running_totals.png?raw=true)
+
+<table>
+<hr>
+</table>
+
+- running totals by year  / month
+```sql
+SELECT 
+	order_date,
+	total_sales,
+	SUM(total_sales) OVER (PARTITION BY DATETRUNC(year, order_date) ORDER BY order_date) AS running_total_sales
+FROM
+(
+SELECT 
+	DATETRUNC(month, order_date) as order_date,
+	SUM(sales_amount) as total_sales
+FROM [gold.fact_sales]
+WHERE order_date is not NULL
+GROUP BY DATETRUNC(month, order_date)
+) t
+```
+Result: <br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/05_sql_advanced_data_analytics_baraa/images/09_running_totals_by_year_month.png?raw=true)
+
+<table>
+<hr>
+</table>
+
+- running total sales accumulated by year
+```sql
+SELECT 
+	order_date,
+	total_sales,
+	SUM(total_sales) OVER (ORDER BY order_date) AS running_total_sales
+FROM
+(
+SELECT 
+	DATETRUNC(year, order_date) as order_date,
+	SUM(sales_amount) as total_sales
+FROM [gold.fact_sales]
+WHERE order_date is not NULL
+GROUP BY DATETRUNC(year, order_date)
+) t
+```
+Result: <br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/05_sql_advanced_data_analytics_baraa/images/10_running_total_sales_by_year.png?raw=true)
+
+<table>
+<hr>
+</table>
+
+- moving average of the price
+```sql
+SELECT 
+	order_date,
+	total_sales,
+	SUM(total_sales) OVER (ORDER BY order_date) AS running_total_sales,
+	AVG(avg_price) OVER (ORDER BY order_date) AS moving_avg_price
+FROM
+(
+SELECT 
+	DATETRUNC(year, order_date) as order_date,
+	SUM(sales_amount) as total_sales,
+	AVG(price) as avg_price
+FROM [gold.fact_sales]
+WHERE order_date is not NULL
+GROUP BY DATETRUNC(year, order_date)
+) t
+```
+Result: <br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/05_sql_advanced_data_analytics_baraa/images/11_moving_avg_price.png?raw=true)
+
+<table>
+<hr>
+</table>
+
+## 3. Performance Analysis
+
+Goal: 
+- compare the current value to a target value to measure success and compare performance
+- analyze the yearly performance of products by comparing each product sales to both its average sales and the previous year's sales 
+
+- yearly performance by product
+```sql
+SELECT
+	YEAR(s.order_date) as order_year,
+	p.product_name,
+	SUM(s.sales_amount) as current_sales
+FROM [gold.fact_sales] s
+LEFT JOIN [gold.dim_products] p
+ON s.product_key = p.product_key
+WHERE s.order_date is not NULL
+GROUP BY YEAR(s.order_date), p.product_name
+ORDER BY order_year, p.product_name;
+```
+Result: <br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/05_sql_advanced_data_analytics_baraa/images/12_yearly_performance_by_product.png?raw=true)
+
+<table>
+<hr>
+</table>
+
+- yearly performance by product, compared to avd_sales
+```sql
+WITH yearly_product_sales AS (
+  SELECT
+    YEAR(s.order_date) AS order_year,
+    p.product_name,
+    SUM(s.sales_amount) AS current_sales
+  FROM [gold.fact_sales] s
+  LEFT JOIN [gold.dim_products] p
+    ON s.product_key = p.product_key
+  WHERE s.order_date IS NOT NULL
+  GROUP BY YEAR(s.order_date), p.product_name
+)
+SELECT
+	order_year,
+	product_name,
+	current_sales,
+	AVG(current_sales) OVER (PARTITION BY product_name) AS avg_sales,
+	current_sales - AVG(current_sales) OVER (PARTITION BY product_name) AS diff_avg,
+	CASE WHEN current_sales - AVG(current_sales) OVER (PARTITION BY product_name) > 0 THEN 'Above Avg'
+		 WHEN current_sales - AVG(current_sales) OVER (PARTITION BY product_name) < 0 THEN 'Below Avg'
+		 ELSE 'Avg'
+	END avg_change
+FROM yearly_product_sales
+ORDER BY product_name, order_year;
+```
+Result: <br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/05_sql_advanced_data_analytics_baraa/images/13_product_sales_performance.png?raw=true)
+
+<table>
+<hr>
+</table>
 
 In Progress!
