@@ -172,7 +172,7 @@ WHERE s.order_date is not NULL
 GROUP BY YEAR(s.order_date), p.product_name
 ORDER BY order_year, p.product_name;
 
--- yearly performance by product, compared to avd_sales
+-- yearly performance by product, compared to average sales
 WITH yearly_product_sales AS (
   SELECT
     YEAR(s.order_date) AS order_year,
@@ -185,10 +185,14 @@ WITH yearly_product_sales AS (
   GROUP BY YEAR(s.order_date), p.product_name
 )
 SELECT
-  order_year,
-  product_name,
-  current_sales,
-  AVG(current_sales) OVER (PARTITION BY product_name) AS avg_sales,
-  current_sales - AVG(current_sales) OVER (PARTITION BY product_name) AS diff_avg
+	order_year,
+	product_name,
+	current_sales,
+	AVG(current_sales) OVER (PARTITION BY product_name) AS avg_sales,
+	current_sales - AVG(current_sales) OVER (PARTITION BY product_name) AS diff_avg,
+	CASE WHEN current_sales - AVG(current_sales) OVER (PARTITION BY product_name) > 0 THEN 'Above Avg'
+		 WHEN current_sales - AVG(current_sales) OVER (PARTITION BY product_name) < 0 THEN 'Below Avg'
+		 ELSE 'Avg'
+	END avg_change
 FROM yearly_product_sales
 ORDER BY product_name, order_year;

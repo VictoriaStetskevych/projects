@@ -300,7 +300,7 @@ Result: <br>
 <hr>
 </table>
 
-- yearly performance by product, compared to avd_sales
+- yearly performance by product, compared to average sales
 ```sql
 WITH yearly_product_sales AS (
   SELECT
