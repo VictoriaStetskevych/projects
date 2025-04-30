@@ -534,7 +534,7 @@ GROUP BY age_category
 ORDER BY total_customers DESC;
 ```
 Result:<br>
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/SQL/04_sql_exploratory_data_analysis_baraa/images/19_age_categories_total.png?raw=true)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/05_sql_advanced_data_analytics_baraa/images/19_age_categories_total.png?raw=true)
 
 <table>
 <hr>
@@ -587,7 +587,7 @@ FROM customer_categories_2
 ORDER BY total_customers_by_category DESC;
 ```
 Result:<br>
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/SQL/04_sql_exploratory_data_analysis_baraa/images/20_age_categories_bought.png?raw=true)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/05_sql_advanced_data_analytics_baraa/images/20_age_categories_bought.png?raw=true)
 
 <table>
 <hr>
