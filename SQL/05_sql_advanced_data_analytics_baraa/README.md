@@ -587,8 +587,7 @@ FROM customer_categories_2
 ORDER BY total_customers_by_category DESC;
 ```
 Result:<br>
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/SQL/04_sql_exploratory_data_analysis_baraa/images/
-20_age_categories_bought.png?raw=true)
+![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/SQL/04_sql_exploratory_data_analysis_baraa/images/20_age_categories_bought.png?raw=true)
 
 <table>
 <hr>
