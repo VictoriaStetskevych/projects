@@ -424,8 +424,175 @@ Result: <br>
 <hr>
 </table>
 
+## 4. Data Segmentation 
 
+Goal: group data based on a specific range to understand the correlation between two measures 
 
+- segment products into cost range
+```sql
+SELECT
+	product_key,
+	product_name, 
+	cost,
+	CASE WHEN cost < 100 THEN 'Below 100'
+	WHEN cost BETWEEN 100 and 500 THEN '100-500'
+	WHEN cost BETWEEN 500 and 1000 THEN '500-1000'
+	ELSE 'Above 1000'
+	END cost_range
+FROM [gold.dim_products];;
+```
+Result: <br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/05_sql_advanced_data_analytics_baraa/images/17_cost_range.png?raw=true)
+
+<table>
+<hr>
+</table>
+
+- count how many products fall into each segment
+```sql
+WITH product_segment AS (
+SELECT
+	product_key,
+	product_name, 
+	cost,
+	CASE WHEN cost < 100 THEN 'Below 100'
+	WHEN cost BETWEEN 100 and 500 THEN '100-500'
+	WHEN cost BETWEEN 500 and 1000 THEN '500-1000'
+	ELSE 'Above 1000'
+	END cost_range
+FROM [gold.dim_products]
+)
+SELECT 
+	cost_range,
+	COUNT (product_key) as total_products
+FROM product_segment
+GROUP BY cost_range
+ORDER BY total_products DESC;
+```
+Result: <br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/05_sql_advanced_data_analytics_baraa/images/18_cost_range_total.png?raw=true)
+
+<table>
+<hr>
+</table>
+
+- age and age category
+```sql
+WITH AgeCalculatiion AS (
+SELECT *,
+    DATEDIFF(YEAR, birthdate, GETDATE()) 
+    - CASE 
+        WHEN MONTH(birthdate) > MONTH(GETDATE()) 
+             OR (MONTH(birthdate) = MONTH(GETDATE()) AND DAY(birthdate) > DAY(GETDATE()))
+        THEN 1 
+        ELSE 0 
+      END AS age
+FROM [gold.dim_customers]
+)
+SELECT *,
+CASE 
+    WHEN age <= 29 THEN 'Young'
+    WHEN age BETWEEN 30 AND 55 THEN 'Middle'
+    ELSE 'Old'
+END AS [age_category]
+FROM AgeCalculatiion;
+```
+Result:<br>
+![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/SQL/04_sql_exploratory_data_analysis_baraa/images/13_age_category.png?raw=true)
+
+<table>
+<hr>
+</table>
+
+- count age categories
+```sql
+;WITH AgeCalculatiion AS (
+SELECT *,
+    DATEDIFF(YEAR, birthdate, GETDATE()) 
+    - CASE 
+        WHEN MONTH(birthdate) > MONTH(GETDATE()) 
+             OR (MONTH(birthdate) = MONTH(GETDATE()) AND DAY(birthdate) > DAY(GETDATE()))
+        THEN 1 
+        ELSE 0 
+      END AS age
+FROM [gold.dim_customers]
+),
+	total_age_categories AS (
+SELECT *,
+CASE 
+    WHEN age <= 29 THEN 'Young'
+    WHEN age BETWEEN 30 AND 55 THEN 'Middle'
+    ELSE 'Old'
+END AS [age_category]
+FROM AgeCalculatiion
+)
+SELECT 
+	age_category,
+	COUNT(customer_key) as total_customers
+FROM total_age_categories
+GROUP BY age_category
+ORDER BY total_customers DESC;
+```
+Result:<br>
+![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/SQL/04_sql_exploratory_data_analysis_baraa/images/19_age_categories_total.png?raw=true)
+
+<table>
+<hr>
+</table>
+
+- count customers, items bought by categories, total sales, % sales by each age category
+```sql
+;WITH AgeCalculatiion AS (
+SELECT *,
+    DATEDIFF(YEAR, birthdate, GETDATE()) 
+    - CASE 
+        WHEN MONTH(birthdate) > MONTH(GETDATE()) 
+             OR (MONTH(birthdate) = MONTH(GETDATE()) AND DAY(birthdate) > DAY(GETDATE()))
+        THEN 1 
+        ELSE 0 
+      END AS age
+FROM [gold.dim_customers]
+),
+	total_age_categories AS (
+SELECT *,
+CASE 
+    WHEN age <= 29 THEN 'Young'
+    WHEN age BETWEEN 30 AND 55 THEN 'Middle'
+    ELSE 'Old'
+END AS [age_category]
+FROM AgeCalculatiion
+),
+	customer_categories AS (
+SELECT 
+	COUNT(s.customer_key) as total_customers_by_category,
+	age_category,
+	SUM(s.sales_amount) as total_category_sales
+FROM total_age_categories a
+LEFT JOIN [gold.fact_sales] s
+ON a.customer_key = s.customer_key
+GROUP BY age_category
+), 
+	customer_categories_2 AS (
+SELECT 
+	*,
+    SUM(total_category_sales) OVER () AS total_sales,
+	SUM(total_customers_by_category) OVER () AS total_customers
+FROM customer_categories
+) 
+SELECT
+	*,
+	CONCAT(ROUND(CAST(total_category_sales AS FLOAT) / total_sales * 100, 2), ' %') AS percent_of_total_sales,
+	CONCAT(ROUND(CAST(total_customers_by_category AS FLOAT) / total_customers * 100, 2), ' %') AS percent_of_total_customers
+FROM customer_categories_2
+ORDER BY total_customers_by_category DESC;
+```
+Result:<br>
+![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/SQL/04_sql_exploratory_data_analysis_baraa/images/
+20_age_categories_bought.png?raw=true)
+
+<table>
+<hr>
+</table>
 
 
 

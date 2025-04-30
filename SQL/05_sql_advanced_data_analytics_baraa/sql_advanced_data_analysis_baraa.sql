@@ -298,3 +298,169 @@ SELECT
 	CONCAT(ROUND((CAST(total_sales as FLOAT) / SUM (total_sales) OVER ())*100, 2), '%') as persentage_of_total
 FROM category_sales
 ORDER BY total_sales DESC;
+
+--------------------------------------------------------------------- Data Segmentation  ------------------------------------------------------------------------------------------------------------
+
+-- segment products into cost range
+
+SELECT
+	product_key,
+	product_name, 
+	cost,
+	CASE WHEN cost < 100 THEN 'Below 100'
+	WHEN cost BETWEEN 100 and 500 THEN '100-500'
+	WHEN cost BETWEEN 500 and 1000 THEN '500-1000'
+	ELSE 'Above 1000'
+	END cost_range
+FROM [gold.dim_products];
+
+-- count how many products fall into each segment
+WITH product_segment AS (
+SELECT
+	product_key,
+	product_name, 
+	cost,
+	CASE WHEN cost < 100 THEN 'Below 100'
+	WHEN cost BETWEEN 100 and 500 THEN '100-500'
+	WHEN cost BETWEEN 500 and 1000 THEN '500-1000'
+	ELSE 'Above 1000'
+	END cost_range
+FROM [gold.dim_products]
+)
+SELECT 
+	cost_range,
+	COUNT (product_key) as total_products
+FROM product_segment
+GROUP BY cost_range
+ORDER BY total_products DESC;
+
+
+-- age and age category
+WITH AgeCalculatiion AS (
+SELECT *,
+    DATEDIFF(YEAR, birthdate, GETDATE()) 
+    - CASE 
+        WHEN MONTH(birthdate) > MONTH(GETDATE()) 
+             OR (MONTH(birthdate) = MONTH(GETDATE()) AND DAY(birthdate) > DAY(GETDATE()))
+        THEN 1 
+        ELSE 0 
+      END AS age
+FROM [gold.dim_customers]
+)
+SELECT *,
+CASE 
+    WHEN age <= 29 THEN 'Young'
+    WHEN age BETWEEN 30 AND 55 THEN 'Middle'
+    ELSE 'Old'
+END AS [age_category]
+FROM AgeCalculatiion;
+
+-- count customers age categories
+;WITH AgeCalculatiion AS (
+SELECT *,
+    DATEDIFF(YEAR, birthdate, GETDATE()) 
+    - CASE 
+        WHEN MONTH(birthdate) > MONTH(GETDATE()) 
+             OR (MONTH(birthdate) = MONTH(GETDATE()) AND DAY(birthdate) > DAY(GETDATE()))
+        THEN 1 
+        ELSE 0 
+      END AS age
+FROM [gold.dim_customers]
+),
+	total_age_categories AS (
+SELECT *,
+CASE 
+    WHEN age <= 29 THEN 'Young'
+    WHEN age BETWEEN 30 AND 55 THEN 'Middle'
+    ELSE 'Old'
+END AS [age_category]
+FROM AgeCalculatiion
+)
+SELECT 
+	age_category,
+	COUNT(customer_key) as total_customers
+FROM total_age_categories
+GROUP BY age_category
+ORDER BY total_customers DESC;
+
+SELECT 
+COUNT(DISTINCT(customer_id))
+FROM [gold.dim_customers];
+
+-- customers that bought
+SELECT *
+FROM [gold.dim_customers];
+
+SELECT *
+FROM [gold.fact_sales];
+
+-- customers who bought: age category, sales, total_quantity % per each category
+;WITH AgeCalculatiion AS (
+SELECT *,
+    DATEDIFF(YEAR, birthdate, GETDATE()) 
+    - CASE 
+        WHEN MONTH(birthdate) > MONTH(GETDATE()) 
+             OR (MONTH(birthdate) = MONTH(GETDATE()) AND DAY(birthdate) > DAY(GETDATE()))
+        THEN 1 
+        ELSE 0 
+      END AS age
+FROM [gold.dim_customers]
+),
+	total_age_categories AS (
+SELECT *,
+CASE 
+    WHEN age <= 29 THEN 'Young'
+    WHEN age BETWEEN 30 AND 55 THEN 'Middle'
+    ELSE 'Old'
+END AS [age_category]
+FROM AgeCalculatiion
+),
+	customer_categories AS (
+SELECT 
+	COUNT(s.customer_key) as total_customers_by_category,
+	age_category,
+	SUM(s.sales_amount) as total_category_sales
+FROM total_age_categories a
+LEFT JOIN [gold.fact_sales] s
+ON a.customer_key = s.customer_key
+GROUP BY age_category
+), 
+	customer_categories_2 AS (
+SELECT 
+	*,
+    SUM(total_category_sales) OVER () AS total_sales,
+	SUM(total_customers_by_category) OVER () AS total_customers
+FROM customer_categories
+) 
+SELECT
+	*,
+	CONCAT(ROUND(CAST(total_category_sales AS FLOAT) / total_sales * 100, 2), ' %') AS percent_of_total_sales,
+	CONCAT(ROUND(CAST(total_customers_by_category AS FLOAT) / total_customers * 100, 2), ' %') AS percent_of_total_customers
+FROM customer_categories_2
+ORDER BY total_customers_by_category DESC;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SELECT 
+	COUNT(customer_key) as total_customers
+FROM [gold.fact_sales];
+
+SELECT 
+	SUM(sales_amount)
+FROM [gold.fact_sales];
