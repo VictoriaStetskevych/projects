@@ -418,7 +418,7 @@ FROM category_sales
 ORDER BY total_sales DESC;
 ```
 Result: <br>
-![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/05_sql_advanced_data_analytics_baraa/images/16_categories_percentage.png.png?raw=true)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/05_sql_advanced_data_analytics_baraa/images/16_categories_percentage.png?raw=true)
 
 <table>
 <hr>
