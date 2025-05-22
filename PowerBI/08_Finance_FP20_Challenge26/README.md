@@ -1,10 +1,9 @@
 # Financial Analysis Power BI Dashboard
 
-This dashboard was created for FP20 Analytics Data Challenge26 'Financial Analysis'
-https://zoomcharts.com/en/microsoft-power-bi-custom-visuals/challenges/fp20-analytics-may-2025
+This dashboard was created for [FP20 Analytics Data Challenge26 'Financial Analysis'](https://zoomcharts.com/en/microsoft-power-bi-custom-visuals/challenges/fp20-analytics-may-2025)<br>
 
-## Challenge Task
-To build a dashboard that will help to answer next questions
+## Challenge Task<br>
+To build a dashboard that will help to answer next questions<br>
 
 Financial Overview & Performance
 - Over the year, did the company spend more or less than planned?
