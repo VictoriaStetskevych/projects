@@ -1,6 +1,7 @@
 # Financial Analysis Power BI Dashboard
 
 This dashboard was created for FP20 Analytics Data Challenge26 'Financial Analysis'
+https://zoomcharts.com/en/microsoft-power-bi-custom-visuals/challenges/fp20-analytics-may-2025
 
 ## Challenge Task
 To build a dashboard that will help to answer next questions
@@ -28,8 +29,7 @@ Trends & Patterns
 
 Result:<br>
 
-https://github.com/user-attachments/assets/e3949c67-e3de-447a-84fb-2111cc5bc415
-
+https://github.com/user-attachments/assets/ce83fea4-2052-407d-84cd-3e04bd6d674d
 
 
 
