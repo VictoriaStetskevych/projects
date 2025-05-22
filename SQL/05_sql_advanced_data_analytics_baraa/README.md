@@ -424,7 +424,7 @@ Result: <br>
 <hr>
 </table>
 
-## 4. Data Segmentation 
+## 5. Data Segmentation 
 
 Goal: group data based on a specific range to understand the correlation between two measures 
 
@@ -593,6 +593,342 @@ Result:<br>
 <hr>
 </table>
 
+- group customers into three segment based on their spending behavior:<br>
+	- VIP: at least 12 months of history and spending more than 5000 Euro
+	- Regular: at least 12 months of history and spending more than 5000 Euro or less
+	- New: lefespan less than 12 months
+```sql
+WITH customer_spending AS
+(
+SELECT
+	c.customer_key,
+	SUM(s.sales_amount) as total_spending,
+	MIN(order_date) as first_order,
+	MAX(order_date) as last_order, 
+	DATEDIFF(MONTH, MIN(order_date), MAX(order_date)) as lifespan_months
+FROM [gold.fact_sales] s
+LEFT JOIN [gold.dim_customers] c
+ON s.customer_key = c.customer_key
+GROUP BY c.customer_key
+)
+SELECT
+	customer_key,
+	total_spending,
+	lifespan_months,
+	CASE WHEN lifespan_months >= 12 AND total_spending > 5000 THEN 'VIP'
+		 WHEN lifespan_months >= 12 AND total_spending <= 5000 THEN 'Regular'
+	ELSE 'New'
+	END customer_segement
+FROM customer_spending
+ORDER BY total_spending DESC;
+```
+Result:<br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/05_sql_advanced_data_analytics_baraa/images/21_customers_lifespan_categories.png?raw=true)
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/05_sql_advanced_data_analytics_baraa/images/21_customers_lifespan_categories.png?raw=true)
+
+<table>
+<hr>
+</table>
+
+- total number customers by each group
+```sql
+;WITH customer_spending AS
+(
+SELECT
+	c.customer_key,
+	SUM(s.sales_amount) as total_spending,
+	MIN(order_date) as first_order,
+	MAX(order_date) as last_order, 
+	DATEDIFF(MONTH, MIN(order_date), MAX(order_date)) as lifespan_months
+FROM [gold.fact_sales] s
+LEFT JOIN [gold.dim_customers] c
+ON s.customer_key = c.customer_key
+GROUP BY c.customer_key
+),
+customer_spending_2 as (
+SELECT
+	customer_key,
+	total_spending,
+	lifespan_months,
+	CASE WHEN lifespan_months >= 12 AND total_spending > 5000 THEN 'VIP'
+		 WHEN lifespan_months >= 12 AND total_spending <= 5000 THEN 'Regular'
+	ELSE 'New'
+	END customer_segment
+FROM customer_spending
+)
+SELECT 
+	COUNT(customer_key) as customers, 
+	SUM(total_spending) as spending,
+	customer_segment
+FROM customer_spending_2 
+GROUP BY customer_segment
+ORDER BY SUM(total_spending) DESC;
+```
+Result:<br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/05_sql_advanced_data_analytics_baraa/images/23_customers_lifespan_categories_total.png?raw=true)
+
+<table>
+<hr>
+</table>
+
+- % -- total number customers by each group
+```sql
+;WITH customer_spending AS
+(
+SELECT
+	c.customer_key,
+	SUM(s.sales_amount) as total_spending,
+	MIN(order_date) as first_order,
+	MAX(order_date) as last_order, 
+	DATEDIFF(MONTH, MIN(order_date), MAX(order_date)) as lifespan_months
+FROM [gold.fact_sales] s
+LEFT JOIN [gold.dim_customers] c
+ON s.customer_key = c.customer_key
+GROUP BY c.customer_key
+),
+customer_spending_2 as (
+SELECT
+	customer_key,
+	total_spending,
+	lifespan_months,
+	CASE WHEN lifespan_months >= 12 AND total_spending > 5000 THEN 'VIP'
+		 WHEN lifespan_months >= 12 AND total_spending <= 5000 THEN 'Regular'
+	ELSE 'New'
+	END customer_segment
+FROM customer_spending
+), 
+customer_spending_3 as (
+SELECT 
+	COUNT(customer_key) as customers, 
+	SUM(total_spending) as spending,
+	customer_segment
+FROM customer_spending_2 
+GROUP BY customer_segment
+)
+SELECT
+	*,
+	SUM(spending) OVER() as total_spending,
+	CONCAT(ROUND((CAST(spending as FLOAT)/(SUM(spending) OVER())*100),2), ' %') as percent_spending
+FROM customer_spending_3 
+ORDER BY spending DESC;
+```
+Result:<br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/05_sql_advanced_data_analytics_baraa/images/24_customers_lifespan_categories_percent.png?raw=true)
+
+<table>
+<hr>
+</table>
+
+## 6. Customer Report
+
+Purpose:
+- This report consolidates key customer metrics and behavior
+
+Highlights:
+1. Gather essential fields, such as names, ages, and transaction details
+2. Segment customers into categories (VIP, Regular, New) and age groups.
+3. Aggregate customer level metrics: 
+- total orders
+- total sales
+- total quantity purchased
+- total products
+- lifespan(months)
+4. Calculate valuable KPIs:
+- recency (months since last order)
+- average order value
+- average monthly spending 
+
+<table>
+<hr>
+</table>
+
+```sql
+CREATE VIEW report AS 
+-- 1. Gather essential fields, such as names, ages, and transaction details
+WITH q1 AS (
+SELECT
+	s.order_number,
+	s.product_key,
+	s.order_date,
+	s.sales_amount,
+	s.quantity,
+	c.customer_key,
+	c.customer_number,
+	CONCAT (c.first_name, ' ', c.last_name) as customer_name,
+	DATEDIFF(YEAR, c.birthdate, GETDATE()) - CASE 
+        WHEN MONTH(c.birthdate) > MONTH(GETDATE()) 
+             OR (MONTH(c.birthdate) = MONTH(GETDATE()) AND DAY(c.birthdate) > DAY(GETDATE()))
+        THEN 1 
+        ELSE 0 
+		END as age
+FROM [gold.fact_sales] s
+LEFT JOIN [gold.dim_customers] c
+ON c.customer_key = s.customer_key
+WHERE s.order_date is not NULL
+),
+-- 3. Aggregate customer level metrics: 
+-- - total orders
+-- - total sales
+-- - total quantity purchased
+-- - total products
+-- - lifespan(months)
+q2 as (
+SELECT 
+	customer_key,
+	customer_number,
+	customer_name,
+	age,
+	COUNT(DISTINCT order_number) as total_orders,
+	SUM(sales_amount) as total_sales,
+	SUM(quantity) as total_quantity,
+	COUNT(DISTINCT product_key) as total_products,
+	MAX(order_date) as last_order_date,
+	DATEDIFF(month, MIN(order_date), MAX(order_date)) as lifespan_months
+FROM q1
+GROUP BY
+	customer_key,
+	customer_number,
+	customer_name,
+	age
+)
+-- 2. Segment customers into categories (VIP, Regular, New) and age groups.
+SELECT 
+	customer_key,
+	customer_number,
+	customer_name,
+	age,
+	total_orders,
+	total_sales,
+	total_quantity,
+	total_products,
+	last_order_date,
+	lifespan_months,
+	CASE 
+		WHEN lifespan_months >= 12 AND total_sales > 5000 THEN 'VIP'
+		WHEN lifespan_months >= 12 AND total_sales <= 5000 THEN 'Regular'
+		ELSE 'New'
+	END customer_segement,
+	CASE 
+		WHEN age <= 20 THEN 'Under 20'
+		WHEN age BETWEEN 20 AND 29 THEN '20-29'
+		WHEN age BETWEEN 30 AND 39 THEN '30-39'
+		WHEN age BETWEEN 40 AND 49 THEN '40-49'
+		ELSE '50 and above'
+	END AS age_category,
+	-- recency (months since last order)
+	DATEDIFF(month, last_order_date, GETDATE()) as recency ,
+	-- average order value (AOV)
+	CASE WHEN total_sales = 0 THEN 0 
+		 ELSE total_sales/total_orders 
+	END AS avg_order_value,
+	-- average monthly spends 
+	CASE WHEN lifespan_months = 0 THEN 0
+		 ELSE total_sales/lifespan_months
+	END AS avg_monthly_spends
+FROM q2;
+```
+Result:<br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/05_sql_advanced_data_analytics_baraa/images/26_report_customers.png?raw=true)
+
+
+## 7. Product Report
+
+Purpose: consolidate key product metrics and behaviors
+
+Highlights:
+1. Gather essential fields as product_name, category, subcategory, and cost
+2. Segment products by revenue to identify high-performers, mid-range, or low-performers
+3. Aggregate product-level metrics:
+	- total orders,
+	- total sales,
+	- total quantity sold,
+	- total customers (unique),
+	- lifespan (in month)
+4. Aggregate valuable KPIs:
+	- recency (months since last order)
+	- average order value
+	- average monthly spending 
+
+```sql
+-- Base query: core columns from [gold.fact_sales] and [gold.dim_products]
+WITH q1 AS (
+    SELECT
+        s.order_number,
+        s.order_date,
+        s.customer_key,
+        s.sales_amount,
+        s.quantity,
+        p.product_name,
+        p.product_key,
+        p.category,
+        p.subcategory,
+        p.cost
+    FROM [gold.fact_sales] s
+    LEFT JOIN [gold.dim_products] p
+        ON p.product_key = s.product_key
+    WHERE s.order_date IS NOT NULL
+),
+-- Aggregation product-level metrics (total sales, orders, quantity, lifespan)
+q2 AS (
+    SELECT 
+        COUNT(DISTINCT order_number) AS total_orders,
+        DATEDIFF(MONTH, MIN(order_date), MAX(order_date)) AS lifespan_months,
+        MAX(order_date) AS last_sale_date,
+        COUNT(DISTINCT customer_key) AS total_customers,
+        SUM(sales_amount) AS total_sales,
+        SUM(quantity) AS total_quantity,	
+        product_name,
+        product_key,
+        category,
+        subcategory,
+        cost,
+        ROUND(AVG(CAST(sales_amount AS FLOAT) / NULLIF(quantity, 0)), 1) AS avg_selling_price
+    FROM q1
+    GROUP BY
+        product_name,
+        product_key,
+        category,
+        subcategory,
+        cost
+)
+-- Final Query
+SELECT 
+	product_name,
+    product_key,
+    category,
+    subcategory,
+    cost,
+	last_sale_date,
+	-- recency (months since last order)
+	DATEDIFF(month, last_sale_date, GETDATE()) as recency ,
+	CASE 
+		WHEN total_sales > 50000 THEN 'High-Performer'
+		WHEN total_sales >= 10000 THEN 'Mid-Performer'
+		ELSE 'Low-Performer'
+	END product_segment,
+	lifespan_months,
+	total_customers,
+	total_sales,
+	total_quantity,
+	total_orders,
+	avg_selling_price,
+	-- average order revenue (AOR)
+	CASE WHEN total_orders = 0 THEN 0 
+		 ELSE total_sales/total_orders 
+	END AS avg_order_value,
+	-- average monthly revenue 
+	CASE WHEN lifespan_months = 0 THEN 0
+		 ELSE total_sales/lifespan_months
+	END AS avg_monthly_revenue
+FROM q2;
+```
+
+Result:<br>
+![](https://github.com/VictoriaStetskevych/projects/blob/main/SQL/05_sql_advanced_data_analytics_baraa/images/27_report_product.png?raw=true)
+
+<table>
+<hr>
+</table>
 
 
 In Progress!

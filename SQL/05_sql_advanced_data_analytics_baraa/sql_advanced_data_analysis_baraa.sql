@@ -394,6 +394,14 @@ FROM [gold.dim_customers];
 SELECT *
 FROM [gold.fact_sales];
 
+SELECT 
+	COUNT(customer_key) as total_customers
+FROM [gold.fact_sales];
+
+SELECT 
+	SUM(sales_amount)
+FROM [gold.fact_sales];
+
 -- customers who bought: age category, sales, total_quantity % per each category
 ;WITH AgeCalculatiion AS (
 SELECT *,
@@ -440,27 +448,107 @@ FROM customer_categories_2
 ORDER BY total_customers_by_category DESC;
 
 
+-- group customers into three segment based on their spending behaviour,
+	-- VIP: at least 12 months of history and spending more than 5000 Euro
+	-- Regular: at least 12 months of history and spending more than 5000 Euro or less
+	-- New: lefespan less than 12 months
 
+WITH customer_spending AS
+(
+SELECT
+	c.customer_key,
+	SUM(s.sales_amount) as total_spending,
+	MIN(order_date) as first_order,
+	MAX(order_date) as last_order, 
+	DATEDIFF(MONTH, MIN(order_date), MAX(order_date)) as lifespan_months
+FROM [gold.fact_sales] s
+LEFT JOIN [gold.dim_customers] c
+ON s.customer_key = c.customer_key
+GROUP BY c.customer_key
+)
+SELECT
+	customer_key,
+	total_spending,
+	lifespan_months,
+	CASE WHEN lifespan_months >= 12 AND total_spending > 5000 THEN 'VIP'
+		 WHEN lifespan_months >= 12 AND total_spending <= 5000 THEN 'Regular'
+	ELSE 'New'
+	END customer_segement
+FROM customer_spending
+ORDER BY total_spending DESC;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-- total number customers by each group
+;WITH customer_spending AS
+(
+SELECT
+	c.customer_key,
+	SUM(s.sales_amount) as total_spending,
+	MIN(order_date) as first_order,
+	MAX(order_date) as last_order, 
+	DATEDIFF(MONTH, MIN(order_date), MAX(order_date)) as lifespan_months
+FROM [gold.fact_sales] s
+LEFT JOIN [gold.dim_customers] c
+ON s.customer_key = c.customer_key
+GROUP BY c.customer_key
+),
+customer_spending_2 as (
+SELECT
+	customer_key,
+	total_spending,
+	lifespan_months,
+	CASE WHEN lifespan_months >= 12 AND total_spending > 5000 THEN 'VIP'
+		 WHEN lifespan_months >= 12 AND total_spending <= 5000 THEN 'Regular'
+	ELSE 'New'
+	END customer_segment
+FROM customer_spending
+)
 SELECT 
-	COUNT(customer_key) as total_customers
-FROM [gold.fact_sales];
+	COUNT(customer_key) as customers, 
+	SUM(total_spending) as spending,
+	customer_segment
+FROM customer_spending_2 
+GROUP BY customer_segment
+ORDER BY SUM(total_spending) DESC;
 
+
+-- % -- total number customers by each group
+;WITH customer_spending AS
+(
+SELECT
+	c.customer_key,
+	SUM(s.sales_amount) as total_spending,
+	MIN(order_date) as first_order,
+	MAX(order_date) as last_order, 
+	DATEDIFF(MONTH, MIN(order_date), MAX(order_date)) as lifespan_months
+FROM [gold.fact_sales] s
+LEFT JOIN [gold.dim_customers] c
+ON s.customer_key = c.customer_key
+GROUP BY c.customer_key
+),
+customer_spending_2 as (
+SELECT
+	customer_key,
+	total_spending,
+	lifespan_months,
+	CASE WHEN lifespan_months >= 12 AND total_spending > 5000 THEN 'VIP'
+		 WHEN lifespan_months >= 12 AND total_spending <= 5000 THEN 'Regular'
+	ELSE 'New'
+	END customer_segment
+FROM customer_spending
+), 
+customer_spending_3 as (
 SELECT 
-	SUM(sales_amount)
-FROM [gold.fact_sales];
+	COUNT(customer_key) as customers, 
+	SUM(total_spending) as spending,
+	customer_segment
+FROM customer_spending_2 
+GROUP BY customer_segment
+)
+SELECT
+	*,
+	SUM(spending) OVER() as total_spending,
+	CONCAT(ROUND((CAST(spending as FLOAT)/(SUM(spending) OVER())*100),2), ' %') as percent_spending
+FROM customer_spending_3 
+ORDER BY spending DESC;
+
+
