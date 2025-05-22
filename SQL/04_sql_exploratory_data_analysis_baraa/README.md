@@ -268,34 +268,6 @@ Result:<br>
 <hr>
 </table>
 
-- age and age category
-```sql
-WITH AgeCalculatiion AS (
-SELECT *,
-    DATEDIFF(YEAR, birthdate, GETDATE()) 
-    - CASE 
-        WHEN MONTH(birthdate) > MONTH(GETDATE()) 
-             OR (MONTH(birthdate) = MONTH(GETDATE()) AND DAY(birthdate) > DAY(GETDATE()))
-        THEN 1 
-        ELSE 0 
-      END AS age
-FROM [gold.dim_customers]
-)
-SELECT *,
-CASE 
-    WHEN age <= 29 THEN 'Young'
-    WHEN age BETWEEN 30 AND 55 THEN 'Middle'
-    ELSE 'Old'
-END AS [age_category]
-FROM AgeCalculatiion;
-```
-Result:<br>
-![](https://raw.githubusercontent.com/VictoriaStetskevych/projects/refs/heads/main/SQL/04_sql_exploratory_data_analysis_baraa/images/13_age_category.png?raw=true)
-
-<table>
-<hr>
-</table>
-
 ## 4. Measures Exploration
 
 Goal: calculate the key metrics of the business (Big Numbers). Highest level of Aggregation / Lowest levels of Details. (SUM, AVERAGE, COUNT)
